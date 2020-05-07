@@ -1,0 +1,15 @@
+
+<?php $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js'; ?>
+
+<div class="privacy-bar">
+    <div class="content-wrapper">
+        <p><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['info'] ?>
+            <a href="{{link_url::<?= $this->privacyDataProtectionPage ?>}}"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['dataProtection'] ?></a>
+        </p>
+        <div class="btn-holder">
+            <button class="button button-enable-all" id="enable-all"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['activateAll'] ?></button>
+            <button class="button open-privacy-settings"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['privacySettings'] ?></button>
+        </div>
+    </div>
+</div>

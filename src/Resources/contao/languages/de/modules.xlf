@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="FMD.privacyBar.0">
+                <source>Privacy bar</source>
+                <target>Privacy bar</target>
+            </trans-unit>
+            <trans-unit id="FMD.privacyPopup.0">
+                <source>Privacy popup</source>
+                <target>Privacy popup</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

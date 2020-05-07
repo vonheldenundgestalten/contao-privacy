@@ -1,0 +1,125 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/default.php" source-language="en" target-language="de">
+        <body>
+
+            <trans-unit id="CTE.privacyPopupOpener.0">
+                <source>Privacy popup opener</source>
+                <target>Privacy popup opener</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.open">
+                <source>Open</source>
+                <target>Open</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.googleMapsLoadQuestion">
+                <source>Do you want to load Google map?</source>
+                <target>Do you want to load Google map?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionYes">
+                <source>Yes, please</source>
+                <target>Yes, please</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Edit privacy settings</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.changePrivacySettings">
+                <source>Change your privacy settings</source>
+                <target>Change your privacy settings</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.BAR.info">
+                <source>In order to be able to offer you a perfect service on our website, we use cookies to improve functionality. By continuing to browse this site, you consent to the use of cookies. You can find detailed information on this in our</source>
+                <target>Um Ihnen einen einwandfreien Service auf unserer Webseite anbieten zu können, verwenden wir Cookies zur Verbesserung der Funktionalität. Durch das Weitersurfen auf dieser Seite, erklären Sie sich mit der Verwendung von Cookies einverstanden. Detaillierte Informationen hierzu, erhalten Sie in unserer</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.dataProtection">
+                <source>Data protection</source>
+                <target>Datenschutz-Erklärung</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.activateAll">
+                <source>Activate all</source>
+                <target>Alle aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.privacySettings">
+                <source>Privacy settings</source>
+                <target>Privatspären-Einstellungen</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
+                <source>Analysis Tools and Advertising</source>
+                <target>Analyse-Tools und Werbung</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.moreInfo">
+                <source>More information can be found in the</source>
+                <target>Weitere Informationen finden Sie in der</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.dataProtection">
+                <source>Data protection</source>
+                <target>Datenschutz-Erklärung</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.privacySettings">
+                <source>Privacy settings</source>
+                <target>Privatsphären-Einstellungen</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analytics">
+                <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. Google Analytics is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
+                <target>Wir werten Ihre Nutzung unserer Online-Dienste aus. Mit den gewonnenen Statistik-Daten können wir unsere Angebote noch besser auf Ihre Bedürfnisse anpassen. Für die Auswertung kommt Google Analytics zum Einsatz, wir übergeben nur anonymisierte Daten, ein persönlicher Bezug ist dabei nicht möglich.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsIntro">
+                <source>Google Analytics is currently</source>
+                <target>Google Analytics ist aktuell</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsIsActive">
+                <source>Google Analytics is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Google Analytics ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
+                <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Google Analytics ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
+                <source>Plugins and Tools</source>
+                <target>Plugins and Tools</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.maps">
+                <source>We use the map service Google Maps to show you location information clearly presented.</source>
+                <target>Wir verwenden den Kartendienst Google Maps um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapsIsActive">
+                <source>Google Maps is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Google Maps ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapsIsDeactivated">
+                <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Google Maps ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.youTube">
+                <source>We use a data protection-optimized version of YouTube, which exchanges less data with YouTube to embed videos in the website.</source>
+                <target>Wir verwenden eine datenschutz-optimierte Version von Youtube an, die weniger Daten mit YouTube austauscht um Videos in der Webseite einzubinden.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.youTubeIsActive">
+                <source>YouTube is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>YouTube ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.youTubeIsDeactivated">
+                <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>YouTube ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.activate">
+                <source>activate</source>
+                <target>aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.deactivate">
+                <source>deactivate</source>
+                <target>deaktivieren</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

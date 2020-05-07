@@ -1,0 +1,40 @@
+{
+    "name": "magmell-agentur/contao-privacy",
+    "description": "Standalone package to deliver privacy related functions, cookie notice and updated templates for Analytics and Google Maps",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Markus Milkereit",
+            "email": "markus.milkereit@magmell.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Marko Todić",
+            "email": "drexplosiveweb@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    	"contao/core-bundle": "^4.4"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.2"
+    },
+    "extra": {
+        "contao-manager-plugin": "Magmell\\Contao\\Privacy\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magmell\\Contao\\Privacy\\": "src"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
+}

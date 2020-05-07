@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_module.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_module.privacyDataProtectionPage.0">
+                <source>Data protection page</source>
+                <target>Data protection page</target>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyShowGoogleMaps.0">
+                <source>Show Google Maps</source>
+                <target>Show Google Maps</target>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyShowYouTube.0">
+                <source>Show YouTube</source>
+                <target>Show YouTube</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

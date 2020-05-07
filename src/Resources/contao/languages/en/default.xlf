@@ -1,0 +1,105 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/default.php" source-language="en">
+        <body>
+
+            <trans-unit id="CTE.privacyPopupOpener.0">
+                <source>Privacy popup opener</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.page_notice">
+                <source>You can change your privacy settings anytime in the privacy center. %s</source>
+            </trans-unit>
+			<trans-unit id="PRIVACY.open">
+                <source>open privacy center</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.googleMapsLoadQuestion">
+                <source>Do you want to load Google maps?</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionYes">
+                <source>Yes, please</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.changePrivacySettings">
+                <source>Change your privacy settings</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.BAR.info">
+                <source>In order to be able to offer you a perfect service on our website, we use cookies to improve functionality. Please check our privacy center to change your desired settings. You can find more detailed information in our</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.dataProtection">
+                <source>privacy policy</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.activateAll">
+                <source>Activate all</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.BAR.privacySettings">
+                <source>Privacy settings</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.privacySettings">
+                <source>Privacy settings</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.moreInfo">
+                <source>More information can be found in the</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.dataProtection">
+                <source>privacy policy</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.privacySettings">
+                <source>Privacy Center</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
+                <source>Analysis Tools and Advertising</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analytics">
+                <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. Google Analytics is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
+            </trans-unit>
+             <trans-unit id="PRIVACY.POPUP.analyticsIntro">
+                <source>Google Analytics is currently</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsIsActive">
+                <source>active</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
+                <source>deactivated</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
+                <source>Plugins and Tools</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.maps">
+                <source>We use the map service Google Maps to show you location information clearly presented.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapsIsActive">
+                <source>Google Maps is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapsIsDeactivated">
+                <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.youTube">
+                <source>We use a data protection-optimized version of YouTube, which exchanges less data with YouTube to embed videos in the website.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.youTubeIsActive">
+                <source>YouTube is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.youTubeIsDeactivated">
+                <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.activate">
+                <source>activate</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.deactivate">
+                <source>deactivate</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
