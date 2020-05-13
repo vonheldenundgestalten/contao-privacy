@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+global $objPage;
 
 // var_dump($GLOBALS['TL_JAVASCRIPT']);
 
@@ -15,6 +17,17 @@ foreach($GLOBALS['TL_JAVASCRIPT'] as $jsincludes){
 }
 
 $GLOBALS['TL_JAVASCRIPT'] = $arrJSFiles;
+
+if (($objRootPage = \PageModel::findByPk($objPage->rootId)) !== null)
+{
+    $key = $objRootPage->dlh_googlemaps_apikey;
+}
+
+if ($key === null)
+{
+    $key = \Config::get('dlh_googlemaps_apikey');
+}
+
 
 // var_dump($GLOBALS['TL_JAVASCRIPT']);
 
@@ -63,7 +76,7 @@ $GLOBALS['TL_JAVASCRIPT'] = $arrJSFiles;
                 if(gmapInit != true){
 
                     const script = document.createElement('script');
-                    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDFpTUXc6BdE3UmJcO73Jo-i4bkqea-5_0';
+                    script.src = 'https://maps.googleapis.com/maps/api/js?key=<?= $key ?>';
                     script.defer = 1;
                     script.async = 1;
                     document.body.appendChild(script);
