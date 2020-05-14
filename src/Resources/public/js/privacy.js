@@ -1,208 +1,293 @@
-// window.condMaster = localStorage.getItem('condMaster');
-window.condGmap = localStorage.getItem('condGmap');
-window.condAnalytics = localStorage.getItem('condAnalytics');
-window.condYoutube = localStorage.getItem('condYoutube');
 
-window.condAcceptAll = localStorage.getItem('condAcceptAll');
-window.condPrivacyBarShow = localStorage.getItem('condPrivacyBarShow');
-// if (window.condMaster === null) {
-//     window.condMaster = false;
-// } else {
-//     window.condMaster = JSON.parse(window.condMaster)
-// }
+var contaoPrivacy = (function() {
 
-if (window.condGmap === null) {
-    // console.log('was null setting to false');
-    window.condGmap = false;
-} else {
-    condGmap = JSON.parse(window.condGmap)
-}
+    /**
+     * Whether we show privacy bar or not
+     * @return boolean
+     */
+    function toShowBar() {
+        return !localStorage.getItem('contaoPrivacy.barUsed');
+    }
 
-if (window.condAnalytics === null) {
-    window.condAnalytics = false;
-} else {
-    condAnalytics = JSON.parse(window.condAnalytics)
-}
+    /**
+     * Show privacy bar
+     */
+    function showBar() {
+        $('.privacy-bar').fadeIn();
+    }
 
-if (window.condYoutube === null) {
-    window.condYoutube = false;
-} else {
-    condYoutube = JSON.parse(window.condYoutube)
-}
+    /**
+     * Set privacy bar used
+     */
+    function setBarUsed() {
+        localStorage.setItem('contaoPrivacy.barUsed', '1');
+    }
 
-if (window.condAcceptAll === null) {
-    window.condAcceptAll = false;
-} else {
-    condAcceptAll = JSON.parse(window.condAcceptAll)
-}
+    /**
+     * Close privacy bar
+     */
+    function closeBar() {
+        $('.privacy-bar').fadeOut();
+        $('#footer').removeClass('addSpace');
+    }
 
-if (window.condPrivacyBarShow === null) {
-    window.condPrivacyBarShow = false;
-} else {
-    condPrivacyBarShow = JSON.parse(window.condPrivacyBarShow)
-}
+    /**
+     * Set all enabled
+     */
+    function enableAll() {
+        setAnalytics(true);
+        setGmap(true);
+        setYouTube(true);
+    }
 
-setTimeout(checkJQueryForPrivacy, 250);
+    /**
+     * @param bln boolean
+     */
+    function setAnalytics(bln) {
+        localStorage.setItem('contaoPrivacy.enabledAnalytics', bln ? '1' : '');
 
-    function checkJQueryForPrivacy(){
-        if (!window.jQuery) {
-            return setTimeout(checkJQueryForPrivacy, 250);
+        // Switch checkbox correspondingly
+        var $inputAnalytics = $('input[name="g-analytics"]');
+        $inputAnalytics.prop("checked", bln);
+
+        // Show right status message
+        $('.g-analytics .status-enabled').css('display', bln ? 'block' : 'none');
+        $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'block');
+    }
+
+    /**
+     * @param bln boolean
+     */
+    function setGmap(bln) {
+        localStorage.setItem('contaoPrivacy.enabledGmap', bln ? '1' : '');
+
+        // Show corresponding block
+        $('.gmap-active-status').css('display', bln ? 'block' : 'none');
+        $('.gmap-inactive-status').css('display', bln ? 'none' : 'block');
+
+        if (bln) {
+            return showGmap();
         }
 
-        // button clicks
-        if (window.condPrivacyBarShow != true) {
-            $('.privacy-bar').fadeIn();
+        hideGmap();
+    }
 
+    /**
+     * Show google map if present
+     */
+    function showGmap() {
+        if (!$('.map-container').length) {
+            return;
         }
 
-        $('#enable-all').on('click', function () {
+        $('.map-container').addClass('active-gmap');
+        $('#privacy-settings').addClass('active-gmap');
+        $('.dlh_googlemap').removeClass('map-hidden');
+        $(".map-question-block").hide();
+        $(".map-container + .open-privacy-btn").show();
+    }
 
-            window.condAnalytics = true;
-            localStorage.setItem("condAnalytics", window.condAnalytics);
+    /**
+     * Hide google map if present
+     */
+    function hideGmap() {
+        if (!$('.map-container').length) {
+            return;
+        }
 
-            window.condGmap = true;
-            localStorage.setItem("condGmap", window.condGmap);
+        $('.map-container').removeClass('active-gmap');
+        $('.dlh_googlemap').addClass('map-hidden');
+        $('#privacy-settings').removeClass('active-gmap');
+        $(".map-question-block").show();
+        $(".map-container + .open-privacy-btn").hide();
+    }
 
-            window.condAcceptAll = true;
-            localStorage.setItem("condAcceptAll", window.condAcceptAll);
+    /**
+     * @param bln boolean
+     */
+    function setYouTube(bln) {
+        localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
 
-            window.condPrivacyBarShow = true;
-            localStorage.setItem("condPrivacyBarShow", window.condPrivacyBarShow);
+        // Show corresponding block
+        $('.youtube-active-status').css('display', bln ? 'block' : 'none');
+        $('.youtube-inactive-status').css('display', bln ? 'none' : 'block');
+    }
 
-            $('.privacy-bar').fadeOut();
-            $('#footer').removeClass('addSpace');
+    /**
+     * Show privacy popup
+     */
+    function showPopup() {
+        $('#privacy-settings ').show();
+        $('#footer').removeClass('addSpace');
+    }
 
-        });
+    /**
+     * Close privacy popup
+     */
+    function closePopup() {
+        $('#privacy-settings').hide();
+    }
 
-        $('.open-privacy-settings').click(function () {
-            $('#privacy-settings ').show();
-            $('.privacy-bar').fadeOut();
+    return {
+        toShowBar: toShowBar,
+        showBar: showBar,
+        setBarUsed: setBarUsed,
+        enableAll: enableAll,
+        closeBar: closeBar,
+        showPopup: showPopup,
+        closePopup: closePopup,
+        setAnalytics: setAnalytics,
+        setGmap: setGmap,
+        setYouTube: setYouTube,
+    };
+})();
 
-            window.condPrivacyBarShow = true;
-            localStorage.setItem("condPrivacyBarShow", window.condPrivacyBarShow);
+// Run privacy logic but wait first for jQuery to be loaded
+setTimeout(runContaoPrivacy, 250);
 
-            $('#footer').removeClass('addSpace');
-        });
-        $('.close-privacy').click(function () {
-            $('#privacy-settings ').hide();
-        });
+function runContaoPrivacy() {
+    if (!window.jQuery) {
+        // jQuery still not loaded
+        return setTimeout(runContaoPrivacy, 250);
+    }
 
+    var $buttonEnableAll =     $('button#enable-all');
+    var $buttonOpenPopup =     $('button.open-privacy-settings');
+    var $buttonClosePopup =    $('.close-privacy');
+    var $inputAnalytics =      $('input[name="g-analytics"]');
+    var $buttonGmapSwitch =    $('button.button.privacy-gmap');
+    var $buttonYouTubeSwitch = $('button.button.privacy-youtube');
+    var $buttonActivateGmap =  $('button#load-google-map');
 
-        // activate gmap
-        $('.gmap-inactive-status .btn-on, #load-google-map').on('click', function () {
-            window.condGmap = true;
-            localStorage.setItem("condGmap", window.condGmap);
+    // Show privacy bar if not already shown previously
+    if (contaoPrivacy.toShowBar()) {
+        contaoPrivacy.showBar();
+    }
 
-            activateGmap();
-        });
-
-        // deactivate gmap
-        $('.gmap-active-status .btn-off').on('click', function () {
-            window.condGmap = false;
-            localStorage.setItem("condGmap", window.condGmap);
-
-            deactivateGmap();
-        });
-
-
-        // activate youtube
-        $('.youtube-inactive-status .btn-on, #load-youtube').on('click', function () {
-            window.condYoutube = true;
-            localStorage.setItem("condYoutube", window.condYoutube);
-
-            $('.ce_youtube_fullscreen').addClass('youtube-active');
-            
-            checkJQueryForColorbox();
-        });
-
-        // deactivate youtube
-        $('.youtube-active-status .btn-off').on('click', function () {
-            window.condGmap = false;
-            localStorage.setItem("condGmap", window.condGmap);
-        });
-
-        // activate / deactivate ganalytics
-        $('#g-analytics-control').on('change', function () {
-            
-            if($(this).is(':checked')) {
-
-                window.condAnalytics = true;
-                localStorage.setItem("condAnalytics", window.condAnalytics);
-                $('#privacy-settings').addClass('active-analytics');
-
-            } else {
-
-                window.condAnalytics = false;
-                localStorage.setItem("condAnalytics", window.condAnalytics);
-                $('#privacy-settings').removeClass('active-analytics');
+    // Make additional space for privacy bar so it does not overlap with content at the end of the page
+    if ($('.privacy-bar').css('display') === 'block') {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                $(window).unbind('scroll');
+                $('#footer').addClass('addSpace');
             }
-           
         });
+    }
 
+    // Set analytics initially
+    if ($inputAnalytics.length) {
+        contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'));
+    }
 
-        if ($('.privacy-bar').css('display') == 'block') {
-            $(window).scroll(function () {
-                if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                    $(window).unbind('scroll');
-                    $('#footer').addClass('addSpace');
-                }
-            })
+    // Set gmap initially
+    if ($buttonGmapSwitch.length) {
+        contaoPrivacy.setGmap(!!localStorage.getItem('contaoPrivacy.enabledGmap'));
+    }
+
+    // Set youtube initially
+    if ($buttonYouTubeSwitch.length) {
+        contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'));
+    }
+
+    // Enable all
+    $buttonEnableAll.on('click', function() {
+        contaoPrivacy.enableAll();
+        contaoPrivacy.setBarUsed();
+        contaoPrivacy.closeBar();
+    });
+
+    // Open privacy popup
+    $buttonOpenPopup.on('click', function() {
+        contaoPrivacy.showPopup();
+        contaoPrivacy.setBarUsed();
+        contaoPrivacy.closeBar();
+    });
+
+    // Close privacy popup
+    $buttonClosePopup.on('click', function () {
+        contaoPrivacy.closePopup();
+    });
+
+    // Close privacy popup on click outside of it
+    $(document).on('click', function(e) {
+        // Exclude click on buttons that are opening the popup
+        if ($(e.target).hasClass('open-privacy-settings')) {
+            return;
         }
 
-
-
-}
-
-function activateGmap() {
-    $('.map-container').addClass('active-gmap');
-    $('#privacy-settings').addClass('active-gmap');
-    $('.dlh_googlemap').removeClass('map-hidden');
-    $(".map-question-block").hide();
-    $(".map-container + .open-privacy-btn").show();
-    console.log('sdsds');
-}
-
-function deactivateGmap() {
-    $('.map-container').removeClass('active-gmap');
-    $('.dlh_googlemap').addClass('map-hidden');
-    $('#privacy-settings').removeClass('active-gmap');
-    $(".map-question-block").show();
-    $(".map-container + .open-privacy-btn").hide();
-}
-
-function activateYoutube() {
-    // checkJQueryForColorbox();
-}
-
-function deactivateYoutube() {
-   
-}
-
-// Activate Youtube
-function checkJQueryForColorbox(){
-    if(window.jQuery && window.jQuery.colorbox) {
-        // colorbox logic for Youtube Videos based on the ce_youtube_fullscreen template
-        if( $(".youtube-preview").length ){
-            $(".youtube-preview").colorbox(cboxOptions);
-            $('#colorbox').addClass('video-colorbox');
+        if (!$(e.target).closest('.privacy-settings.innerbox').length) {
+            contaoPrivacy.closePopup();
         }
+    });
+    
+    // Toggle analytics
+    if ($inputAnalytics.length) {
+        $inputAnalytics.on('change', function() {
+            contaoPrivacy.setAnalytics($(this).prop('checked'));
+        });
+    }
 
-        // moved from j_colorbox for async JS loading
-        if($('a[data-lightbox]').length > 0) {
-            $('a[data-lightbox]').map(function() {
-                $(this).colorbox({
-                    // Put custom options here
-                    loop: false,
-                    rel: $(this).attr('data-lightbox'),
-                    maxWidth: '95%',
-                    maxHeight: '95%',
-                    onComplete: function() {
-                          $("#colorbox").prepend("<b>Appended text</b>")
-                      },
-                });
-            });
-        }   
-    } else {
-        setTimeout(checkJQueryForColorbox, 250);        
-    }   
+    // Toggle gmap
+    if ($buttonGmapSwitch.length) {
+        $buttonGmapSwitch.on('click', function() {
+            contaoPrivacy.setGmap(!!$(this).hasClass('btn-on'));
+        });
+    }
+
+    // Toggle youtube
+    if ($buttonYouTubeSwitch.length) {
+        $buttonYouTubeSwitch.on('click', function() {
+            contaoPrivacy.setYouTube(!!$(this).hasClass('btn-on'));
+        });
+    }
+
+    // Activate gmap
+    $buttonActivateGmap.on('click', function () {
+        contaoPrivacy.setGmap(true);
+    });
 }
+
+// // activate youtube
+// $('.youtube-inactive-status .btn-on, #load-youtube').on('click', function () {
+//     window.condYoutube = true;
+//     localStorage.setItem("condYoutube", window.condYoutube);
+//
+//     $('.ce_youtube_fullscreen').addClass('youtube-active');
+//
+//     checkJQueryForColorbox();
+// });
+//
+// // deactivate youtube
+// $('.youtube-active-status .btn-off').on('click', function () {
+//     window.condGmap = false;
+//     localStorage.setItem("condGmap", window.condGmap);
+// });
+//
+// // Activate Youtube
+// function checkJQueryForColorbox() {
+//     if (window.jQuery && window.jQuery.colorbox) {
+//         // colorbox logic for Youtube Videos based on the ce_youtube_fullscreen template
+//         if ($(".youtube-preview").length) {
+//             $(".youtube-preview").colorbox(cboxOptions);
+//             $('#colorbox').addClass('video-colorbox');
+//         }
+//
+//         // moved from j_colorbox for async JS loading
+//         if ($('a[data-lightbox]').length > 0) {
+//             $('a[data-lightbox]').map(function () {
+//                 $(this).colorbox({
+//                     // Put custom options here
+//                     loop: false,
+//                     rel: $(this).attr('data-lightbox'),
+//                     maxWidth: '95%',
+//                     maxHeight: '95%',
+//                     onComplete: function () {
+//                         $("#colorbox").prepend("<b>Appended text</b>")
+//                     },
+//                 });
+//             });
+//         }
+//     } else {
+//         setTimeout(checkJQueryForColorbox, 250);
+//     }
+// }

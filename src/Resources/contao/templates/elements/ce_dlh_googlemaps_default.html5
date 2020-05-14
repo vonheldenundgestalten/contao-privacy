@@ -64,10 +64,10 @@ if ($key === null) {
         var gmapInit = false;
 
         var nTimer = setInterval(function () {
-            if (window.condGmap === true) {
-                if (gmapInit != true) {
+            if (localStorage.getItem('contaoPrivacy.enabledGmap')) {
+                if (gmapInit !== true) {
 
-                    const script = document.createElement('script');
+                    var script = document.createElement('script');
                     script.src = 'https://maps.googleapis.com/maps/api/js?key=<?= $key ?>';
                     script.defer = 1;
                     script.async = 1;

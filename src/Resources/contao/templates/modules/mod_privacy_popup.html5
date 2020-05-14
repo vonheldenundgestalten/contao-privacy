@@ -20,7 +20,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
 ?>
 
 <div id="privacy-settings">
-    <div class="innerbox">
+    <div class="privacy-settings innerbox">
         <span class="icomoon-close-icon close-privacy"><svg xmlns="http://www.w3.org/2000/svg" class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M451.669333 512L55.108267 908.544a42.7776 42.7776 0 0 0 0 60.330667 42.7776 42.7776 0 0 0 60.330666 0L512 572.356267l396.544 396.561066c16.597333 16.597333 43.776 16.597333 60.330667 0 16.597333-16.597333 16.597333-43.776 0-60.373333L572.347733 512l396.561067-396.544c16.597333-16.597333 16.597333-43.776 0-60.330667-16.597333-16.597333-43.776-16.597333-60.373333 0L512 451.6608 115.456 55.125333a42.7776 42.7776 0 0 0-60.330667 0 42.7776 42.7776 0 0 0 0 60.330667L451.669333 512z"/></svg></span>
         <h3><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['privacySettings'] ?></h3>
 
@@ -56,11 +56,11 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
                 <p class="gmap-active-status">
                     <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
-                    <button class="button btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
+                    <button class="button privacy-gmap btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
                 </p>
                 <p class="gmap-inactive-status">
                     <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
-                    <button class="button btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
+                    <button class="button privacy-gmap btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
                 </p>
             <?php endif; ?>
 
@@ -68,11 +68,11 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
                 <p class="youtube-active-status">
                     <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
-                    <button class="button btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
+                    <button class="button privacy-youtube btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
                 </p>
                 <p class="youtube-inactive-status">
                     <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
-                    <button class="button btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
+                    <button class="button privacy-youtube btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
                 </p>
             <?php endif; ?>
         </div>
