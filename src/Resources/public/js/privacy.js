@@ -250,7 +250,6 @@ function runContaoPrivacy() {
 
     // Toggle youtube
     if ($inputYouTube.length) {
-        console.log('h');
         $inputYouTube.on('change', function() {
             contaoPrivacy.setYouTube($(this).prop('checked'));
         });
