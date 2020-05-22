@@ -47,7 +47,7 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledAnalytics', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputAnalytics = $('input[name="g-analytics"]');
+        var $inputAnalytics = $('input[name="privacy-g-analytics"]');
         $inputAnalytics.prop("checked", bln);
 
         // Show right status message
@@ -61,9 +61,13 @@ var contaoPrivacy = (function() {
     function setGmap(bln) {
         localStorage.setItem('contaoPrivacy.enabledGmap', bln ? '1' : '');
 
-        // Show corresponding block
-        $('.gmap-active-status').css('display', bln ? 'block' : 'none');
-        $('.gmap-inactive-status').css('display', bln ? 'none' : 'block');
+        // Switch checkbox correspondingly
+        var $inputGmaps = $('input[name="privacy-g-maps"]');
+        $inputGmaps.prop("checked", bln);
+
+        // Show right status message
+        $('.g-maps .status-enabled').css('display', bln ? 'block' : 'none');
+        $('.g-maps .status-disabled').css('display', bln ? 'none' : 'block');
 
         if (bln) {
             return showGmap();
@@ -108,9 +112,19 @@ var contaoPrivacy = (function() {
     function setYouTube(bln) {
         localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
 
-        // Show corresponding block
-        $('.youtube-active-status').css('display', bln ? 'block' : 'none');
-        $('.youtube-inactive-status').css('display', bln ? 'none' : 'block');
+        // Switch checkbox correspondingly
+        var $inputYouTube = $('input[name="privacy-youtube"]');
+        $inputYouTube.prop("checked", bln);
+
+        // Show right status message
+        $('.youtube .status-enabled').css('display', bln ? 'block' : 'none');
+        $('.youtube .status-disabled').css('display', bln ? 'none' : 'block');
+
+        // if (bln) {
+        //     return showYouTube();
+        // }
+
+        // hideYouTube();
     }
 
     /**
@@ -154,9 +168,9 @@ function runContaoPrivacy() {
     var $buttonEnableAll =     $('button#enable-all');
     var $buttonOpenPopup =     $('button.open-privacy-settings');
     var $buttonClosePopup =    $('.close-privacy');
-    var $inputAnalytics =      $('input[name="g-analytics"]');
-    var $buttonGmapSwitch =    $('button.button.privacy-gmap');
-    var $buttonYouTubeSwitch = $('button.button.privacy-youtube');
+    var $inputAnalytics =      $('input[name="privacy-g-analytics"]');
+    var $inputGmaps =          $('input[name="privacy-g-maps"]');
+    var $inputYouTube =        $('input[name="privacy-youtube"]');
     var $buttonActivateGmap =  $('button#load-google-map');
 
     // Show privacy bar if not already shown previously
@@ -180,12 +194,12 @@ function runContaoPrivacy() {
     }
 
     // Set gmap initially
-    if ($buttonGmapSwitch.length) {
+    if ($inputGmaps.length) {
         contaoPrivacy.setGmap(!!localStorage.getItem('contaoPrivacy.enabledGmap'));
     }
 
     // Set youtube initially
-    if ($buttonYouTubeSwitch.length) {
+    if ($inputYouTube.length) {
         contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'));
     }
 
@@ -228,16 +242,17 @@ function runContaoPrivacy() {
     }
 
     // Toggle gmap
-    if ($buttonGmapSwitch.length) {
-        $buttonGmapSwitch.on('click', function() {
-            contaoPrivacy.setGmap(!!$(this).hasClass('btn-on'));
+    if ($inputGmaps.length) {
+        $inputGmaps.on('change', function() {
+            contaoPrivacy.setGmap($(this).prop('checked'));
         });
     }
 
     // Toggle youtube
-    if ($buttonYouTubeSwitch.length) {
-        $buttonYouTubeSwitch.on('click', function() {
-            contaoPrivacy.setYouTube(!!$(this).hasClass('btn-on'));
+    if ($inputYouTube.length) {
+        console.log('h');
+        $inputYouTube.on('change', function() {
+            contaoPrivacy.setYouTube($(this).prop('checked'));
         });
     }
 

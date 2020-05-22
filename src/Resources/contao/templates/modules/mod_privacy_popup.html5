@@ -1,8 +1,7 @@
-
-<?php $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static'; ?>
-<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js'; ?>
-
 <?php
+
+$GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static';
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js';
 
 /** @var \Contao\PageModel $objPage */
 global $objPage;
@@ -29,55 +28,68 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         </div>
 
         <div class="right-col">
+            <!-- GOOGLE ANALYTICS -->
             <?php if ($blnShowAnalytics): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
-                <p class=" g-analytics status-line">
-                    <span class="status-base"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIntro'] ?></span>
-                   
+                <p class="g-analytics status-line">
                     <label class="switch">
-                        <input type="checkbox" name="g-analytics" id="g-analytics-control">
+                        <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
                         <span class="switch-btn"></span>
-                        
                     </label>
+
                     <span class="status-disabled">
-                            <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsDeactivated'] ?>
-                        </span>
-                        <span class="status-enabled"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive']  ?></span>
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive'] ?>
+                    </span>
                 </p>
-              
+
             <?php endif; ?>
-                
+
             <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
 
+            <!-- GOOGLE MAPS -->
             <?php if ($this->privacyShowGoogleMaps): ?>
                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
-                <p class="gmap-active-status">
-                    <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
-                    <button class="button privacy-gmap btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
-                </p>
-                <p class="gmap-inactive-status">
-                    <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
-                    <button class="button privacy-gmap btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
+                <p class="g-maps status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
+                    </span>
                 </p>
             <?php endif; ?>
 
+            <!-- YOUTUBE -->
             <?php if ($this->privacyShowYouTube): ?>
                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
-                <p class="youtube-active-status">
-                    <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
-                    <button class="button privacy-youtube btn-off"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['deactivate'] ?></button>
-                </p>
-                <p class="youtube-inactive-status">
-                    <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
-                    <button class="button privacy-youtube btn-on"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['activate'] ?></button>
+                <p class="youtube status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-youtube" id="youtube-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
+                    </span>
                 </p>
             <?php endif; ?>
         </div>
-       
-       
-
     </div>
 </div>
