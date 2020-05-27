@@ -128,6 +128,39 @@ var contaoPrivacy = (function() {
     }
 
     /**
+     * @param bln boolean
+     */
+    function setVimeo(bln) {
+        localStorage.setItem('contaoPrivacy.enabledVimeo', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputVimeo = $('input[name="privacy-vimeo"]');
+        $inputVimeo.prop("checked", bln);
+
+        // Show right status message
+        $('.vimeo .status-enabled').css('display', bln ? 'block' : 'none');
+        $('.vimeo .status-disabled').css('display', bln ? 'none' : 'block');
+
+        if (bln) {
+            return showVimeo();
+        }
+
+        hideVimeo();
+    }
+
+    function showVimeo() {
+        $('.vimeo-video-block').css('display', 'block');
+        $('.privacy-vimeo-question-block').css('display', 'none');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'block');
+    }
+
+    function hideVimeo() {
+        $('.vimeo-video-block').css('display', 'none');
+        $('.privacy-vimeo-question-block').css('display', 'block');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'none');
+    }
+
+    /**
      * Show privacy popup
      */
     function showPopup() {
@@ -153,6 +186,7 @@ var contaoPrivacy = (function() {
         setAnalytics: setAnalytics,
         setGmap: setGmap,
         setYouTube: setYouTube,
+        setVimeo: setVimeo
     };
 })();
 
@@ -171,7 +205,9 @@ function runContaoPrivacy() {
     var $inputAnalytics =      $('input[name="privacy-g-analytics"]');
     var $inputGmaps =          $('input[name="privacy-g-maps"]');
     var $inputYouTube =        $('input[name="privacy-youtube"]');
-    var $buttonActivateGmap =  $('button#load-google-map');
+    var $inputVimeo =          $('input[name="privacy-vimeo"]');
+    var $buttonShowGmap =      $('button#load-google-map');
+    var $buttonShowVimeo =     $('button#load-vimeo');
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {
@@ -201,6 +237,11 @@ function runContaoPrivacy() {
     // Set youtube initially
     if ($inputYouTube.length) {
         contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'));
+    }
+
+    // Set vimeo initially
+    if ($inputVimeo.length) {
+        contaoPrivacy.setVimeo(!!localStorage.getItem('contaoPrivacy.enabledVimeo'));
     }
 
     // Enable all
@@ -255,53 +296,20 @@ function runContaoPrivacy() {
         });
     }
 
-    // Activate gmap
-    $buttonActivateGmap.on('click', function () {
+    // Toggle vimeo
+    if ($inputVimeo.length) {
+        $inputVimeo.on('change', function() {
+            contaoPrivacy.setVimeo($(this).prop('checked'));
+        });
+    }
+
+    // Show gmap
+    $buttonShowGmap.on('click', function () {
         contaoPrivacy.setGmap(true);
     });
-}
 
-// // activate youtube
-// $('.youtube-inactive-status .btn-on, #load-youtube').on('click', function () {
-//     window.condYoutube = true;
-//     localStorage.setItem("condYoutube", window.condYoutube);
-//
-//     $('.ce_youtube_fullscreen').addClass('youtube-active');
-//
-//     checkJQueryForColorbox();
-// });
-//
-// // deactivate youtube
-// $('.youtube-active-status .btn-off').on('click', function () {
-//     window.condGmap = false;
-//     localStorage.setItem("condGmap", window.condGmap);
-// });
-//
-// // Activate Youtube
-// function checkJQueryForColorbox() {
-//     if (window.jQuery && window.jQuery.colorbox) {
-//         // colorbox logic for Youtube Videos based on the ce_youtube_fullscreen template
-//         if ($(".youtube-preview").length) {
-//             $(".youtube-preview").colorbox(cboxOptions);
-//             $('#colorbox').addClass('video-colorbox');
-//         }
-//
-//         // moved from j_colorbox for async JS loading
-//         if ($('a[data-lightbox]').length > 0) {
-//             $('a[data-lightbox]').map(function () {
-//                 $(this).colorbox({
-//                     // Put custom options here
-//                     loop: false,
-//                     rel: $(this).attr('data-lightbox'),
-//                     maxWidth: '95%',
-//                     maxHeight: '95%',
-//                     onComplete: function () {
-//                         $("#colorbox").prepend("<b>Appended text</b>")
-//                     },
-//                 });
-//             });
-//         }
-//     } else {
-//         setTimeout(checkJQueryForColorbox, 250);
-//     }
-// }
+    // Show vimeo
+    $buttonShowVimeo.on('click', function () {
+        contaoPrivacy.setVimeo(true);
+    });
+}

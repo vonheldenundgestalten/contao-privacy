@@ -25,6 +25,16 @@
                 <source>Change your privacy settings</source>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.vimeoLoadQuestion">
+                <source>Do you want to load Vimeo?</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoLoadButton">
+                <source>Yes, please</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoEditPrivacy">
+                <source>Edit privacy settings</source>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.BAR.info">
                 <source>In order to be able to offer you a perfect service on our website, we use cookies to improve functionality. Please check our privacy center to change your desired settings. You can find more detailed information in our</source>
             </trans-unit>
@@ -92,6 +102,16 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTubeIsDeactivated">
                 <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.vimeo">
+                <source>We use a data protection-optimized version of Vimeo, which exchanges less data with Vimeo to embed videos in the website.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.vimeoIsActive">
+                <source>Vimeo is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
+                <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

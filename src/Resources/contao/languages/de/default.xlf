@@ -28,6 +28,19 @@
                 <target>Change your privacy settings</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.vimeoLoadQuestion">
+                <source>Do you want to load Vimeo?</source>
+                <target>Do you want to load Vimeo?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoLoadButton">
+                <source>Yes, please</source>
+                <target>Yes, please</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Edit privacy settings</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.BAR.info">
                 <source>In order to be able to offer you a perfect service on our website, we use cookies to improve functionality. By continuing to browse this site, you consent to the use of cookies. You can find detailed information on this in our</source>
                 <target>Um Ihnen einen einwandfreien Service auf unserer Webseite anbieten zu können, verwenden wir Cookies zur Verbesserung der Funktionalität. Durch das Weitersurfen auf dieser Seite, erklären Sie sich mit der Verwendung von Cookies einverstanden. Detaillierte Informationen hierzu, erhalten Sie in unserer</target>
@@ -110,6 +123,19 @@
             <trans-unit id="PRIVACY.POPUP.youTubeIsDeactivated">
                 <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>YouTube ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.vimeo">
+                <source>We use a data protection-optimized version of Vimeo, which exchanges less data with Vimeo to embed videos in the website.</source>
+                <target>Wir verwenden eine datenschutz-optimierte Version von Vimeo an, die weniger Daten mit Vimeo austauscht um Videos in der Webseite einzubinden.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.vimeoIsActive">
+                <source>Vimeo is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Vimeo ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
+                <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Vimeo ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

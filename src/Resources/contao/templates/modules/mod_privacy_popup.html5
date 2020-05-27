@@ -90,6 +90,25 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
+
+            <!-- VIMEO -->
+            <?php if ($this->privacyShowVimeo): ?>
+                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
+                <p class="vimeo status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-vimeo" id="vimeo-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </div>

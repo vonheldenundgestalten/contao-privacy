@@ -13,6 +13,10 @@
                 <source>Show YouTube</source>
                 <target>Show YouTube</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowVimeo.0">
+                <source>Show Vimeo</source>
+                <target>Show Vimeo</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
