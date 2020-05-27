@@ -2,7 +2,7 @@
 
 <?php $this->block('content'); ?>
 
-<figure class="video_container vimeo_video_container">
+<figure class="video_container">
     <?php if ($this->aspect): ?>
     <div class="responsive ratio-<?= $this->aspect ?> vimeo-video-block" style="display: none;">
     <?php endif; ?>
