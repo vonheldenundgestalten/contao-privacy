@@ -198,7 +198,7 @@ if ($key === null) {
                         }
 
                         <?php if($this->map['useClusterer']): ?>
-                        var gmap<?= $this->map['id']; ?>_markerCluster = new MarkerClusterer(gmap<?= $this->map['id']; ?>, gmap<?= $this->map['id']; ?>_markers, {imagePath: '<?= $this->map[clusterImg]; ?>/m'});
+                        var gmap<?= $this->map['id']; ?>_markerCluster = new MarkerClusterer(gmap<?= $this->map['id']; ?>, gmap<?= $this->map['id']; ?>_markers, {imagePath: '<?= $this->map['clusterImg']; ?>/m'});
                         <?php endif; ?>
 
                         <?php
