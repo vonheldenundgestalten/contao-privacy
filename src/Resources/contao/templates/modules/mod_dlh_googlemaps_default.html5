@@ -163,7 +163,7 @@
                         }
 
                         <?php if($this->map['useClusterer']): ?>
-                        var gmap<?php echo $this->map['id']; ?>_markerCluster = new MarkerClusterer(gmap<?php echo $this->map['id']; ?>, gmap<?php echo $this->map['id']; ?>_markers, {imagePath: '<?php echo $this->map[clusterImg]; ?>/m'});
+                        var gmap<?php echo $this->map['id']; ?>_markerCluster = new MarkerClusterer(gmap<?php echo $this->map['id']; ?>, gmap<?php echo $this->map['id']; ?>_markers, {imagePath: '<?php echo $this->map['clusterImg']; ?>/m'});
                         <?php endif; ?>
 
                         <?php
