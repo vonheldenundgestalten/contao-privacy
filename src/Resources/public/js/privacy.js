@@ -51,8 +51,8 @@ var contaoPrivacy = (function() {
         $inputAnalytics.prop("checked", bln);
 
         // Show right status message
-        $('.g-analytics .status-enabled').css('display', bln ? 'block' : 'none');
-        $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'block');
+        $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 
     /**
@@ -66,8 +66,8 @@ var contaoPrivacy = (function() {
         $inputGmaps.prop("checked", bln);
 
         // Show right status message
-        $('.g-maps .status-enabled').css('display', bln ? 'block' : 'none');
-        $('.g-maps .status-disabled').css('display', bln ? 'none' : 'block');
+        $('.g-maps .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.g-maps .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showGmap();
@@ -117,8 +117,8 @@ var contaoPrivacy = (function() {
         $inputYouTube.prop("checked", bln);
 
         // Show right status message
-        $('.youtube .status-enabled').css('display', bln ? 'block' : 'none');
-        $('.youtube .status-disabled').css('display', bln ? 'none' : 'block');
+        $('.youtube .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.youtube .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         // if (bln) {
         //     return showYouTube();
@@ -138,8 +138,8 @@ var contaoPrivacy = (function() {
         $inputVimeo.prop("checked", bln);
 
         // Show right status message
-        $('.vimeo .status-enabled').css('display', bln ? 'block' : 'none');
-        $('.vimeo .status-disabled').css('display', bln ? 'none' : 'block');
+        $('.vimeo .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.vimeo .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showVimeo();

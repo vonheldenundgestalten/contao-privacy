@@ -3,19 +3,23 @@
         <body>
             <trans-unit id="tl_module.privacyDataProtectionPage.0">
                 <source>Data protection page</source>
-                <target>Data protection page</target>
+                <target>Datenschutz-Seite</target>
             </trans-unit>
             <trans-unit id="tl_module.privacyShowGoogleMaps.0">
                 <source>Show Google Maps</source>
-                <target>Show Google Maps</target>
+                <target>Google Maps anzeigen</target>
             </trans-unit>
             <trans-unit id="tl_module.privacyShowYouTube.0">
                 <source>Show YouTube</source>
-                <target>Show YouTube</target>
+                <target>YouTube anzeigen</target>
             </trans-unit>
             <trans-unit id="tl_module.privacyShowVimeo.0">
                 <source>Show Vimeo</source>
-                <target>Show Vimeo</target>
+                <target>Vimeo anzeigen</target>
+            </trans-unit>
+			<trans-unit id="tl_module.privacy_legend">
+                <source>Privacy settings for the popup</source>
+                <target>Privatsphären-Einstellungen im Popup</target>
             </trans-unit>
         </body>
     </file>
