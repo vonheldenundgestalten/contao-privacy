@@ -3,11 +3,11 @@
         <body>
             <trans-unit id="FMD.privacyBar.0">
                 <source>Privacy bar</source>
-                <target>Datenschutz/Cookie-Leiste</target>
+                <target>Privacy bar</target>
             </trans-unit>
             <trans-unit id="FMD.privacyPopup.0">
                 <source>Privacy popup</source>
-                <target>Privatsphären-Popup</target>
+                <target>Privacy popup</target>
             </trans-unit>
         </body>
     </file>

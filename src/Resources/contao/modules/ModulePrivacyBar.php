@@ -4,7 +4,6 @@ namespace Magmell\Zeag\Privacy\Modules;
 
 use Contao\BackendTemplate;
 use Contao\Module;
-use Contao\PageModel;
 use Patchwork\Utf8;
 
 /**
@@ -40,9 +39,5 @@ class ModulePrivacyBar extends Module
 
     protected function compile()
     {
-		$objPagePrivacy = PageModel::findById($this->privacyDataProtectionPage);
-		$strLink = '<a href="'.$objPagePrivacy->getFrontendUrl().'">'.$GLOBALS['TL_LANG']['PRIVACY']['BAR']['dataProtection'].'</a>';
-		
-		$this->Template->content = sprintf($GLOBALS['TL_LANG']['PRIVACY']['BAR']['info'], $strLink);
     }
 }

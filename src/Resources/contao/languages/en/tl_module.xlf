@@ -13,9 +13,6 @@
             <trans-unit id="tl_module.privacyShowVimeo.0">
                 <source>Show Vimeo</source>
             </trans-unit>
-			<trans-unit id="tl_module.privacy_legend">
-                <source>Privacy settings for the popup</source>
-            </trans-unit>
         </body>
     </file>
 </xliff>

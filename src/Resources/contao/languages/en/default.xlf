@@ -13,10 +13,10 @@
             </trans-unit>
 
             <trans-unit id="PRIVACY.googleMapsLoadQuestion">
-                <source>This map element uses Google Maps. If you load it Google is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <source>Do you want to load Google maps?</source>
             </trans-unit>
             <trans-unit id="PRIVACY.googleMapsLoadQuestionYes">
-                <source>Activate Google Maps</source>
+                <source>Yes, please</source>
             </trans-unit>
             <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
                 <source>Edit privacy settings</source>
@@ -26,27 +26,17 @@
             </trans-unit>
 
             <trans-unit id="PRIVACY.vimeoLoadQuestion">
-                <source>This video element uses playback technology from vimeo.com. When showing and playing the video Vimeo is setting Cookies for usage and statistical analysis. Do you want to load the video?</source>
+                <source>Do you want to load Vimeo?</source>
             </trans-unit>
             <trans-unit id="PRIVACY.vimeoLoadButton">
-                <source>Enable Vimeo</source>
+                <source>Yes, please</source>
             </trans-unit>
             <trans-unit id="PRIVACY.vimeoEditPrivacy">
                 <source>Edit privacy settings</source>
             </trans-unit>
-			
-			<trans-unit id="PRIVACY.youtubeLoadQuestion">
-                <source>This video element uses playback technology from YouTube. We're using a data protection optimized version of YouTube, where a minimum of usage and statistical data is shared you YouTube. Do you want to load the video?</source>
-            </trans-unit>
-            <trans-unit id="PRIVACY.youtubeLoadButton">
-                <source>Enable YouTube</source>
-            </trans-unit>
-            <trans-unit id="PRIVACY.youtubeEditPrivacy">
-                <source>Edit privacy settings</source>
-            </trans-unit>
 
             <trans-unit id="PRIVACY.BAR.info">
-                <source>In order to be able to offer you a perfect service on our website, we use cookies and third-party tools to improve functionality. You can accept all use, or select specific partners to enable and disabled in the privacy settings. The settings can be changed anytime when visiting the %s.</source>
+                <source>In order to be able to offer you a perfect service on our website, we use cookies to improve functionality. Please check our privacy center to change your desired settings. You can find more detailed information in our</source>
             </trans-unit>
             <trans-unit id="PRIVACY.BAR.dataProtection">
                 <source>privacy policy</source>
@@ -61,9 +51,7 @@
             <trans-unit id="PRIVACY.POPUP.privacySettings">
                 <source>Privacy settings</source>
             </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
-                <source>Analysis Tools and Advertising</source>
-            </trans-unit>
+
             <trans-unit id="PRIVACY.POPUP.moreInfo">
                 <source>More information can be found in the</source>
             </trans-unit>
@@ -71,17 +59,25 @@
                 <source>privacy policy</source>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.POPUP.privacySettings">
+                <source>Privacy Center</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
+                <source>Analysis Tools and Advertising</source>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.POPUP.analytics">
-                <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Google Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
+                <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. Google Analytics is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
             </trans-unit>
              <trans-unit id="PRIVACY.POPUP.analyticsIntro">
                 <source>Google Analytics is currently</source>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.analyticsIsActive">
-                <source>Google Analytics is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <source>active</source>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
-                <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <source>deactivated</source>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
@@ -89,7 +85,7 @@
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.maps">
-                <source>We use the map service &lt;strong&gt;Google Maps&lt;/strong&gt; to show you location information clearly presented.</source>
+                <source>We use the map service Google Maps to show you location information clearly presented.</source>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.mapsIsActive">
                 <source>Google Maps is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
@@ -99,7 +95,7 @@
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.youTube">
-                <source>We use a data protection-optimized version of &lt;strong&gt;YouTube&lt;/strong&gt;, which exchanges less data with YouTube to embed videos in the website.</source>
+                <source>We use a data protection-optimized version of YouTube, which exchanges less data with YouTube to embed videos in the website.</source>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTubeIsActive">
                 <source>YouTube is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
@@ -109,7 +105,7 @@
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.vimeo">
-                <source>We use &lt;strong&gt;Vimeo&lt;/strong&gt; to include video data and playback technology. Vimeo collects usage data for statistical analysis and optimization of their services.</source>
+                <source>We use a data protection-optimized version of Vimeo, which exchanges less data with Vimeo to embed videos in the website.</source>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeoIsActive">
                 <source>Vimeo is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
