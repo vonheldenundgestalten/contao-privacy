@@ -145,7 +145,6 @@ $brand-1: #01BABC;
     display: none;
     height: 100vh;
 	.innerbox {
-		width: 80%;
 		max-width: 55em;
         left: 50%;
         top: 50%;
@@ -154,7 +153,6 @@ $brand-1: #01BABC;
         display: inline-block;
         padding: 1.5em 2em 2em;
         background: #fff;
-        max-width: 50em;
     }
     .left-col {
         width: 32%;
@@ -211,6 +209,13 @@ $brand-1: #01BABC;
             background-color: $dark-grey;
         }
     }
+	.status-line {
+		margin-bottom: 1em;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
 	.switch {
 		position: relative;
 		display: inline-block;
@@ -260,9 +265,6 @@ $brand-1: #01BABC;
 			transform: translateX(1.7em);		   
 		}
 	}
-	.status-disabled, .status-enabled {
-		margin-bottom: 1.5em;
-	}
     .status-enabled {
         display: none;
         color: $green;
@@ -299,7 +301,7 @@ $brand-1: #01BABC;
     }
     @media all and (max-width: 880px){
         padding: 1em;
-        p {
+		p {
             font-size: 16px;
         }
         .left-col,
@@ -318,6 +320,10 @@ $brand-1: #01BABC;
         .innerbox {
             padding: 1em;
         }
+		.close-privacy {
+			top: .75em;
+			right: .75em;
+		}
         p {
             font-size: 16px;
         }

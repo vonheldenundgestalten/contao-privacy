@@ -33,7 +33,7 @@
 
             <trans-unit id="PRIVACY.vimeoLoadQuestion">
                 <source>This video element uses playback technology from vimeo.com. When showing and playing the video Vimeo is setting Cookies for usage and statistical analysis. Do you want to load the video?</source>
-                <target>Dieses Video-Element nutzt Videodaten und Playback-Technologie von vimeo.com. Sobald das Video angezeigt wird werden Nutzungs- und Statistikdaten an Vimeo übertragen. Video anzeigen?</target>
+                <target>Dieses Video-Element verwendt Vimeo um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste. Video anzeigen?</target>
             </trans-unit>
             <trans-unit id="PRIVACY.vimeoLoadButton">
                 <source>Enable Vimeo</source>
@@ -46,7 +46,7 @@
 
             <trans-unit id="PRIVACY.youtubeLoadQuestion">
                 <source>This video element uses playback technology from YouTube. We're using a data protection optimized version of YouTube, where a minimum of usage and statistical data is shared you YouTube. Do you want to load the video?</source>
-                <target>Dieses Video-Element nutzt Videodaten und Playback-Technologie von YouTube. Wir verwenden eine Datenschutz-optimierte Version von YouTube, bei der ein Minimum an Nutzungs- und Statistikdaten an YouTube übertragen wird. Video anzeigen?</target>
+                <target>Dieses Video-Element nutzt Videodaten und Playback-Technologie von YouTube. Wir verwenden eine Datenschutz-optimierte Version von YouTube, bei der weniger Nutzungs- und Statistikdaten an YouTube übertragen werden. Video anzeigen?</target>
             </trans-unit>
             <trans-unit id="PRIVACY.youtubeLoadButton">
                 <source>Enable YouTube</source>
@@ -128,7 +128,7 @@
 
             <trans-unit id="PRIVACY.POPUP.youTube">
                 <source>We use a data protection-optimized version of &lt;strong&gt;YouTube&lt;/strong&gt;, which exchanges less data with YouTube to embed videos in the website.</source>
-                <target>Wir verwenden eine datenschutz-optimierte Version von &lt;strong&gt;Youtube&lt;/strong&gt; an, die weniger Daten mit YouTube austauscht um Videos in der Webseite einzubinden.</target>
+                <target>Wir verwenden eine datenschutz-optimierte Version von &lt;strong&gt;Youtube&lt;/strong&gt;, die weniger Daten mit YouTube austauscht um Videos in der Webseite einzubinden.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTubeIsActive">
                 <source>YouTube is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
