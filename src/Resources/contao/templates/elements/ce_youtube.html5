@@ -1,0 +1,51 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<figure class="video_container">
+    <div class="youtube-video-block" style="display: none;">
+        <?php if ($this->aspect): ?>
+        <div class="responsive ratio-<?= $this->aspect ?>">
+            <?php endif; ?>
+
+            <?php if ($this->splashImage): ?>
+                <a id="splashImage_<?= $this->id ?>" href="<?= $this->src ?>">
+                    <?php $this->insert('picture_default', $this->splashImage->picture); ?>
+                </a>
+                <script>
+                    document.getElementById('splashImage_<?= $this->id ?>').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var iframe = document.createElement('iframe');
+                        iframe.src = this.href;
+                        iframe.width = '<?= $this->width ?>';
+                        iframe.height = '<?= $this->height ?>';
+                        iframe.setAttribute('allowfullscreen', '');
+                        this.parentNode.replaceChild(iframe, this);
+                    });
+                </script>
+
+            <?php else: ?>
+                <iframe<?= $this->size ?> src="<?= $this->src ?>" allowfullscreen></iframe>
+            <?php endif; ?>
+
+            <?php if ($this->aspect): ?>
+        </div>
+    <?php endif; ?>
+    </div>
+
+    <?php if ($this->caption): ?>
+        <figcaption class="caption"><?= $this->caption ?></figcaption>
+    <?php endif; ?>
+
+    <!-- Privacy -->
+    <div class="privacy-youtube-question-block ratio-<?= $this->aspect ?>">
+        <p><?= $GLOBALS['TL_LANG']['PRIVACY']['youtubeLoadQuestion'] ?></p>
+
+        <button id="load-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['youtubeLoadButton'] ?></button>
+        <button class="open-privacy-settings"><?= $GLOBALS['TL_LANG']['PRIVACY']['youtubeEditPrivacy'] ?></button>
+    </div>
+
+    <button class="open-privacy-btn open-privacy-settings" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
+</figure>
+
+<?php $this->endblock(); ?>

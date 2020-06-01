@@ -120,11 +120,11 @@ var contaoPrivacy = (function() {
         $('.youtube .status-enabled').css('display', bln ? 'inline-block' : 'none');
         $('.youtube .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
-        // if (bln) {
-        //     return showYouTube();
-        // }
+        if (bln) {
+            return showYouTube();
+        }
 
-        // hideYouTube();
+        hideYouTube();
     }
 
     /**
@@ -157,6 +157,18 @@ var contaoPrivacy = (function() {
     function hideVimeo() {
         $('.vimeo-video-block').css('display', 'none');
         $('.privacy-vimeo-question-block').css('display', 'block');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'none');
+    }
+
+    function showYouTube() {
+        $('.youtube-video-block').css('display', 'block');
+        $('.privacy-youtube-question-block').css('display', 'none');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'block');
+    }
+
+    function hideYouTube() {
+        $('.youtube-video-block').css('display', 'none');
+        $('.privacy-youtube-question-block').css('display', 'block');
         $('.open-privacy-btn.open-privacy-settings').css('display', 'none');
     }
 
@@ -208,6 +220,7 @@ function runContaoPrivacy() {
     var $inputVimeo =          $('input[name="privacy-vimeo"]');
     var $buttonShowGmap =      $('button#load-google-map');
     var $buttonShowVimeo =     $('button#load-vimeo');
+    var $buttonShowYouTube =     $('button#load-youtube');
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {
@@ -311,5 +324,10 @@ function runContaoPrivacy() {
     // Show vimeo
     $buttonShowVimeo.on('click', function () {
         contaoPrivacy.setVimeo(true);
+    });
+
+    // Show youtube
+    $buttonShowYouTube.on('click', function () {
+        contaoPrivacy.setYouTube(true);
     });
 }
