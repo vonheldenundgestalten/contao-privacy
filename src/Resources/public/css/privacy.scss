@@ -71,6 +71,7 @@ $brand-1: #01BABC;
 		}
 		outline: none;
         display: inline-block;
+        align-self: center;
         border: 1px solid $brand-1;
         color: $brand-1;
         font-size: 1rem;
@@ -317,7 +318,6 @@ $brand-1: #01BABC;
         }        
     }
     @media all and (max-width: 480px){
-        overflow-y:auto;
         .innerbox {
             padding: 1em;
         }
@@ -368,13 +368,21 @@ $brand-1: #01BABC;
     }
 }
 
-// Vimeo privacy
-.privacy-vimeo-question-block {
+.dlh_googlemap {
+    background: $light-grey-background;
+    width: 100%;
+    padding-bottom: 66.6667%;
+}
+
+// Video privacy
+.privacy-vimeo-question-block,
+.privacy-youtube-question-block {
 	text-align: center;
 	background: $light-grey-background;
 	position: relative;
 
-	.vimeo-question-block {
+	.vimeo-question-block,
+    .youtube-question-block {
 		text-align: center;
 		position: absolute;
 		top: 50%;
@@ -388,6 +396,7 @@ $brand-1: #01BABC;
 
 
 .vimeo-question-block,
+.youtube-question-block,
 .map-question-block {
     button {
         border: none;
@@ -397,6 +406,20 @@ $brand-1: #01BABC;
         padding: 10px 20px;
         cursor: pointer;
         margin: 0 5px 10px;
+    }
+}
+
+.youtube-video-block, 
+.vimeo-video-block {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // default ratio 16:9, if you want other ratio change padding-bottom
+    iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 
