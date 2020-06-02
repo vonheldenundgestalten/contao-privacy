@@ -19,7 +19,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
 ?>
 
 <div id="privacy-settings">
-    <div class="privacy-settings innerbox">
+    <div class="innerbox">
         <span class="icomoon-close-icon close-privacy"><svg xmlns="http://www.w3.org/2000/svg" class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M451.669333 512L55.108267 908.544a42.7776 42.7776 0 0 0 0 60.330667 42.7776 42.7776 0 0 0 60.330666 0L512 572.356267l396.544 396.561066c16.597333 16.597333 43.776 16.597333 60.330667 0 16.597333-16.597333 16.597333-43.776 0-60.373333L572.347733 512l396.561067-396.544c16.597333-16.597333 16.597333-43.776 0-60.330667-16.597333-16.597333-43.776-16.597333-60.373333 0L512 451.6608 115.456 55.125333a42.7776 42.7776 0 0 0-60.330667 0 42.7776 42.7776 0 0 0 0 60.330667L451.669333 512z"/></svg></span>
         <h3><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['privacySettings'] ?></h3>
 
@@ -32,6 +32,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
             <?php if ($blnShowAnalytics): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
+
                 <p class="g-analytics status-line">
                     <label class="switch">
                         <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
@@ -51,44 +52,6 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
 
             <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
-            <?php endif; ?>
-
-            <!-- GOOGLE MAPS -->
-            <?php if ($this->privacyShowGoogleMaps): ?>
-                <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
-                <p class="g-maps status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
-                        <span class="switch-btn"></span>
-                    </label>
-
-                    <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
-                    </span>
-
-                    <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
-                    </span>
-                </p>
-            <?php endif; ?>
-
-            <!-- YOUTUBE -->
-            <?php if ($this->privacyShowYouTube): ?>
-                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
-                <p class="youtube status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-youtube" id="youtube-control">
-                        <span class="switch-btn"></span>
-                    </label>
-
-                    <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
-                    </span>
-
-                    <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
-                    </span>
-                </p>
             <?php endif; ?>
 
             <!-- VIMEO -->

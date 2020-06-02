@@ -269,6 +269,14 @@ function runContaoPrivacy() {
         contaoPrivacy.showPopup();
         contaoPrivacy.setBarUsed();
         contaoPrivacy.closeBar();
+        var innerbox = $("#privacy-settings > .innerbox")
+        var innerboxHeight = innerbox.height()
+        var screensize = $(window).height();
+        
+        if (innerboxHeight > screensize ) {
+            innerbox.css({top: 0, left: 0, transform: 'translate(0)'});
+        }
+
     });
 
     // Close privacy popup

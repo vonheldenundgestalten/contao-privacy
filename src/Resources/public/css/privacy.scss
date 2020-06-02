@@ -317,6 +317,7 @@ $brand-1: #01BABC;
         }        
     }
     @media all and (max-width: 480px){
+        overflow-y:auto;
         .innerbox {
             padding: 1em;
         }
