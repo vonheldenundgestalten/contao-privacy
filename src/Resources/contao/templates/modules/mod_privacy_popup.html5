@@ -53,6 +53,44 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
             <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
+            
+            <!-- GOOGLE MAPS -->
+            <?php if ($this->privacyShowGoogleMaps): ?>
+                <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
+                <p class="g-maps status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
+
+            <!-- YOUTUBE -->
+            <?php if ($this->privacyShowYouTube): ?>
+                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
+                <p class="youtube status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-youtube" id="youtube-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
 
             <!-- VIMEO -->
             <?php if ($this->privacyShowVimeo): ?>
