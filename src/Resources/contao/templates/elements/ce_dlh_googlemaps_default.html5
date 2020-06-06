@@ -2,6 +2,10 @@
 
 global $objPage;
 
+// var_dump($GLOBALS['TL_JAVASCRIPT']);
+
+// remove google maps, which got added in module "ContentMap.php" of the googlemaps bundle
+
 // create a new array to work with
 $arrJSFiles = array();
 
@@ -9,6 +13,7 @@ foreach ($GLOBALS['TL_JAVASCRIPT'] as $jsincludes) {
     if (strpos($jsincludes, 'maps.google.com/maps/api/js') === false) {
         $arrJSFiles[] = $jsincludes;
     }
+    // var_dump($jsincludes);
 }
 
 $GLOBALS['TL_JAVASCRIPT'] = $arrJSFiles;
@@ -20,6 +25,10 @@ if (($objRootPage = \PageModel::findByPk($objPage->rootId)) !== null) {
 if ($key === null) {
     $key = \Config::get('dlh_googlemaps_apikey');
 }
+
+
+// var_dump($GLOBALS['TL_JAVASCRIPT']);
+
 
 ?>
 
@@ -226,5 +235,5 @@ if ($key === null) {
 </div>
 </div>
 
-<button class="open-privacy-btn open-privacy-settings" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
+<button class="open-privacy-btn open-privacy-settings "><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
 <!-- indexer::continue -->

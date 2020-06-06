@@ -151,25 +151,25 @@ var contaoPrivacy = (function() {
     function showVimeo() {
         $('.vimeo-video-block').css('display', 'block');
         $('.privacy-vimeo-question-block').css('display', 'none');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'block');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'block');
     }
 
     function hideVimeo() {
         $('.vimeo-video-block').css('display', 'none');
         $('.privacy-vimeo-question-block').css('display', 'block');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'none');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'none');
     }
 
     function showYouTube() {
         $('.youtube-video-block').css('display', 'block');
         $('.privacy-youtube-question-block').css('display', 'none');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'block');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'block');
     }
 
     function hideYouTube() {
         $('.youtube-video-block').css('display', 'none');
         $('.privacy-youtube-question-block').css('display', 'block');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'none');
+        $('.open-privacy-btn.open-privacy-settings').css('display', 'none');
     }
 
     /**
