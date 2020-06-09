@@ -3,7 +3,7 @@
 /**
  * To use this script, please fill in your Google Analytics ID below
  */
-$GoogleAnalyticsId = 'UA-49108650-32';
+$GoogleAnalyticsId = 'UA-XXXXX-X';
 
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
@@ -32,9 +32,7 @@ if ($GoogleAnalyticsId != 'UA-XXXXX-X' && !BE_USER_LOGGED_IN && sha1(session_id(
                     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
                     ga('create', '<?= $GoogleAnalyticsId ?>', 'auto');
-                    <?php if (Config::get('privacyAnonymizeGA')): ?>
                     ga('set', 'anonymizeIp', true);
-                    <?php endif; ?>
                     ga('send', 'pageview');
                 }, 1000);
             }
