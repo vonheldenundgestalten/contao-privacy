@@ -227,15 +227,26 @@ function runContaoPrivacy() {
         contaoPrivacy.showBar();
     }
 
-    // Make additional space for privacy bar so it does not overlap with content at the end of the page
-    if ($('.privacy-bar').css('display') === 'block') {
-        $(window).scroll(function () {
-            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                $(window).unbind('scroll');
-                $('#footer').addClass('addSpace');
-            }
-        });
-    }
+    // Privacy bar position relative when the page is scrolled to the bottom
+    var scrolling = false;
+
+    $( window ).scroll( function() {
+      scrolling = true;
+    });
+
+    setInterval( function() {
+      if ( scrolling ) {
+        scrolling = false;
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+            $(".privacy-bar").css({"position": "relative", "border-top": "1px solid #fff"});
+
+        } 
+        else {
+            $(".privacy-bar").css({"position": "fixed", "border-top": "0"});
+        }
+      }
+    }, 250);
+
 
     // Set analytics initially
     if ($inputAnalytics.length) {

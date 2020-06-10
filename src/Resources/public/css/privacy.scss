@@ -12,12 +12,6 @@ $brand-1: #01BABC;
 // Privacy bottom bar
 #footer {
 	transition: padding-bottom 0.3s ease-in-out;
-    &.addSpace {
-        padding-bottom: 4em;
-        .privacy-bar {
-            border-top: 1px solid #fff;
-        }
-    }
 }
 
 // Privacy bottom bar
