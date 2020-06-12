@@ -302,7 +302,7 @@ function runContaoPrivacy() {
             return;
         }
 
-        if (!$(e.target).closest('.privacy-settings.innerbox').length) {
+        if (!$(e.target).closest('#privacy-settings .innerbox').length) {
             contaoPrivacy.closePopup();
         }
     });
