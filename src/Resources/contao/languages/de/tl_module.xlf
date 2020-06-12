@@ -17,6 +17,10 @@
                 <source>Show Vimeo</source>
                 <target>Vimeo anzeigen</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowLeadLab.0">
+                <source>Show LeadLab</source>
+                <target>LeadLab anzeigen</target>
+            </trans-unit>
 			<trans-unit id="tl_module.privacy_legend">
                 <source>Privacy settings for the popup</source>
                 <target>Privatsphären-Einstellungen im Popup</target>
