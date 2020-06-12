@@ -238,11 +238,11 @@ function runContaoPrivacy() {
       if ( scrolling ) {
         scrolling = false;
         if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-            $(".privacy-bar").css({"position": "relative", "border-top": "1px solid #fff"});
-
+            $(".privacy-bar").addClass('not-fixed');
         } 
         else {
-            $(".privacy-bar").css({"position": "fixed", "border-top": "0"});
+            $(".privacy-bar").removeClass('not-fixed');
+
         }
       }
     }, 250);
@@ -302,7 +302,7 @@ function runContaoPrivacy() {
             return;
         }
 
-        if (!$(e.target).closest('.privacy-settings.innerbox').length) {
+        if (!$(e.target).closest('#privacy-settings .innerbox').length) {
             contaoPrivacy.closePopup();
         }
     });
