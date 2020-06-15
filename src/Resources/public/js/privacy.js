@@ -344,6 +344,10 @@ function runContaoPrivacy() {
         if ($(e.target).hasClass('open-privacy-settings')) {
             return;
         }
+        
+        if ($(e.target).closest('.close-privacy').length) {
+            return contaoPrivacy.closePopup();
+        }
 
         if (!$(e.target).closest('#privacy-settings .innerbox').length) {
             contaoPrivacy.closePopup();
