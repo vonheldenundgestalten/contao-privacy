@@ -17,6 +17,10 @@
                 <source>Show Vimeo</source>
                 <target>Vimeo anzeigen</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowOpenStreetMap.0">
+                <source>Show Open Street Map</source>
+                <target>Open Street Map anzeigen</target>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowLeadLab.0">
                 <source>Show LeadLab</source>
                 <target>LeadLab anzeigen</target>

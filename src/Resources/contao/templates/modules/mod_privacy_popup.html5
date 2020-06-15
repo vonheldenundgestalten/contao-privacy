@@ -110,6 +110,25 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
+
+            <!-- OPEN STREET MAP -->
+            <?php if ($this->privacyShowOpenStreetMap): ?>
+                <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
+                <p class="open-street-map status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-open-street-map" id="open-street-map-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </div>

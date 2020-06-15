@@ -21,6 +21,17 @@
             <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
                 <source>Edit privacy settings</source>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
+                <source>This map element uses Open Street Map. If you load it Open Street Map is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionYes">
+                <source>Activate Open Street Map</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
             </trans-unit>
@@ -116,6 +127,16 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
                 <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.openStreetMap">
+                <source>We use the map service &lt;strong&gt;Open Street Map&lt;/strong&gt; to show you location information clearly presented.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsActive">
+                <source>Open Street Map is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
+                <source>Open Street Map is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

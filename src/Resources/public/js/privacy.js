@@ -38,6 +38,8 @@ var contaoPrivacy = (function() {
         setAnalytics(true);
         setGmap(true);
         setYouTube(true);
+        setVimeo(true);
+        setOpenStreetMap(true);
     }
 
     /**
@@ -148,6 +150,27 @@ var contaoPrivacy = (function() {
         hideVimeo();
     }
 
+    /**
+     * @param bln boolean
+     */
+    function setOpenStreetMap(bln) {
+        localStorage.setItem('contaoPrivacy.enabledOpenStreetMap', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputOpenStreetMap = $('input[name="privacy-open-street-map"]');
+        $inputOpenStreetMap.prop("checked", bln);
+
+        // Show right status message
+        $('.open-street-map .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.open-street-map .status-disabled').css('display', bln ? 'none' : 'inline-block');
+
+        if (bln) {
+            return showOpenStreetMap();
+        }
+
+        hideOpenStreetMap();
+    }
+
     function showVimeo() {
         $('.vimeo-video-block').css('display', 'block');
         $('.privacy-vimeo-question-block').css('display', 'none');
@@ -170,6 +193,18 @@ var contaoPrivacy = (function() {
         $('.youtube-video-block').css('display', 'none');
         $('.privacy-youtube-question-block').css('display', 'block');
         $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'none');
+    }
+
+    function showOpenStreetMap() {
+        $('.open-street-map-block').css('display', 'block');
+        $('.privacy-open-street-map-question-block').css('display', 'none');
+        $('.privacy-open-street-map-question-block + .open-privacy-btn').css('display', 'block');
+    }
+
+    function hideOpenStreetMap() {
+        $('.open-street-map-block').css('display', 'none');
+        $('.privacy-open-street-map-question-block').css('display', 'block');
+        $('.privacy-open-street-map-question-block + .open-privacy-btn').css('display', 'none');
     }
 
     /**
@@ -198,7 +233,8 @@ var contaoPrivacy = (function() {
         setAnalytics: setAnalytics,
         setGmap: setGmap,
         setYouTube: setYouTube,
-        setVimeo: setVimeo
+        setVimeo: setVimeo,
+        setOpenStreetMap: setOpenStreetMap
     };
 })();
 
@@ -211,16 +247,18 @@ function runContaoPrivacy() {
         return setTimeout(runContaoPrivacy, 250);
     }
 
-    var $buttonEnableAll =     $('button#enable-all');
-    var $buttonOpenPopup =     $('button.open-privacy-settings');
-    var $buttonClosePopup =    $('.close-privacy');
-    var $inputAnalytics =      $('input[name="privacy-g-analytics"]');
-    var $inputGmaps =          $('input[name="privacy-g-maps"]');
-    var $inputYouTube =        $('input[name="privacy-youtube"]');
-    var $inputVimeo =          $('input[name="privacy-vimeo"]');
-    var $buttonShowGmap =      $('button#load-google-map');
-    var $buttonShowVimeo =     $('button#load-vimeo');
-    var $buttonShowYouTube =     $('button#load-youtube');
+    var $buttonEnableAll =         $('button#enable-all');
+    var $buttonOpenPopup =         $('button.open-privacy-settings');
+    var $buttonClosePopup =        $('.close-privacy');
+    var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
+    var $inputGmaps =              $('input[name="privacy-g-maps"]');
+    var $inputYouTube =            $('input[name="privacy-youtube"]');
+    var $inputVimeo =              $('input[name="privacy-vimeo"]');
+    var $inputOpenStreetMap =      $('input[name="privacy-open-street-map"]');
+    var $buttonShowGmap =          $('button#load-google-map');
+    var $buttonShowVimeo =         $('button#load-vimeo');
+    var $buttonShowYouTube =       $('button#load-youtube');
+    var $buttonShowOpenStreetMap = $('button#load-open-street-map');
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {
@@ -266,6 +304,11 @@ function runContaoPrivacy() {
     // Set vimeo initially
     if ($inputVimeo.length) {
         contaoPrivacy.setVimeo(!!localStorage.getItem('contaoPrivacy.enabledVimeo'));
+    }
+
+    // Set open street map initially
+    if ($inputOpenStreetMap.length) {
+        contaoPrivacy.setOpenStreetMap(!!localStorage.getItem('contaoPrivacy.enabledOpenStreetMap'));
     }
 
     // Enable all
@@ -335,6 +378,13 @@ function runContaoPrivacy() {
         });
     }
 
+    // Toggle open street map
+    if ($inputOpenStreetMap.length) {
+        $inputOpenStreetMap.on('change', function() {
+            contaoPrivacy.setOpenStreetMap($(this).prop('checked'));
+        });
+    }
+
     // Show gmap
     $buttonShowGmap.on('click', function () {
         contaoPrivacy.setGmap(true);
@@ -348,5 +398,10 @@ function runContaoPrivacy() {
     // Show youtube
     $buttonShowYouTube.on('click', function () {
         contaoPrivacy.setYouTube(true);
+    });
+
+    // Show youtube
+    $buttonShowOpenStreetMap.on('click', function () {
+        contaoPrivacy.setOpenStreetMap(true);
     });
 }

@@ -26,6 +26,20 @@
                 <source>Edit privacy settings</source>
                 <target>Privatsphären-Einstellungen bearbeiten</target>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
+                <source>This map element uses Open Street Map. If you load it Open Street Map is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <target>Diese Karte nutzt Open Street Map Maps. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Open Street Map übertragen. Karte einbinden?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionYes">
+                <source>Activate Open Street Map</source>
+                <target>Open Street Map aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
                 <target>Privatsphären-Einstellungen bearbeiten</target>
@@ -150,6 +164,19 @@
             <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
                 <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Vimeo ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.openStreetMap">
+                <source>We use the map service &lt;strong&gt;Open Street Map&lt;/strong&gt; to show you location information clearly presented.</source>
+                <target>Wir verwenden den Kartendienst &lt;strong&gt;Open Street Map&lt;/strong&gt; um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsActive">
+                <source>Open Street Map is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Open Street Map ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
+                <source>Open Street Map is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Open Street Map ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

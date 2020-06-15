@@ -8,6 +8,7 @@ use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use delahaye\googlemaps\DlhGoogleMapsBundle;
 use Magmell\Contao\Privacy\ContaoPrivacyBundle;
+use Magmell\DHBWVS\Basic\DhbwvsBasicBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -17,7 +18,8 @@ class Plugin implements BundlePluginInterface
             BundleConfig::create(ContaoPrivacyBundle::class)
                 ->setLoadAfter([
                     ContaoCoreBundle::class,
-                    DlhGoogleMapsBundle::class
+                    DlhGoogleMapsBundle::class,
+                    DhbwvsBasicBundle::class
                 ])
         ];
     }
