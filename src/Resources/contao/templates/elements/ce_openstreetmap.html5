@@ -13,8 +13,8 @@
 <div class="privacy-open-street-map-question-block">
     <p><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestion'] ?></p>
     <button id="load-open-street-map"
-            value="show-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionYes'] ?></button>
-    <button class="open-privacy-settings "><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionEditPrivacy'] ?></button>
+            value="show-map" class="btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionYes'] ?></button>
+    <button class="open-privacy-settings btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionEditPrivacy'] ?></button>
 </div>
 
-<button class="open-privacy-btn open-privacy-settings "><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
+<button class="open-privacy-btn open-privacy-settings btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>

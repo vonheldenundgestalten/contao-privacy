@@ -121,19 +121,6 @@ $brand-1: #01BABC;
 	max-width: 1000px;
 	margin: auto;
 	margin-bottom: 1.5em;
-	.open-privacy-settings {
-		outline: none;
-		background: transparent;
-		color: #000;
-		border: 1px solid #000;
-		padding: .6em 1.2em;
-		cursor: pointer;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			background: $light-grey-background;
-			border-color: $dark-grey;
-		}
-	}
 }
 
 // Privacy popup
@@ -381,7 +368,13 @@ $brand-1: #01BABC;
 		position: absolute;
 		top: 50%;
 		left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
 	}
 	p {
 		margin-bottom: 1em;
@@ -445,17 +438,24 @@ $brand-1: #01BABC;
 .ce_vimeo,
 .ce_youtube {
 	.open-privacy-settings {
-		outline: none;
-		background: transparent;
-		color: #000;
-		border: 1px solid #000;
-		padding: .6em 1.2em;
-		margin-top: 3px;
-		cursor: pointer;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			background: $light-grey-background;
-			border-color: $dark-grey;
-		}
+		
 	}
+}
+
+
+// Default button style for non-specific/non-high-important-action buttons
+.ce_privacyPopOpener button,
+.btn-privacy {
+    outline: none;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: .6em 1.2em;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background: $light-grey-background;
+        border-color: $dark-grey;
+    }
 }
