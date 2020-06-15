@@ -13,9 +13,7 @@ var contaoPrivacy = (function() {
      * Show privacy bar
      */
     function showBar() {
-        setTimeout(function () {
-            $('.privacy-bar').fadeIn();
-        }, 250);
+        $('.privacy-bar').fadeIn();
     }
 
     /**
@@ -244,7 +242,7 @@ var contaoPrivacy = (function() {
 setTimeout(runContaoPrivacy, 250);
 
 function runContaoPrivacy() {
-    if (!window.jQuery) {
+    if (!window.jQuery || !$('.privacy-bar').length || !$('#privacy-settings').length) {
         // jQuery still not loaded
         return setTimeout(runContaoPrivacy, 250);
     }
@@ -270,23 +268,21 @@ function runContaoPrivacy() {
     // Privacy bar position relative when the page is scrolled to the bottom
     var scrolling = false;
 
-    $( window ).scroll( function() {
-      scrolling = true;
+    $(window).on('scroll', function() {
+        scrolling = true;
     });
 
-    setInterval( function() {
-      if ( scrolling ) {
-        scrolling = false;
-        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-            $(".privacy-bar").addClass('not-fixed');
-        } 
-        else {
-            $(".privacy-bar").removeClass('not-fixed');
+    setInterval(function() {
+        if (scrolling) {
+            scrolling = false;
+            if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                $(".privacy-bar").addClass('not-fixed');
 
+            } else {
+                $(".privacy-bar").removeClass('not-fixed');
+            }
         }
-      }
     }, 250);
-
 
     // Set analytics initially
     if ($inputAnalytics.length) {
