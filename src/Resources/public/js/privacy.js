@@ -13,7 +13,9 @@ var contaoPrivacy = (function() {
      * Show privacy bar
      */
     function showBar() {
-        $('.privacy-bar').fadeIn();
+        setTimeout(function () {
+            $('.privacy-bar').fadeIn();
+        }, 250);
     }
 
     /**
