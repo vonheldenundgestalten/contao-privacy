@@ -32,6 +32,16 @@
                 <source>Edit privacy settings</source>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.leadlabLoadQuestion">
+                <source>TO BE CHANGED</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.leadlabLoadQuestionYes">
+                <source>Activate LeadLab</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.leadlabLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
             </trans-unit>
@@ -137,6 +147,16 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
                 <source>Open Street Map is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.leadlab">
+                <source>TO BE CHANGED</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsActive">
+                <source>LeadLab is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsDeactivated">
+                <source>LeadLab is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

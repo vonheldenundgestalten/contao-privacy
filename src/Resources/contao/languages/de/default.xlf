@@ -40,6 +40,19 @@
                 <target>Privatsphären-Einstellungen bearbeiten</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.leadlabLoadQuestion">
+                <source>TO BE CHANGED</source>
+                <target>TO BE CHANGED</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.leadlabLoadQuestionYes">
+                <source>Activate LeadLab</source>
+                <target>LeadLab aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.leadlabLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
                 <target>Privatsphären-Einstellungen bearbeiten</target>
@@ -177,6 +190,19 @@
             <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
                 <source>Open Street Map is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Open Street Map ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.leadlab">
+                <source>TO BE CHANGED</source>
+                <target>TO BE CHANGED</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsActive">
+                <source>LeadLab is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>LeadLab ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsDeactivated">
+                <source>LeadLab is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>LeadLab ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

@@ -21,7 +21,7 @@
                 <source>Show Open Street Map</source>
                 <target>Open Street Map anzeigen</target>
             </trans-unit>
-            <trans-unit id="tl_module.privacyShowLeadLab.0">
+            <trans-unit id="tl_module.privacyShowLeadlab.0">
                 <source>Show LeadLab</source>
                 <target>LeadLab anzeigen</target>
             </trans-unit>

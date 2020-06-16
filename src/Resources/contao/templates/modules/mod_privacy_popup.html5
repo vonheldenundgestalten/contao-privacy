@@ -129,6 +129,25 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
+
+            <!-- LEADLAB -->
+            <?php if ($this->privacyShowLeadLab): ?>
+                <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
+                <p class="leadlab status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </div>

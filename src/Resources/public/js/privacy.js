@@ -36,6 +36,7 @@ var contaoPrivacy = (function() {
      */
     function enableAll() {
         setAnalytics(true);
+        setLeadLab(true);
         setGmap(true);
         setYouTube(true);
         setVimeo(true);
@@ -55,6 +56,21 @@ var contaoPrivacy = (function() {
         // Show right status message
         $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
         $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+    }
+
+    /**
+     * @param bln boolean
+     */
+    function setLeadLab(bln) {
+        localStorage.setItem('contaoPrivacy.enabledLeadlab', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputLeadLab = $('input[name="privacy-leadlab"]');
+        $inputLeadLab.prop("checked", bln);
+
+        // Show right status message
+        $('.leadlab .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.leadlab .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 
     /**
@@ -231,6 +247,7 @@ var contaoPrivacy = (function() {
         showPopup: showPopup,
         closePopup: closePopup,
         setAnalytics: setAnalytics,
+        setLeadLab: setLeadLab,
         setGmap: setGmap,
         setYouTube: setYouTube,
         setVimeo: setVimeo,
@@ -251,6 +268,7 @@ function runContaoPrivacy() {
     var $buttonOpenPopup =         $('button.open-privacy-settings');
     var $buttonClosePopup =        $('.close-privacy');
     var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
+    var $inputLeadLab =            $('input[name="privacy-leadlab"]');
     var $inputGmaps =              $('input[name="privacy-g-maps"]');
     var $inputYouTube =            $('input[name="privacy-youtube"]');
     var $inputVimeo =              $('input[name="privacy-vimeo"]');
@@ -287,6 +305,11 @@ function runContaoPrivacy() {
     // Set analytics initially
     if ($inputAnalytics.length) {
         contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'));
+    }
+
+    // Set leadlab initially
+    if ($inputLeadLab.length) {
+        contaoPrivacy.setLeadLab(!!localStorage.getItem('contaoPrivacy.enabledLeadlab'));
     }
 
     // Set gmap initially
@@ -356,6 +379,13 @@ function runContaoPrivacy() {
     if ($inputAnalytics.length) {
         $inputAnalytics.on('change', function() {
             contaoPrivacy.setAnalytics($(this).prop('checked'));
+        });
+    }
+
+    // Toggle analytics
+    if ($inputLeadLab.length) {
+        $inputLeadLab.on('change', function() {
+            contaoPrivacy.setLeadLab($(this).prop('checked'));
         });
     }
 
