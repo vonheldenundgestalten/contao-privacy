@@ -59,20 +59,20 @@ $brand-1: #01BABC;
 		width: 100%;
 		background: transparent;
 		padding: .6em 1.2em;
-		&.button-enable-all {
-			margin-right: 1em;
-		}
-		&.open-privacy-settings {
-			margin-left: 0;
-		}
+        cursor: pointer;
 		outline: none;
         display: inline-block;
         @include align-self($value: center);
         border: 1px solid $brand-1;
         color: $brand-1;
         font-size: 1rem;
-        cursor: pointer;
         transition: all 0.3s ease-in-out;
+        &.button-enable-all {
+            margin-right: 1em;
+        }
+        &.open-privacy-settings {
+            margin-left: 0;
+        }
         &:hover {
             background: #fff;
         }
