@@ -22,6 +22,16 @@
                 <source>Edit privacy settings</source>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.mapboxLoadQuestion">
+                <source>This map element uses Mapbox. If you load it Mapbox is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionYes">
+                <source>Activate Mapbox</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
                 <source>This map element uses Open Street Map. If you load it Open Street Map is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
             </trans-unit>
@@ -117,6 +127,16 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.mapsIsDeactivated">
                 <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.mapbox">
+                <source>We use the map service &lt;strong&gt;Mapbox&lt;/strong&gt; to show you location information clearly presented.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapboxIsActive">
+                <source>Mapbox is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapboxIsDeactivated">
+                <source>Mapbox is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.youTube">

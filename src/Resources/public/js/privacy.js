@@ -38,6 +38,7 @@ var contaoPrivacy = (function() {
         setAnalytics(true);
         setLeadLab(true);
         setGmap(true);
+        setMapbox(true);
         setYouTube(true);
         setVimeo(true);
         setOpenStreetMap(true);
@@ -122,6 +123,57 @@ var contaoPrivacy = (function() {
         $('#privacy-settings').removeClass('active-gmap');
         $(".map-container .map-question-block").show();
         $(".map-container + .open-privacy-btn").hide();
+    }
+
+    /**
+     * @param bln boolean
+     */
+    function setMapbox(bln) {
+        localStorage.setItem('contaoPrivacy.enabledMapbox', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputMapbox = $('input[name="privacy-mapbox"]');
+        $inputMapbox.prop("checked", bln);
+
+        // Show right status message
+        $('.mapbox .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.mapbox .status-disabled').css('display', bln ? 'none' : 'inline-block');
+
+        if (bln) {
+            return showMapbox();
+        }
+
+        hideMapbox();
+    }
+
+    /**
+     * Show google map if present
+     */
+    function showMapbox() {
+        if (!$('.mapbox-container').length) {
+            return;
+        }
+
+        $('.mapbox-container').addClass('active-mapbox');
+        $('#privacy-settings').addClass('active-mapbox');
+        $('.dlh_googlemap').removeClass('mapbox-hidden');
+        $(".mapbox-container .mapbox-question-block").hide();
+        $(".mapbox-container + .open-privacy-btn").show();
+    }
+
+    /**
+     * Hide google map if present
+     */
+    function hideMapbox() {
+        if (!$('.mapbox-container').length) {
+            return;
+        }
+
+        $('.mapbox-container').removeClass('active-mapbox');
+        $('.dlh_googlemap').addClass('mapbox-hidden');
+        $('#privacy-settings').removeClass('active-mapbox');
+        $(".mapbox-container .mapbox-question-block").show();
+        $(".mapbox-container + .open-privacy-btn").hide();
     }
 
     /**
@@ -249,6 +301,7 @@ var contaoPrivacy = (function() {
         setAnalytics: setAnalytics,
         setLeadLab: setLeadLab,
         setGmap: setGmap,
+        setMapbox: setMapbox,
         setYouTube: setYouTube,
         setVimeo: setVimeo,
         setOpenStreetMap: setOpenStreetMap
@@ -270,10 +323,12 @@ function runContaoPrivacy() {
     var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
     var $inputLeadLab =            $('input[name="privacy-leadlab"]');
     var $inputGmaps =              $('input[name="privacy-g-maps"]');
+    var $inputMapbox =             $('input[name="privacy-mapbox"]');
     var $inputYouTube =            $('input[name="privacy-youtube"]');
     var $inputVimeo =              $('input[name="privacy-vimeo"]');
     var $inputOpenStreetMap =      $('input[name="privacy-open-street-map"]');
     var $buttonShowGmap =          $('button#load-google-map');
+    var $buttonShowMapbox =        $('button#load-mapbox');
     var $buttonShowVimeo =         $('button#load-vimeo');
     var $buttonShowYouTube =       $('button#load-youtube');
     var $buttonShowOpenStreetMap = $('button#load-open-street-map');
@@ -317,6 +372,11 @@ function runContaoPrivacy() {
         contaoPrivacy.setGmap(!!localStorage.getItem('contaoPrivacy.enabledGmap'));
     }
 
+    // Set mapbox initially
+    if ($inputMapbox.length) {
+        contaoPrivacy.setMapbox(!!localStorage.getItem('contaoPrivacy.enabledMapbox'));
+    }
+
     // Set youtube initially
     if ($inputYouTube.length) {
         contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'));
@@ -346,9 +406,9 @@ function runContaoPrivacy() {
         contaoPrivacy.closeBar();
         var innerbox = $("#privacy-settings > .innerbox")
         var innerboxHeight = innerbox.height()
-        var screensize = $(window).height();
+        var windowHeight = $(window).height();
         
-        if (innerboxHeight > screensize ) {
+        if (innerboxHeight > windowHeight ) {
             innerbox.css({top: 0, left: 0, transform: 'translate(0)'});
         }
 
@@ -396,6 +456,13 @@ function runContaoPrivacy() {
         });
     }
 
+    // Toggle mapbox
+    if ($inputMapbox.length) {
+        $inputMapbox.on('change', function() {
+            contaoPrivacy.setMapbox($(this).prop('checked'));
+        });
+    }
+
     // Toggle youtube
     if ($inputYouTube.length) {
         $inputYouTube.on('change', function() {
@@ -420,6 +487,11 @@ function runContaoPrivacy() {
     // Show gmap
     $buttonShowGmap.on('click', function () {
         contaoPrivacy.setGmap(true);
+    });
+
+    // Show mapbox
+    $buttonShowMapbox.on('click', function () {
+        contaoPrivacy.setMapbox(true);
     });
 
     // Show vimeo

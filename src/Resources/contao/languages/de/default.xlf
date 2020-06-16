@@ -27,6 +27,19 @@
                 <target>Privatsphären-Einstellungen bearbeiten</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.mapboxLoadQuestion">
+                <source>This map element uses Mapbox. If you load it Mapbox is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <target>Diese Karte nutzt Mapbox. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Mapbox übertragen. Karte einbinden?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionYes">
+                <source>Activate Mapbox</source>
+                <target>Mapbox aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
                 <source>This map element uses Open Street Map. If you load it Open Street Map is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
                 <target>Diese Karte nutzt Open Street Map Maps. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Open Street Map übertragen. Karte einbinden?</target>
@@ -151,6 +164,19 @@
             <trans-unit id="PRIVACY.POPUP.mapsIsDeactivated">
                 <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Google Maps ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.mapbox">
+                <source>We use the map service &lt;strong&gt;Mapbox&lt;/strong&gt; to show you location information clearly presented.</source>
+                <target>Wir verwenden den Kartendienst &lt;strong&gt;Mapbox&lt;/strong&gt; um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapboxIsActive">
+                <source>Mapbox is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Mapbox ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.mapboxIsDeactivated">
+                <source>Mapbox is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Mapbox ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.youTube">

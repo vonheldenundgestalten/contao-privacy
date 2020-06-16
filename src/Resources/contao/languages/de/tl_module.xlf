@@ -9,6 +9,10 @@
                 <source>Show Google Maps</source>
                 <target>Google Maps anzeigen</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowMapbox.0">
+                <source>Show Mapbox</source>
+                <target>Mapbox anzeigen</target>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowYouTube.0">
                 <source>Show YouTube</source>
                 <target>YouTube anzeigen</target>

@@ -73,6 +73,25 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
+            <!-- MAPBOX -->
+            <?php if ($this->privacyShowMapbox): ?>
+                <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
+                <p class="mapbox status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-mapbox" id="mapbox-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
+
             <!-- OPEN STREET MAP -->
             <?php if ($this->privacyShowOpenStreetMap): ?>
                 <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>

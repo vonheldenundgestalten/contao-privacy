@@ -7,6 +7,9 @@
             <trans-unit id="tl_module.privacyShowGoogleMaps.0">
                 <source>Show Google Maps</source>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowMapbox.0">
+                <source>Show Mapbox</source>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowYouTube.0">
                 <source>Show YouTube</source>
             </trans-unit>

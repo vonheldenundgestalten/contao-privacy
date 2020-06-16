@@ -2,7 +2,7 @@
 
 // Palettes
 $GLOBALS['TL_DCA']['tl_module']['palettes']['privacyBar'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage;{template_legend:hide},customTpl;';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['privacyPopup'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage,privacyShowGoogleMaps,privacyShowYouTube,privacyShowVimeo,privacyShowOpenStreetMap,privacyShowLeadLab;{template_legend:hide},customTpl;';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['privacyPopup'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage,privacyShowGoogleMaps,privacyShowMapbox,privacyShowYouTube,privacyShowVimeo,privacyShowOpenStreetMap,privacyShowLeadLab;{template_legend:hide},customTpl;';
 
 // Fields
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyDataProtectionPage'] = [
@@ -49,6 +49,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowOpenStreetMap'] = [
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowLeadLab'] = [
     'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowLeadLab'],
+    'exclude'                 => true,
+    'inputType'               => 'checkbox',
+    'eval'                    => array('tl_class'=>'w50'),
+    'sql'                     => "char(1) NOT NULL default ''"
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMapbox'] = [
+    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowMapbox'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
