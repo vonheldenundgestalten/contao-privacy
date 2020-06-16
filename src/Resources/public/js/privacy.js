@@ -156,7 +156,6 @@ var contaoPrivacy = (function() {
 
         $('.mapbox-container').addClass('active-mapbox');
         $('#privacy-settings').addClass('active-mapbox');
-        $('.dlh_googlemap').removeClass('mapbox-hidden');
         $(".mapbox-container .mapbox-question-block").hide();
         $(".mapbox-container + .open-privacy-btn").show();
     }
@@ -170,7 +169,6 @@ var contaoPrivacy = (function() {
         }
 
         $('.mapbox-container').removeClass('active-mapbox');
-        $('.dlh_googlemap').addClass('mapbox-hidden');
         $('#privacy-settings').removeClass('active-mapbox');
         $(".mapbox-container .mapbox-question-block").show();
         $(".mapbox-container + .open-privacy-btn").hide();
@@ -407,7 +405,7 @@ function runContaoPrivacy() {
         var innerbox = $("#privacy-settings > .innerbox")
         var innerboxHeight = innerbox.height()
         var windowHeight = $(window).height();
-        
+
         if (innerboxHeight > windowHeight ) {
             innerbox.css({top: 0, left: 0, transform: 'translate(0)'});
         }
@@ -425,7 +423,7 @@ function runContaoPrivacy() {
         if ($(e.target).hasClass('open-privacy-settings')) {
             return;
         }
-        
+
         if ($(e.target).closest('.close-privacy').length) {
             return contaoPrivacy.closePopup();
         }
@@ -434,7 +432,7 @@ function runContaoPrivacy() {
             contaoPrivacy.closePopup();
         }
     });
-    
+
     // Toggle analytics
     if ($inputAnalytics.length) {
         $inputAnalytics.on('change', function() {
