@@ -41,7 +41,7 @@
         <button class="open-privacy-settings"><?= $GLOBALS['TL_LANG']['PRIVACY']['vimeoEditPrivacy'] ?></button>
     </div>
 
-    <button class="open-privacy-btn open-privacy-settings" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
+    <button class="open-privacy-btn open-privacy-settings btn-privacy" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
 </figure>
 
 <?php $this->endblock(); ?>
