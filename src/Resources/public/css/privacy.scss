@@ -142,6 +142,8 @@ $brand-1: #01BABC;
         display: inline-block;
         padding: 1.5em 2em 2em;
         background: #fff;
+        overflow: auto;
+        max-height: 85%;
     }
     .left-col {
         width: 32%;
@@ -319,7 +321,9 @@ $brand-1: #01BABC;
 }
 
 // Maps
-.ce_dlh_googlemaps, .mod_dlh_googlemaps {
+.ce_dlh_googlemaps, 
+.mod_dlh_googlemaps,
+.ce_openstreetmap {
      background: $light-grey-background;
      width: 100%;
      padding-top: 50%;
@@ -336,7 +340,8 @@ $brand-1: #01BABC;
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
-    .dlh_googlemap {
+    .dlh_googlemap,
+	.open-street-map-block {
         position: absolute;
         top: 0;
         left: 0;
@@ -433,13 +438,6 @@ $brand-1: #01BABC;
     &.ratio-21 {
         padding-bottom: 50%;
     }
-}
-
-.ce_vimeo,
-.ce_youtube {
-	.open-privacy-settings {
-		
-	}
 }
 
 
