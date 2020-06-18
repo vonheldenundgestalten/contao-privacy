@@ -1,5 +1,5 @@
 
-var contaoPrivacy = (function() {
+var functionContaoPrivacy = function($j) {
 
     /**
      * Whether we show privacy bar or not
@@ -13,7 +13,7 @@ var contaoPrivacy = (function() {
      * Show privacy bar
      */
     function showBar() {
-        $('.privacy-bar').fadeIn();
+        $j('.privacy-bar').fadeIn();
     }
 
     /**
@@ -27,8 +27,8 @@ var contaoPrivacy = (function() {
      * Close privacy bar
      */
     function closeBar() {
-        $('.privacy-bar').fadeOut();
-        $('#footer').removeClass('addSpace');
+        $j('.privacy-bar').fadeOut();
+        $j('#footer').removeClass('addSpace');
     }
 
     /**
@@ -51,12 +51,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledAnalytics', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputAnalytics = $('input[name="privacy-g-analytics"]');
+        var $inputAnalytics = $j('input[name="privacy-g-analytics"]');
         $inputAnalytics.prop("checked", bln);
 
         // Show right status message
-        $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 
     /**
@@ -66,12 +66,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledLeadlab', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputLeadLab = $('input[name="privacy-leadlab"]');
+        var $inputLeadLab = $j('input[name="privacy-leadlab"]');
         $inputLeadLab.prop("checked", bln);
 
         // Show right status message
-        $('.leadlab .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.leadlab .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.leadlab .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.leadlab .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 
     /**
@@ -81,12 +81,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledGmap', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputGmaps = $('input[name="privacy-g-maps"]');
+        var $inputGmaps = $j('input[name="privacy-g-maps"]');
         $inputGmaps.prop("checked", bln);
 
         // Show right status message
-        $('.g-maps .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.g-maps .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.g-maps .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.g-maps .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showGmap();
@@ -99,30 +99,30 @@ var contaoPrivacy = (function() {
      * Show google map if present
      */
     function showGmap() {
-        if (!$('.map-container').length) {
+        if (!$j('.map-container').length) {
             return;
         }
 
-        $('.map-container').addClass('active-gmap');
-        $('#privacy-settings').addClass('active-gmap');
-        $('.dlh_googlemap').removeClass('map-hidden');
-        $(".map-container .map-question-block").hide();
-        $(".map-container + .open-privacy-btn").show();
+        $j('.map-container').addClass('active-gmap');
+        $j('#privacy-settings').addClass('active-gmap');
+        $j('.dlh_googlemap').removeClass('map-hidden');
+        $j(".map-container .map-question-block").hide();
+        $j(".map-container + .open-privacy-btn").show();
     }
 
     /**
      * Hide google map if present
      */
     function hideGmap() {
-        if (!$('.map-container').length) {
+        if (!$j('.map-container').length) {
             return;
         }
 
-        $('.map-container').removeClass('active-gmap');
-        $('.dlh_googlemap').addClass('map-hidden');
-        $('#privacy-settings').removeClass('active-gmap');
-        $(".map-container .map-question-block").show();
-        $(".map-container + .open-privacy-btn").hide();
+        $j('.map-container').removeClass('active-gmap');
+        $j('.dlh_googlemap').addClass('map-hidden');
+        $j('#privacy-settings').removeClass('active-gmap');
+        $j(".map-container .map-question-block").show();
+        $j(".map-container + .open-privacy-btn").hide();
     }
 
     /**
@@ -132,12 +132,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledMapbox', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputMapbox = $('input[name="privacy-mapbox"]');
+        var $inputMapbox = $j('input[name="privacy-mapbox"]');
         $inputMapbox.prop("checked", bln);
 
         // Show right status message
-        $('.mapbox .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.mapbox .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.mapbox .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.mapbox .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showMapbox();
@@ -150,28 +150,28 @@ var contaoPrivacy = (function() {
      * Show google map if present
      */
     function showMapbox() {
-        if (!$('.mapbox-container').length) {
+        if (!$j('.mapbox-container').length) {
             return;
         }
 
-        $('.mapbox-container').addClass('active-mapbox');
-        $('#privacy-settings').addClass('active-mapbox');
-        $(".mapbox-container .mapbox-question-block").hide();
-        $(".mapbox-container + .open-privacy-btn").show();
+        $j('.mapbox-container').addClass('active-mapbox');
+        $j('#privacy-settings').addClass('active-mapbox');
+        $j(".mapbox-container .mapbox-question-block").hide();
+        $j(".mapbox-container + .open-privacy-btn").show();
     }
 
     /**
      * Hide google map if present
      */
     function hideMapbox() {
-        if (!$('.mapbox-container').length) {
+        if (!$j('.mapbox-container').length) {
             return;
         }
 
-        $('.mapbox-container').removeClass('active-mapbox');
-        $('#privacy-settings').removeClass('active-mapbox');
-        $(".mapbox-container .mapbox-question-block").show();
-        $(".mapbox-container + .open-privacy-btn").hide();
+        $j('.mapbox-container').removeClass('active-mapbox');
+        $j('#privacy-settings').removeClass('active-mapbox');
+        $j(".mapbox-container .mapbox-question-block").show();
+        $j(".mapbox-container + .open-privacy-btn").hide();
     }
 
     /**
@@ -181,12 +181,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputYouTube = $('input[name="privacy-youtube"]');
+        var $inputYouTube = $j('input[name="privacy-youtube"]');
         $inputYouTube.prop("checked", bln);
 
         // Show right status message
-        $('.youtube .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.youtube .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.youtube .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.youtube .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showYouTube();
@@ -202,12 +202,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledVimeo', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputVimeo = $('input[name="privacy-vimeo"]');
+        var $inputVimeo = $j('input[name="privacy-vimeo"]');
         $inputVimeo.prop("checked", bln);
 
         // Show right status message
-        $('.vimeo .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.vimeo .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.vimeo .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.vimeo .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showVimeo();
@@ -223,12 +223,12 @@ var contaoPrivacy = (function() {
         localStorage.setItem('contaoPrivacy.enabledOpenStreetMap', bln ? '1' : '');
 
         // Switch checkbox correspondingly
-        var $inputOpenStreetMap = $('input[name="privacy-open-street-map"]');
+        var $inputOpenStreetMap = $j('input[name="privacy-open-street-map"]');
         $inputOpenStreetMap.prop("checked", bln);
 
         // Show right status message
-        $('.open-street-map .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.open-street-map .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        $j('.open-street-map .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $j('.open-street-map .status-disabled').css('display', bln ? 'none' : 'inline-block');
 
         if (bln) {
             return showOpenStreetMap();
@@ -238,54 +238,54 @@ var contaoPrivacy = (function() {
     }
 
     function showVimeo() {
-        $('.vimeo-video-block').css('display', 'block');
-        $('.privacy-vimeo-question-block').css('display', 'none');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'block');
+        $j('.vimeo-video-block').css('display', 'block');
+        $j('.privacy-vimeo-question-block').css('display', 'none');
+        $j('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'block');
     }
 
     function hideVimeo() {
-        $('.vimeo-video-block').css('display', 'none');
-        $('.privacy-vimeo-question-block').css('display', 'block');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'none');
+        $j('.vimeo-video-block').css('display', 'none');
+        $j('.privacy-vimeo-question-block').css('display', 'block');
+        $j('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'none');
     }
 
     function showYouTube() {
-        $('.youtube-video-block').css('display', 'block');
-        $('.privacy-youtube-question-block').css('display', 'none');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'block');
+        $j('.youtube-video-block').css('display', 'block');
+        $j('.privacy-youtube-question-block').css('display', 'none');
+        $j('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'block');
     }
 
     function hideYouTube() {
-        $('.youtube-video-block').css('display', 'none');
-        $('.privacy-youtube-question-block').css('display', 'block');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'none');
+        $j('.youtube-video-block').css('display', 'none');
+        $j('.privacy-youtube-question-block').css('display', 'block');
+        $j('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'none');
     }
 
     function showOpenStreetMap() {
-        $('.open-street-map-block').css('display', 'block');
-        $('.ce_openstreetmap .map-question-block').css('display', 'none');
-        $('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'block');
+        $j('.open-street-map-block').css('display', 'block');
+        $j('.ce_openstreetmap .map-question-block').css('display', 'none');
+        $j('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'block');
     }
 
     function hideOpenStreetMap() {
-        $('.open-street-map-block').css('display', 'none');
-        $('.ce_openstreetmap .map-question-block').css('display', 'block');
-        $('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'none');
+        $j('.open-street-map-block').css('display', 'none');
+        $j('.ce_openstreetmap .map-question-block').css('display', 'block');
+        $j('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'none');
     }
 
     /**
      * Show privacy popup
      */
     function showPopup() {
-        $('#privacy-settings ').show();
-        $('#footer').removeClass('addSpace');
+        $j('#privacy-settings ').show();
+        $j('#footer').removeClass('addSpace');
     }
 
     /**
      * Close privacy popup
      */
     function closePopup() {
-        $('#privacy-settings').hide();
+        $j('#privacy-settings').hide();
     }
 
     return {
@@ -304,32 +304,41 @@ var contaoPrivacy = (function() {
         setVimeo: setVimeo,
         setOpenStreetMap: setOpenStreetMap
     };
-})();
+};
 
 // Run privacy logic but wait first for jQuery to be loaded
 setTimeout(runContaoPrivacy, 250);
 
 function runContaoPrivacy() {
-    if (!window.jQuery || !$('.privacy-bar').length || !$('#privacy-settings').length) {
+    if (!window.jQuery) {
+        return setTimeout(runContaoPrivacy, 250);
+    }
+
+    // not to conflict with other loaded lib/fws (f.e. MooTools)
+    var $j = jQuery.noConflict();
+
+    if (!window.jQuery || !$j('.privacy-bar').length || !$j('#privacy-settings').length) {
         // jQuery still not loaded
         return setTimeout(runContaoPrivacy, 250);
     }
 
-    var $buttonEnableAll =         $('button#enable-all');
-    var $buttonOpenPopup =         $('button.open-privacy-settings');
-    var $buttonClosePopup =        $('.close-privacy');
-    var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
-    var $inputLeadLab =            $('input[name="privacy-leadlab"]');
-    var $inputGmaps =              $('input[name="privacy-g-maps"]');
-    var $inputMapbox =             $('input[name="privacy-mapbox"]');
-    var $inputYouTube =            $('input[name="privacy-youtube"]');
-    var $inputVimeo =              $('input[name="privacy-vimeo"]');
-    var $inputOpenStreetMap =      $('input[name="privacy-open-street-map"]');
-    var $buttonShowGmap =          $('button#load-google-map');
-    var $buttonShowMapbox =        $('button#load-mapbox');
-    var $buttonShowVimeo =         $('button#load-vimeo');
-    var $buttonShowYouTube =       $('button#load-youtube');
-    var $buttonShowOpenStreetMap = $('button#load-open-street-map');
+    var contaoPrivacy = functionContaoPrivacy($j);
+
+    var $buttonEnableAll =         $j('button#enable-all');
+    var $buttonOpenPopup =         $j('button.open-privacy-settings');
+    var $buttonClosePopup =        $j('.close-privacy');
+    var $inputAnalytics =          $j('input[name="privacy-g-analytics"]');
+    var $inputLeadLab =            $j('input[name="privacy-leadlab"]');
+    var $inputGmaps =              $j('input[name="privacy-g-maps"]');
+    var $inputMapbox =             $j('input[name="privacy-mapbox"]');
+    var $inputYouTube =            $j('input[name="privacy-youtube"]');
+    var $inputVimeo =              $j('input[name="privacy-vimeo"]');
+    var $inputOpenStreetMap =      $j('input[name="privacy-open-street-map"]');
+    var $buttonShowGmap =          $j('button#load-google-map');
+    var $buttonShowMapbox =        $j('button#load-mapbox');
+    var $buttonShowVimeo =         $j('button#load-vimeo');
+    var $buttonShowYouTube =       $j('button#load-youtube');
+    var $buttonShowOpenStreetMap = $j('button#load-open-street-map');
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {
@@ -339,18 +348,18 @@ function runContaoPrivacy() {
     // Privacy bar position relative when the page is scrolled to the bottom
     var scrolling = false;
 
-    $(window).on('scroll', function() {
+    $j(window).on('scroll', function() {
         scrolling = true;
     });
 
     setInterval(function() {
         if (scrolling) {
             scrolling = false;
-            if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                $(".privacy-bar").addClass('not-fixed');
+            if($j(window).scrollTop() + $j(window).height() > $j(document).height() - 100) {
+                $j(".privacy-bar").addClass('not-fixed');
 
             } else {
-                $(".privacy-bar").removeClass('not-fixed');
+                $j(".privacy-bar").removeClass('not-fixed');
             }
         }
     }, 250);
@@ -402,9 +411,9 @@ function runContaoPrivacy() {
         contaoPrivacy.showPopup();
         contaoPrivacy.setBarUsed();
         contaoPrivacy.closeBar();
-        var innerbox = $("#privacy-settings > .innerbox")
+        var innerbox = $j("#privacy-settings > .innerbox")
         var innerboxHeight = innerbox.height()
-        var windowHeight = $(window).height();
+        var windowHeight = $j(window).height();
 
         if (innerboxHeight > windowHeight ) {
             innerbox.css({top: 0, left: 0, transform: 'translate(0)'});
@@ -418,17 +427,17 @@ function runContaoPrivacy() {
     });
 
     // Close privacy popup on click outside of it
-    $(document).on('click', function(e) {
+    $j(document).on('click', function(e) {
         // Exclude click on buttons that are opening the popup
-        if ($(e.target).hasClass('open-privacy-settings')) {
+        if ($j(e.target).hasClass('open-privacy-settings')) {
             return;
         }
 
-        if ($(e.target).closest('.close-privacy').length) {
+        if ($j(e.target).closest('.close-privacy').length) {
             return contaoPrivacy.closePopup();
         }
 
-        if (!$(e.target).closest('#privacy-settings .innerbox').length) {
+        if (!$j(e.target).closest('#privacy-settings .innerbox').length) {
             contaoPrivacy.closePopup();
         }
     });
@@ -436,49 +445,49 @@ function runContaoPrivacy() {
     // Toggle analytics
     if ($inputAnalytics.length) {
         $inputAnalytics.on('change', function() {
-            contaoPrivacy.setAnalytics($(this).prop('checked'));
+            contaoPrivacy.setAnalytics($j(this).prop('checked'));
         });
     }
 
     // Toggle analytics
     if ($inputLeadLab.length) {
         $inputLeadLab.on('change', function() {
-            contaoPrivacy.setLeadLab($(this).prop('checked'));
+            contaoPrivacy.setLeadLab($j(this).prop('checked'));
         });
     }
 
     // Toggle gmap
     if ($inputGmaps.length) {
         $inputGmaps.on('change', function() {
-            contaoPrivacy.setGmap($(this).prop('checked'));
+            contaoPrivacy.setGmap($j(this).prop('checked'));
         });
     }
 
     // Toggle mapbox
     if ($inputMapbox.length) {
         $inputMapbox.on('change', function() {
-            contaoPrivacy.setMapbox($(this).prop('checked'));
+            contaoPrivacy.setMapbox($j(this).prop('checked'));
         });
     }
 
     // Toggle youtube
     if ($inputYouTube.length) {
         $inputYouTube.on('change', function() {
-            contaoPrivacy.setYouTube($(this).prop('checked'));
+            contaoPrivacy.setYouTube($j(this).prop('checked'));
         });
     }
 
     // Toggle vimeo
     if ($inputVimeo.length) {
         $inputVimeo.on('change', function() {
-            contaoPrivacy.setVimeo($(this).prop('checked'));
+            contaoPrivacy.setVimeo($j(this).prop('checked'));
         });
     }
 
     // Toggle open street map
     if ($inputOpenStreetMap.length) {
         $inputOpenStreetMap.on('change', function() {
-            contaoPrivacy.setOpenStreetMap($(this).prop('checked'));
+            contaoPrivacy.setOpenStreetMap($j(this).prop('checked'));
         });
     }
 
