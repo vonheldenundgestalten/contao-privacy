@@ -1,6 +1,5 @@
 
 <?php $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static'; ?>
-<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js'; ?>
 
 <div class="privacy-bar">
     <div class="content-wrapper">

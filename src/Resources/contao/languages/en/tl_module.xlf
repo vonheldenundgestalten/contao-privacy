@@ -4,6 +4,9 @@
             <trans-unit id="tl_module.privacyDataProtectionPage.0">
                 <source>Data protection page</source>
             </trans-unit>
+            <trans-unit id="tl_module.loadConflictFreeJs.0">
+                <source>Load conflict free javascript</source>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowGoogleMaps.0">
                 <source>Show Google Maps</source>
             </trans-unit>

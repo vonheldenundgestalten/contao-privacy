@@ -9,6 +9,9 @@ use Patchwork\Utf8;
 
 /**
  * Front end module "privacyBar".
+ *
+ * @property int $privacyDataProtectionPage
+ * @property bool $loadConflictFreeJs
  */
 class ModulePrivacyBar extends Module
 {
@@ -40,6 +43,9 @@ class ModulePrivacyBar extends Module
 
     protected function compile()
     {
+        $privacyJs = $this->loadConflictFreeJs ? 'privacy_conflict_free.js' : 'privacy.js';
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/' . $privacyJs;
+
 		$objPagePrivacy = PageModel::findById($this->privacyDataProtectionPage);
 		$strLink = '<a href="'.$objPagePrivacy->getFrontendUrl().'">'.$GLOBALS['TL_LANG']['PRIVACY']['BAR']['dataProtection'].'</a>';
 		

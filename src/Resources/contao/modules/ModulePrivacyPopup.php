@@ -8,6 +8,8 @@ use Patchwork\Utf8;
 
 /**
  * Front end module "privacyPopup".
+ *
+ * @property bool $loadConflictFreeJs
  */
 class ModulePrivacyPopup extends Module
 {
@@ -39,5 +41,7 @@ class ModulePrivacyPopup extends Module
 
     protected function compile()
     {
+        $privacyJs = $this->loadConflictFreeJs ? 'privacy_conflict_free.js' : 'privacy.js';
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/' . $privacyJs;
     }
 }

@@ -1,7 +1,6 @@
 <?php
 
 $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static';
-$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js';
 
 /** @var \Contao\PageModel $objPage */
 global $objPage;
