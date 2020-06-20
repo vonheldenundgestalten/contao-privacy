@@ -13,90 +13,10 @@
                 <source>open privacy center</source>
                 <target>Einstellungen öffnen</target>
             </trans-unit>
-
-            <trans-unit id="PRIVACY.googleMapsLoadQuestion">
-                <source>This map element uses Google Maps. If you load it Google is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
-                <target>Diese Karte nutzt Google Maps. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Google übertragen. Karte einbinden?</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.googleMapsLoadQuestionYes">
-                <source>Activate Google Maps</source>
-                <target>Google Maps aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.mapboxLoadQuestion">
-                <source>This map element uses Mapbox. If you load it Mapbox is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
-                <target>Diese Karte nutzt Mapbox. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Mapbox übertragen. Karte einbinden?</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.mapboxLoadQuestionYes">
-                <source>Activate Mapbox</source>
-                <target>Mapbox aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.mapboxLoadQuestionEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
-                <source>This map element uses Open Street Map. If you load it Open Street Map is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
-                <target>Diese Karte nutzt Open Street Map Maps. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Open Street Map übertragen. Karte einbinden?</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.openStreetMapLoadQuestionYes">
-                <source>Activate Open Street Map</source>
-                <target>Open Street Map aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.openStreetMapLoadQuestionEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.leadlabLoadQuestion">
-                <source>TO BE CHANGED</source>
-                <target>TO BE CHANGED</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.leadlabLoadQuestionYes">
-                <source>Activate LeadLab</source>
-                <target>LeadLab aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.leadlabLoadQuestionEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
                 <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.vimeoLoadQuestion">
-                <source>This video element uses playback technology from vimeo.com. When showing and playing the video Vimeo is setting Cookies for usage and statistical analysis. Do you want to load the video?</source>
-                <target>Dieses Video-Element verwendt Vimeo um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste. Video anzeigen?</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.vimeoLoadButton">
-                <source>Enable Vimeo</source>
-                <target>Vimeo aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.vimeoEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.youtubeLoadQuestion">
-                <source>This video element uses playback technology from YouTube. We're using a data protection optimized version of YouTube, where a minimum of usage and statistical data is shared you YouTube. Do you want to load the video?</source>
-                <target>Dieses Video-Element nutzt Videodaten und Playback-Technologie von YouTube. Wir verwenden eine Datenschutz-optimierte Version von YouTube, bei der weniger Nutzungs- und Statistikdaten an YouTube übertragen werden. Video anzeigen?</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.youtubeLoadButton">
-                <source>Enable YouTube</source>
-                <target>YouTube aktivieren</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.youtubeEditPrivacy">
-                <source>Edit privacy settings</source>
-                <target>Privatsphären-Einstellungen bearbeiten</target>
-            </trans-unit>
-
+            </trans-unit>			
             <trans-unit id="PRIVACY.BAR.info">
                 <source>In order to be able to offer you a perfect service on our website, we use cookies and third-party tools to improve functionality. You can accept all use, or select specific partners to enable and disabled in the privacy settings. The settings can be changed anytime when visiting the %s.</source>
                 <target>Um Ihnen einen einwandfreien Service auf unserer Webseite anbieten zu können, verwenden wir Cookies und Drittanbieter-Tools zur Verbesserung der Funktionalität. Sie können der Nutzung generell zustimmen, oder in den Datenschutz-Einstellungen spezifische Werkzeuge an- und abschalten. Die Einstellungen können in der %s jederzeit bearbeitet werden.</target>
@@ -114,6 +34,67 @@
                 <target>Privatsphären-Einstellungen</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.googleMapsLoadQuestion">
+                <source>This map element uses Google Maps. If you load it Google is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <target>Diese Karte nutzt Google Maps. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Google übertragen. Karte einbinden?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionYes">
+                <source>Activate Google Maps</source>
+                <target>Google Maps aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.googleMapsLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestion">
+                <source>This map element uses Mapbox. If you load it Mapbox is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <target>Diese Karte nutzt Mapbox. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an Mapbox übertragen. Karte einbinden?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionYes">
+                <source>Activate Mapbox</source>
+                <target>Mapbox aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.mapboxLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestion">
+                <source>This map element uses OpenStreetMap. If you load it, OpenStreetMap is setting Cookies for showing the map and analyzing your map usage. Show map?</source>
+                <target>Diese Karte nutzt OpenStreetMap. Bei Verwendung der Karte werden Anwendungs- und Statistikdaten an OpenStreetMap übertragen. Karte einbinden?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionYes">
+                <source>Activate OpenStreetMap</source>
+                <target>OpenStreetMap aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.openStreetMapLoadQuestionEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoLoadQuestion">
+                <source>This video element uses playback technology from vimeo.com. When showing and playing the video Vimeo is setting Cookies for usage and statistical analysis. Do you want to load the video?</source>
+                <target>Dieses Video-Element verwendt Vimeo um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste. Video anzeigen?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoLoadButton">
+                <source>Enable Vimeo</source>
+                <target>Vimeo aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.vimeoEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.youtubeLoadQuestion">
+                <source>This video element uses playback technology from YouTube. We're using a data protection optimized version of YouTube, where a minimum of usage and statistical data is shared you YouTube. Do you want to load the video?</source>
+                <target>Dieses Video-Element nutzt Videodaten und Playback-Technologie von YouTube. Wir verwenden eine Datenschutz-optimierte Version von YouTube, bei der weniger Nutzungs- und Statistikdaten an YouTube übertragen werden. Video anzeigen?</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.youtubeLoadButton">
+                <source>Enable YouTube</source>
+                <target>YouTube aktivieren</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.youtubeEditPrivacy">
+                <source>Edit privacy settings</source>
+                <target>Privatsphären-Einstellungen bearbeiten</target>
+            </trans-unit>
+			
             <trans-unit id="PRIVACY.POPUP.privacySettings">
                 <source>Privacy settings</source>
                 <target>Privatsphären-Einstellungen</target>
@@ -122,13 +103,14 @@
                 <source>More information can be found on the</source>
                 <target>Weitere Informationen finden Sie in der</target>
             </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
-                <source>Analysis Tools and Advertising</source>
-                <target>Analyse-Tools und Werbung</target>
-            </trans-unit>
             <trans-unit id="PRIVACY.POPUP.dataProtection">
                 <source>Data protection page</source>
                 <target>Datenschutz-Erklärung</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
+                <source>Analysis Tools and Advertising</source>
+                <target>Analyse-Tools und Werbung</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.analytics">
@@ -146,6 +128,18 @@
             <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
                 <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Google Analytics ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>			
+            <trans-unit id="PRIVACY.POPUP.leadlab">
+                <source>We're using the service &lt;strong&gt;leadlab.click&lt;/strong&gt; from Wiredminds GmbH to analyze your use of our website. The data helps us with with optimizing the website content and functionality.</source>
+                <target>Wir verwenden &lt;strong&gt;leadlab.click&lt;/strong&gt; von der Wiredminds GmbH um statistische Nutzungsdaten über unsere Webseite zu erfassen. Die Auswertung unterstützt die inhaltliche und funktionale Optimierung unserer Webseite.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsActive">
+                <source>leadlab.click is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>leadlab.click ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.leadlabIsDeactivated">
+                <source>leadlab.click is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>leadlab.click ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
@@ -165,7 +159,6 @@
                 <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Google Maps ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
-
             <trans-unit id="PRIVACY.POPUP.mapbox">
                 <source>We use the map service &lt;strong&gt;Mapbox&lt;/strong&gt; to show you location information clearly presented.</source>
                 <target>Wir verwenden den Kartendienst &lt;strong&gt;Mapbox&lt;/strong&gt; um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
@@ -178,7 +171,18 @@
                 <source>Mapbox is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Mapbox ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
-
+            <trans-unit id="PRIVACY.POPUP.openStreetMap">
+                <source>We use the map service &lt;strong&gt;OpenStreetMap&lt;/strong&gt; to show you location information clearly presented.</source>
+                <target>Wir verwenden den Kartendienst &lt;strong&gt;OpenStreetMap&lt;/strong&gt; um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsActive">
+                <source>OpenStreetMap is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>OpenStreetMap ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
+                <source>OpenStreetMap is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>OpenStreetMap ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTube">
                 <source>We use a data protection-optimized version of &lt;strong&gt;YouTube&lt;/strong&gt;, which exchanges less data with YouTube to embed videos in the website.</source>
                 <target>Wir verwenden eine datenschutz-optimierte Version von &lt;strong&gt;Youtube&lt;/strong&gt;, die weniger Daten mit YouTube austauscht um Videos in der Webseite einzubinden.</target>
@@ -191,7 +195,6 @@
                 <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>YouTube ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
-
             <trans-unit id="PRIVACY.POPUP.vimeo">
                 <source>We use &lt;strong&gt;Vimeo&lt;/strong&gt; to include video data and playback technology. Vimeo collects usage data for statistical analysis and optimization of their services.</source>
                 <target>Wir verwenden &lt;strong&gt;Vimeo&lt;/strong&gt; um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste.</target>
@@ -203,32 +206,6 @@
             <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
                 <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Vimeo ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.POPUP.openStreetMap">
-                <source>We use the map service &lt;strong&gt;Open Street Map&lt;/strong&gt; to show you location information clearly presented.</source>
-                <target>Wir verwenden den Kartendienst &lt;strong&gt;Open Street Map&lt;/strong&gt; um Ihnen Standort-Informationen anschaulich aufbereitet zu zeigen.</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.openStreetMapIsActive">
-                <source>Open Street Map is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
-                <target>Open Street Map ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
-                <source>Open Street Map is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Open Street Map ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
-            </trans-unit>
-
-            <trans-unit id="PRIVACY.POPUP.leadlab">
-                <source>TO BE CHANGED</source>
-                <target>TO BE CHANGED</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.leadlabIsActive">
-                <source>LeadLab is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
-                <target>LeadLab ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
-            </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.leadlabIsDeactivated">
-                <source>LeadLab is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>LeadLab ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">

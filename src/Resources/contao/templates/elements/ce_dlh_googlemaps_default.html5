@@ -23,14 +23,11 @@ if ($key === null) {
 
 ?>
 
-
 <!-- indexer::stop -->
-<div class="map-container">
+<div class="<?= $this->class; ?> map-container block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>>
 
-    <div class="<?= $this->class; ?> block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>>
-        <?php if ($this->headline): ?>
-
-        <<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
+	<?php if ($this->headline): ?>
+		<<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
     <?php endif; ?>
 
     <div class="dlh_googlemap block" id="dlh_googlemap_<?= $this->map['id']; ?>"
@@ -38,7 +35,6 @@ if ($key === null) {
 
         <noscript><p><?= ($this->map['staticMapNoscript'] ? $this->map['staticMap'] : $this->labels['noscript']); ?></p>
         </noscript>
-
     </div>
 
     <div class="map-question-block">
@@ -47,10 +43,8 @@ if ($key === null) {
                 value="show-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['googleMapsLoadQuestionYes'] ?></button>
         <button class="open-privacy-settings "><?= $GLOBALS['TL_LANG']['PRIVACY']['googleMapsLoadQuestionEditPrivacy'] ?></button>
     </div>
-
-
+	
     <script>
-
         var showMap = false;
         var gmapInit = false;
 
@@ -223,8 +217,7 @@ if ($key === null) {
             }
         }, 250);
     </script>
-</div>
+	<button class="open-privacy-btn open-privacy-settings" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
 </div>
 
-<button class="open-privacy-btn open-privacy-settings" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>
 <!-- indexer::continue -->

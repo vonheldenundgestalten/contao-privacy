@@ -41,9 +41,12 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         </div>
 
         <div class="right-col">
+			<?php if ($blnShowAnalytics || $this->privacyShowLeadLab): ?>
+                <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
+            <?php endif; ?>
+			
             <!-- GOOGLE ANALYTICS -->
             <?php if ($blnShowAnalytics): ?>
-                <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
                 <p class="g-analytics status-line">
@@ -60,13 +63,31 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive'] ?>
                     </span>
                 </p>
-
             <?php endif; ?>
 
+			<!-- LEADLAB -->
+            <?php if ($this->privacyShowLeadLab): ?>
+                <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
+                <p class="leadlab status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
+            
             <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
-            
+			
             <!-- GOOGLE MAPS -->
             <?php if ($this->privacyShowGoogleMaps): ?>
                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
@@ -158,25 +179,6 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
 
                     <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsActive'] ?>
-                    </span>
-                </p>
-            <?php endif; ?>
-
-            <!-- LEADLAB -->
-            <?php if ($this->privacyShowLeadLab): ?>
-                <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
-                <p class="leadlab status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
-                        <span class="switch-btn"></span>
-                    </label>
-
-                    <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
-                    </span>
-
-                    <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
                     </span>
                 </p>
             <?php endif; ?>
