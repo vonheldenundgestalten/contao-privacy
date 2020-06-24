@@ -156,6 +156,7 @@ var contaoPrivacy = (function() {
 
         $('.mapbox-container').addClass('active-mapbox');
         $('#privacy-settings').addClass('active-mapbox');
+        $('.embeded-map').removeClass('map-hidden');
         $(".mapbox-container .mapbox-question-block").hide();
         $(".mapbox-container + .open-privacy-btn").show();
     }
@@ -170,6 +171,7 @@ var contaoPrivacy = (function() {
 
         $('.mapbox-container').removeClass('active-mapbox');
         $('#privacy-settings').removeClass('active-mapbox');
+        $('.embeded-map').addClass('map-hidden');
         $(".mapbox-container .mapbox-question-block").show();
         $(".mapbox-container + .open-privacy-btn").hide();
     }
