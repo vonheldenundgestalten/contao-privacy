@@ -107,7 +107,7 @@ var contaoPrivacy = (function() {
         $('#privacy-settings').addClass('active-gmap');
         $('.dlh_googlemap').removeClass('map-hidden');
         $(".map-container .map-question-block").hide();
-        $(".map-container .open-privacy-btn").show();
+        $(".map-container + .open-privacy-btn").show();
     }
 
     /**
@@ -122,7 +122,7 @@ var contaoPrivacy = (function() {
         $('.dlh_googlemap').addClass('map-hidden');
         $('#privacy-settings').removeClass('active-gmap');
         $(".map-container .map-question-block").show();
-        $(".map-container .open-privacy-btn").hide();
+        $(".map-container + .open-privacy-btn").hide();
     }
 
     /**
@@ -344,18 +344,21 @@ function runContaoPrivacy() {
     $(window).on('scroll', function() {
         scrolling = true;
     });
+    var privacyBar = $(".privacy-bar"),
+        privacyBarHeight = privacyBar.height() + 30;
 
     setInterval(function() {
+       
         if (scrolling) {
             scrolling = false;
-            if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                $(".privacy-bar").addClass('not-fixed');
+            if($(window).scrollTop() + $(window).height() > $(document).height() - privacyBarHeight) {
+                privacyBar.addClass('not-fixed');
 
             } else {
-                $(".privacy-bar").removeClass('not-fixed');
+                privacyBar.removeClass('not-fixed');
             }
         }
-    }, 250);
+    }, 450);
 
     // Set analytics initially
     if ($inputAnalytics.length) {
