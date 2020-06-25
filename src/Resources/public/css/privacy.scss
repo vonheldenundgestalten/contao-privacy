@@ -38,7 +38,7 @@ $brand-1: #01BABC;
         margin-bottom: 0;
 		margin-right: 0;
         padding-right: 4em;
-        font-size: 14px;
+        font-size: 0.8em;
         line-height: 1.5;
         width: 100%;
         a {
@@ -66,7 +66,7 @@ $brand-1: #01BABC;
         display: inline-block;
         @include align-self($value: center);
         color: $dark-grey;
-        font-size: 0.85rem;
+        font-size: 0.8em;
         transition: all 0.3s ease-in-out;
         &.button-enable-all {
             margin-right: 1em;
@@ -176,6 +176,7 @@ $brand-1: #01BABC;
     p {
         font-size: 1em;
         color: $dark-grey;
+        margin-bottom: 1em;
         a {
             color: inherit;
             font-weight: 900;
