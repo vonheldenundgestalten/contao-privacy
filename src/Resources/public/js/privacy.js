@@ -107,7 +107,7 @@ var contaoPrivacy = (function() {
         $('#privacy-settings').addClass('active-gmap');
         $('.dlh_googlemap').removeClass('map-hidden');
         $(".map-container .map-question-block").hide();
-        $(".map-container + .open-privacy-btn").show();
+        $(".map-container .open-privacy-btn").show();
     }
 
     /**
@@ -122,7 +122,7 @@ var contaoPrivacy = (function() {
         $('.dlh_googlemap').addClass('map-hidden');
         $('#privacy-settings').removeClass('active-gmap');
         $(".map-container .map-question-block").show();
-        $(".map-container + .open-privacy-btn").hide();
+        $(".map-container .open-privacy-btn").hide();
     }
 
     /**
