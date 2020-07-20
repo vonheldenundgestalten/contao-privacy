@@ -36,6 +36,7 @@ var contaoPrivacy = (function() {
      */
     function enableAll() {
         setAnalytics(true);
+        setTagmanager(true);
         setLeadLab(true);
         setGmap(true);
         setMapbox(true);
@@ -57,6 +58,21 @@ var contaoPrivacy = (function() {
         // Show right status message
         jQuery('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
         jQuery('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+    }
+	
+	/**
+     * @param bln boolean
+     */
+    function setTagmanager(bln) {
+        localStorage.setItem('contaoPrivacy.enabledTagManager', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputTagmanager = jQuery('input[name="privacy-g-tagmanager"]');
+        $inputTagmanager.prop("checked", bln);
+
+        // Show right status message
+        jQuery('.g-tagmanager .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        jQuery('.g-tagmanager .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 
     /**
@@ -297,6 +313,7 @@ var contaoPrivacy = (function() {
         showPopup: showPopup,
         closePopup: closePopup,
         setAnalytics: setAnalytics,
+        setTagmanager: setTagmanager,
         setLeadLab: setLeadLab,
         setGmap: setGmap,
         setMapbox: setMapbox,
@@ -319,6 +336,7 @@ function runContaoPrivacy() {
     var $buttonOpenPopup =         jQuery('button.open-privacy-settings');
     var $buttonClosePopup =        jQuery('.close-privacy');
     var $inputAnalytics =          jQuery('input[name="privacy-g-analytics"]');
+    var $inputTagmanager =         jQuery('input[name="privacy-g-tagmanager"]');
     var $inputLeadLab =            jQuery('input[name="privacy-leadlab"]');
     var $inputGmaps =              jQuery('input[name="privacy-g-maps"]');
     var $inputMapbox =             jQuery('input[name="privacy-mapbox"]');
@@ -358,6 +376,11 @@ function runContaoPrivacy() {
     // Set analytics initially
     if ($inputAnalytics.length) {
         contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'));
+    }
+	
+	// Set analytics initially
+    if ($inputTagmanager.length) {
+        contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledTagManager'));
     }
 
     // Set leadlab initially
@@ -439,8 +462,15 @@ function runContaoPrivacy() {
             contaoPrivacy.setAnalytics(jQuery(this).prop('checked'));
         });
     }
+	
+	// Toggle TagManager
+    if ($inputTagmanager.length) {
+        $inputTagmanager.on('change', function() {
+            contaoPrivacy.setTagmanager(jQuery(this).prop('checked'));
+        });
+    }
 
-    // Toggle analytics
+    // Toggle LeadLab
     if ($inputLeadLab.length) {
         $inputLeadLab.on('change', function() {
             contaoPrivacy.setLeadLab(jQuery(this).prop('checked'));

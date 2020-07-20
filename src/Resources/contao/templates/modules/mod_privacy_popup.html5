@@ -7,12 +7,21 @@ global $objPage;
 
 // Toggle Analytics
 $blnShowAnalytics = false;
+$blnShowTagmanager = false;
 if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->layout))
 {
     // JavaScript analytics template
-    if (!empty(unserialize($objLayout->analytics)))
+	$arrAnalytics = unserialize($objLayout->analytics);
+    if (!empty($arrAnalytics))
     {
-        $blnShowAnalytics = true;
+		foreach($arrAnalytics as $strTemplate){
+			if($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false){
+				$blnShowAnalytics = true;
+			}
+			if($strTemplate == 'analytics_googletagmanager' || strpos($strTemplate, 'analytics_googletagmanager_') !== false){
+				$blnShowTagmanager = true;
+			}			
+		}
     }
 
     // MooTools analytics template
@@ -41,12 +50,12 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         </div>
 
         <div class="right-col">
-			<?php if ($blnShowAnalytics || $this->privacyShowLeadLab): ?>
+			<?php if ($blnShowAnalytics || $blnShowTagmanager || $this->privacyShowLeadLab): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
             <?php endif; ?>
 			
-            <!-- GOOGLE ANALYTICS -->
             <?php if ($blnShowAnalytics): ?>
+            <!-- GOOGLE ANALYTICS -->
                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
                 <p class="g-analytics status-line">
@@ -64,9 +73,29 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
+			
+            <?php if ($blnShowTagmanager): ?>
+			<!-- GOOGLE TAG MANAGER -->
+                <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
 
-			<!-- LEADLAB -->
+                <p class="g-tagmanager status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-g-tagmanager" id="g-tagmanager-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
+
             <?php if ($this->privacyShowLeadLab): ?>
+			<!-- LEADLAB -->
                 <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
                 <p class="leadlab status-line">
                     <label class="switch">
@@ -88,8 +117,8 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
 			
-            <!-- GOOGLE MAPS -->
             <?php if ($this->privacyShowGoogleMaps): ?>
+            <!-- GOOGLE MAPS -->
                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
                 <p class="g-maps status-line">
                     <label class="switch">
@@ -107,8 +136,8 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
-            <!-- MAPBOX -->
             <?php if ($this->privacyShowMapbox): ?>
+            <!-- MAPBOX -->
                 <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
                 <p class="mapbox status-line">
                     <label class="switch">
@@ -126,8 +155,8 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
-            <!-- OPEN STREET MAP -->
             <?php if ($this->privacyShowOpenStreetMap): ?>
+            <!-- OPEN STREET MAP -->
                 <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
                 <p class="open-street-map status-line">
                     <label class="switch">
@@ -145,8 +174,8 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
-            <!-- YOUTUBE -->
             <?php if ($this->privacyShowYouTube): ?>
+            <!-- YOUTUBE -->
                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
                 <p class="youtube status-line">
                     <label class="switch">
@@ -164,8 +193,8 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
-            <!-- VIMEO -->
             <?php if ($this->privacyShowVimeo): ?>
+            <!-- VIMEO -->
                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
                 <p class="vimeo status-line">
                     <label class="switch">

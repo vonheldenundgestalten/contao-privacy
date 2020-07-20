@@ -97,7 +97,19 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
                 <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-            </trans-unit>			
+            </trans-unit>
+			<trans-unit id="PRIVACY.POPUP.tagmanager">
+                <source>With the help of the &lt;strong&gt;Google Tag Manager&lt;/strong&gt; we can track events, and other user interaction on our website. Where possible we only pass anonymised data, a personal reference is not possible then.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.tagmanagerIntro">
+                <source>Google Tag Manager is currently</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.tagmanagerIsActive">
+                <source>Google Tag Manager is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.tagmanagerIsDeactivated">
+                <source>Google Tag Manager is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+            </trans-unit>						
             <trans-unit id="PRIVACY.POPUP.leadlab">
                 <source>We're using the service &lt;strong&gt;leadlab.click&lt;/strong&gt; from Wiredminds GmbH to analyze your use of our website. The data helps us with with optimizing the website content and functionality.</source>
             </trans-unit>
