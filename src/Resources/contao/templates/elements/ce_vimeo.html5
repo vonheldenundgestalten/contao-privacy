@@ -1,4 +1,13 @@
-<?php $this->extend('block_unsearchable'); ?>
+<?php 
+$this->extend('block_unsearchable');
+
+// add a do-not-track parameter to the query
+$arrUrl = parse_url($this->src);
+$strQuery = $arrUrl['query'] . $arrUrl['query']?'&amp;dnt=true':'?dnt=true';
+$strFragment = $arrUrl['fragment']?'#':'' . $arrUrl['fragment'];
+$this->src = $arrUrl['scheme'].'://'.$arrUrl['host'].$arrUrl['path'].$strQuery.$strFragment;
+
+?>
 
 <?php $this->block('content'); ?>
 

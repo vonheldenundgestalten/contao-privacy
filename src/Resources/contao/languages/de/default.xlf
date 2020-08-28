@@ -71,8 +71,8 @@
                 <target>Privatsphären-Einstellungen bearbeiten</target>
             </trans-unit>
             <trans-unit id="PRIVACY.vimeoLoadQuestion">
-                <source>This video element uses playback technology from vimeo.com. When showing and playing the video Vimeo is setting Cookies for usage and statistical analysis. Do you want to load the video?</source>
-                <target>Dieses Video-Element verwendt Vimeo um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste. Video anzeigen?</target>
+                <source>This video element uses playback technology from vimeo.com. We're using a tracking-free version of Vimeo. Do you want to load the video?</source>
+                <target>Dieses Video-Element verwendt Vimeo um Videodaten und Player-Technologie einzubinden. Wir verwenden den Do-Not-Track-Modus, Vimeo überträg dabei keine Nutzungsdaten. Video anzeigen?</target>
             </trans-unit>
             <trans-unit id="PRIVACY.vimeoLoadButton">
                 <source>Enable Vimeo</source>
@@ -212,8 +212,8 @@
                 <target>YouTube ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeo">
-                <source>We use &lt;strong&gt;Vimeo&lt;/strong&gt; to include video data and playback technology. Vimeo collects usage data for statistical analysis and optimization of their services.</source>
-                <target>Wir verwenden &lt;strong&gt;Vimeo&lt;/strong&gt; um Videodaten und Player-Technologie einzubinden. Vimeo überträgt dabei Nutzungsdaten zur statistischen Auswertung und Optimierung ihrer Dienste.</target>
+                <source>We use &lt;strong&gt;Vimeo&lt;/strong&gt; to include video data and playback technology. We're using the do-not-track setting where Vimeo does not collect any user data.</source>
+                <target>Wir verwenden &lt;strong&gt;Vimeo&lt;/strong&gt; um Videodaten und Player-Technologie einzubinden. Do-Not-Track ist aktiviert, Vimeo überträgt dann keine Nutzerdaten.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeoIsActive">
                 <source>Vimeo is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
