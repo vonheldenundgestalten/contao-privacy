@@ -15,10 +15,10 @@
         }
     ],
     "require": {
-    	"contao/core-bundle": "^4.4"
+    	"contao/core-bundle": "4.9.*"
     },
     "require-dev": {
-        "contao/manager-plugin": "^2.2"
+        "contao/manager-plugin": "^2.3"
     },
     "extra": {
         "contao-manager-plugin": "Magmell\\Contao\\Privacy\\ContaoManager\\Plugin"

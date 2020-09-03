@@ -271,6 +271,14 @@ var contaoPrivacy = (function() {
         $('.youtube-video-block').css('display', 'block');
         $('.privacy-youtube-question-block').css('display', 'none');
         $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'block');
+        
+        // show preview images (replace data-src with src)
+        var $previewImages = $('.youtube-preview img');
+        if ($previewImages.length) {
+            $previewImages.each(function () {
+                $(this).attr('src', $(this).attr('data-src'));
+            });
+        }
     }
 
     function hideYouTube() {
