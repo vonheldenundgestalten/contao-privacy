@@ -336,14 +336,7 @@ $brand-1: #01BABC;
 .mod_dlh_googlemaps,
 .ce_openstreetmap {
     background: $light-grey-background;
-    width: 100%;
-    padding-top: 50%;
-    height: 0;
-    position: relative; 
-    @media screen and (max-width: 520px) {
-        padding-top: 0;
-        height: auto;
-    }
+
     .map-question-block {
         text-align: center;
         position: absolute;
@@ -360,11 +353,6 @@ $brand-1: #01BABC;
     }
     .dlh_googlemap,
 	.open-street-map-block {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         &.map-hidden {
             opacity: 0;
         }
@@ -379,29 +367,38 @@ $brand-1: #01BABC;
 }
 
 // Video privacy
-.youtube-video-block, 
-.vimeo-video-block { 
-    iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
-.youtube-video-block, 
-.vimeo-video-block,
-.privacy-youtube-question-block {
-    position: relative;
-    height: 0;
-}
-
 .privacy-vimeo-question-block,
 .privacy-youtube-question-block {
     text-align: center;
     background: $light-grey-background;
     position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // default ratio 16:9 - ratios needs to stay here, otherwise it will not have any height
+    &.ratio-1610 {
+    	padding-bottom: 62.5%;
+    }
+    &.ratio-2351,
+    &.ratio-219 {
+        padding-bottom: 42.55%;
+    }
+    &.ratio-2391,
+    &.ratio-dcp2k {
+        padding-bottom: 41.84%;
+    }
+    &.ratio-1851 {
+        padding-bottom: 54.054%;
+    }
+    &.ratio-1331,
+    &.ratio-43 {
+        padding-bottom: 75%;
+    }
+    &.ratio-21 {
+        padding-bottom: 50%;
+    }
+    &.ratio-32 {
+        padding-bottom: 66.66%;
+    }
+
     @media screen and (max-width: 520px) {
         padding-bottom: 0;
         height: auto;
