@@ -373,31 +373,6 @@ $brand-1: #01BABC;
     background: $light-grey-background;
     position: relative;
     height: 0;
-    padding-bottom: 56.25%; // default ratio 16:9 - ratios needs to stay here, otherwise it will not have any height
-    &.ratio-1610 {
-    	padding-bottom: 62.5%;
-    }
-    &.ratio-2351,
-    &.ratio-219 {
-        padding-bottom: 42.55%;
-    }
-    &.ratio-2391,
-    &.ratio-dcp2k {
-        padding-bottom: 41.84%;
-    }
-    &.ratio-1851 {
-        padding-bottom: 54.054%;
-    }
-    &.ratio-1331,
-    &.ratio-43 {
-        padding-bottom: 75%;
-    }
-    &.ratio-21 {
-        padding-bottom: 50%;
-    }
-    &.ratio-32 {
-        padding-bottom: 66.66%;
-    }
 
     @media screen and (max-width: 520px) {
         padding-bottom: 0;
