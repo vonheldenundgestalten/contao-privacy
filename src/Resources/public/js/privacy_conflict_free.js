@@ -123,7 +123,7 @@ var contaoPrivacy = (function() {
         jQuery('#privacy-settings').addClass('active-gmap');
         jQuery('.dlh_googlemap').removeClass('map-hidden');
         jQuery(".map-container .map-question-block").hide();
-        jQuery(".map-container + .open-privacy-btn").show();
+        jQuery(".map-container .open-privacy-btn").show();
     }
 
     /**
@@ -138,7 +138,7 @@ var contaoPrivacy = (function() {
         jQuery('.dlh_googlemap').addClass('map-hidden');
         jQuery('#privacy-settings').removeClass('active-gmap');
         jQuery(".map-container .map-question-block").show();
-        jQuery(".map-container + .open-privacy-btn").hide();
+        jQuery(".map-container .open-privacy-btn").hide();
     }
 
     /**
