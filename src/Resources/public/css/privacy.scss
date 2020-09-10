@@ -344,11 +344,7 @@ $brand-1: #01BABC;
         left: 50%;
         @include transform(translate(-50%, -50%));  
         @media screen and (max-width: 520px) {
-            position: relative;
-            top: 0;
-            left: 0;
-            @include transform(initial);
-            padding: 4em 3em;
+            width: 85%;
         }
     }
     .dlh_googlemap,
