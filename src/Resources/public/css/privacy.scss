@@ -187,7 +187,6 @@ $brand-1: #01BABC;
 		font-size: 1.5em;
         top: .95em;
 		right: 1.3em;
-       
         padding: 0;
         cursor: pointer;
         svg {
@@ -336,7 +335,6 @@ $brand-1: #01BABC;
 .mod_dlh_googlemaps,
 .ce_openstreetmap {
     background: $light-grey-background;
-
     .map-question-block {
         text-align: center;
         position: absolute;
@@ -354,6 +352,7 @@ $brand-1: #01BABC;
         }
     }
 }
+
 .map-container {
     &.active-gmap {
         .open-privacy-btn {
@@ -368,13 +367,7 @@ $brand-1: #01BABC;
     text-align: center;
     background: $light-grey-background;
     position: relative;
-    height: 0;
-
-    @media screen and (max-width: 520px) {
-        padding-bottom: 0;
-        height: auto;
-    }
-
+   
     .vimeo-question-block,
     .youtube-question-block {
         text-align: center;
@@ -427,10 +420,10 @@ $brand-1: #01BABC;
     font-size: 0.9em;
     color: #fff;
     border: none;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     margin-top: 0.2em;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    @include transition(all 0.3s ease-in-out);
     &:hover {
         background: #333;
     }
