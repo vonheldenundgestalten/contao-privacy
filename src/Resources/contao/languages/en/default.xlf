@@ -188,6 +188,10 @@
             <trans-unit id="PRIVACY.POPUP.deactivate">
                 <source>deactivate</source>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.noFeedbackText">
+                <source>no feedback text</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

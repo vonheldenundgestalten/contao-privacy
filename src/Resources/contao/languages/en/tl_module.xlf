@@ -25,6 +25,9 @@
             <trans-unit id="tl_module.privacyShowLeadlab.0">
                 <source>Show LeadLab</source>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowMatomo.0">
+                <source>Show Matomo</source>
+            </trans-unit>
 			<trans-unit id="tl_module.privacy_legend">
                 <source>Privacy settings for the popup</source>
             </trans-unit>

@@ -248,6 +248,11 @@
                 <source>deactivate</source>
                 <target>deaktivieren</target>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.noFeedbackText">
+                <source>no feedback text</source>
+                <target>no feedback text</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

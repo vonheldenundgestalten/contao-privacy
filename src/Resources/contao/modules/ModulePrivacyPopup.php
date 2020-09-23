@@ -10,6 +10,14 @@ use Patchwork\Utf8;
  * Front end module "privacyPopup".
  *
  * @property bool $loadConflictFreeJs
+ * @property bool $privacyDataProtectionPage
+ * @property bool $privacyShowGoogleMaps
+ * @property bool $privacyShowYouTube
+ * @property bool $privacyShowVimeo
+ * @property bool $privacyShowOpenStreetMap
+ * @property bool $privacyShowLeadLab
+ * @property bool $privacyShowMapbox
+ * @property bool $privacyShowMatomo
  */
 class ModulePrivacyPopup extends Module
 {
@@ -43,5 +51,6 @@ class ModulePrivacyPopup extends Module
     {
         $privacyJs = $this->loadConflictFreeJs ? 'privacy_conflict_free.js' : 'privacy.js';
         $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/' . $privacyJs;
+        $GLOBALS['privacyShowMatomo'] = (bool)$this->privacyShowMatomo;
     }
 }

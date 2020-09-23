@@ -4,8 +4,10 @@
 $MatomoSite = 0;
 $MatomoPath = '//www.example.com/matomo/';
 
+$privacyShowMatomo = $GLOBALS['privacyShowMatomo'];
+
 // DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
-if ($MatomoSite > 0 && '//www.example.com/matomo/' != $MatomoPath && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
+if ($MatomoSite !== 0 && '//www.example.com/matomo/' != $MatomoPath && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
 
     <script>
         setTimeout(checkJQueryForAnalyticsMatomo, 250);
@@ -14,22 +16,28 @@ if ($MatomoSite > 0 && '//www.example.com/matomo/' != $MatomoPath && !BE_USER_LO
             if (!window.jQuery) {
                 return setTimeout(checkJQueryForAnalyticsMatomo, 250);
             }
-            
+
+            <?php if ($privacyShowMatomo): ?>
             if (localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo')) {
+            <?php endif; ?>
+
                 var _paq = window._paq = window._paq || [];
                 _paq.push(['trackPageView']);
                 _paq.push(['enableLinkTracking']);
                 (function () {
                     var u = '<?= $MatomoPath ?>';
                     _paq.push(['setTrackerUrl', u + 'matomo.php']);
-                    _paq.push(['setSiteId', <?= $MatomoSite ?>]);
+                    _paq.push(['setSiteId', '<?= $MatomoSite ?>']);
                     var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
                     g.async = true;
                     g.defer = true;
                     g.src = u + 'matomo.js';
                     s.parentNode.insertBefore(g, s);
                 })();
+
+            <?php if ($privacyShowMatomo): ?>
             }
+            <?php endif; ?>
         }
     </script>
 

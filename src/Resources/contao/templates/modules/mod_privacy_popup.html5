@@ -18,15 +18,18 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
     {
 		foreach ($arrAnalytics as $strTemplate)
 		{
-			if ($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false){
+			if ($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false)
+			{
 				$blnShowAnalyticsGoogle = true;
 			}
 
-			if ($strTemplate == 'analytics_googletagmanager' || strpos($strTemplate, 'analytics_googletagmanager_') !== false){
+			if ($strTemplate == 'analytics_googletagmanager' || strpos($strTemplate, 'analytics_googletagmanager_') !== false)
+			{
 				$blnShowTagManager = true;
 			}
 
-            if ($strTemplate == 'analytics_matomo' || strpos($strTemplate, 'analytics_matomo_') !== false){
+            if (($strTemplate == 'analytics_matomo' || strpos($strTemplate, 'analytics_matomo_') !== false) && $GLOBALS['privacyShowMatomo'])
+            {
                 $blnShowAnalyticsMatomo = true;
             }
 		}
@@ -46,6 +49,17 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
     }
 }
 
+$empty = !$blnShowAnalyticsGoogle
+      && !$blnShowAnalyticsMatomo
+      && !$blnShowTagManager
+      && !$this->privacyShowLeadLab
+      && !$this->privacyShowYouTube
+      && !$this->privacyShowGoogleMaps
+      && !$this->privacyShowMapbox
+      && !$this->privacyShowOpenStreetMap
+      && !$this->privacyShowVimeo
+;
+
 ?>
 
 <div id="privacy-settings">
@@ -58,7 +72,13 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         </div>
 
         <div class="right-col">
-			<?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
+
+            <?php if ($empty): ?>
+                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackHeadline'] ?></h4>
+                <p class="content-empty"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackText'] ?></p>
+            <?php endif; ?>
+
+            <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
             <?php endif; ?>
 
@@ -141,7 +161,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                 </p>
             <?php endif; ?>
 
-            <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
+            <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube || $this->privacyShowMapbox || $this->privacyShowOpenStreetMap || $this->privacyShowVimeo): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
 
