@@ -36,6 +36,7 @@ var contaoPrivacy = (function() {
      */
     function enableAll() {
         setAnalytics(true);
+        setAnalyticsMatomo(true);
         setTagmanager(true);
         setLeadLab(true);
         setGmap(true);
@@ -58,6 +59,21 @@ var contaoPrivacy = (function() {
         // Show right status message
         $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
         $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+    }
+
+    /**
+     * @param bln boolean
+     */
+    function setAnalyticsMatomo(bln) {
+        localStorage.setItem('contaoPrivacy.enabledAnalyticsMatomo', bln ? '1' : '');
+
+        // Switch checkbox correspondingly
+        var $inputAnalyticsMatomo = $('input[name="privacy-matomo-analytics"]');
+        $inputAnalyticsMatomo.prop("checked", bln);
+
+        // Show right status message
+        $('.matomo-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
+        $('.matomo-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
 	
 	/**
@@ -323,6 +339,7 @@ var contaoPrivacy = (function() {
         showPopup: showPopup,
         closePopup: closePopup,
         setAnalytics: setAnalytics,
+        setAnalyticsMatomo: setAnalyticsMatomo,
         setTagmanager: setTagmanager,
         setLeadLab: setLeadLab,
         setGmap: setGmap,
@@ -346,6 +363,7 @@ function runContaoPrivacy() {
     var $buttonOpenPopup =         $('button.open-privacy-settings');
     var $buttonClosePopup =        $('.close-privacy');
     var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
+    var $inputAnalyticsMatomo =    $('input[name="privacy-matomo-analytics"]');
     var $inputTagmanager =         $('input[name="privacy-g-tagmanager"]');
     var $inputLeadLab =            $('input[name="privacy-leadlab"]');
     var $inputGmaps =              $('input[name="privacy-g-maps"]');
@@ -389,6 +407,11 @@ function runContaoPrivacy() {
     // Set analytics initially
     if ($inputAnalytics.length) {
         contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'));
+    }
+
+    // Set matomo analytics initially
+    if ($inputAnalyticsMatomo.length) {
+        contaoPrivacy.setAnalyticsMatomo(!!localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo'));
     }
 
 	// Set tagmanager initially
@@ -473,6 +496,13 @@ function runContaoPrivacy() {
     if ($inputAnalytics.length) {
         $inputAnalytics.on('change', function() {
             contaoPrivacy.setAnalytics($(this).prop('checked'));
+        });
+    }
+
+    // Toggle analytics matomo
+    if ($inputAnalyticsMatomo.length) {
+        $inputAnalyticsMatomo.on('change', function() {
+            contaoPrivacy.setAnalyticsMatomo($(this).prop('checked'));
         });
     }
 	

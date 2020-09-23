@@ -129,6 +129,22 @@
                 <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
                 <target>Google Analytics ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsMatomo">
+                <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Matomo Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
+                <target>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Matomo Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsMatomoIntro">
+                <source>Matomo Analytics is currently</source>
+                <target>Matomo Analytics is currently</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsMatomoIsActive">
+                <source>Matomo Analytics is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Matomo Analytics is currently &lt;strong&gt;active&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.analyticsMatomoIsDeactivated">
+                <source>Matomo Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Matomo Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</target>
+            </trans-unit>
 			<trans-unit id="PRIVACY.POPUP.tagmanager">
                 <source>With the help of the &lt;strong&gt;Google Tag Manager&lt;/strong&gt; we can track events, and other user interaction on our website. Where possible we only pass anonymised data, a personal reference is not possible then.</source>
                 <target>Mit dem Tool &lt;strong&gt;Google Tag Manager&lt;/strong&gt; erfassen wir Events und andere User-Interaktionen in unserer Webseite. Wo möglich werdern nur anonymisierte Daten übergeben, ein persönlicher Bezug ist dann nicht möglich.</target>

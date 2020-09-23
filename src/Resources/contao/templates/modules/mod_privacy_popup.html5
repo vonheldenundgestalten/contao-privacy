@@ -6,21 +6,29 @@ $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static';
 global $objPage;
 
 // Toggle Analytics
-$blnShowAnalytics = false;
-$blnShowTagmanager = false;
+$blnShowAnalyticsGoogle = false;
+$blnShowAnalyticsMatomo = false;
+$blnShowTagManager = false;
+
 if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->layout))
 {
     // JavaScript analytics template
 	$arrAnalytics = unserialize($objLayout->analytics);
     if (!empty($arrAnalytics))
     {
-		foreach($arrAnalytics as $strTemplate){
-			if($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false){
-				$blnShowAnalytics = true;
+		foreach ($arrAnalytics as $strTemplate)
+		{
+			if ($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false){
+				$blnShowAnalyticsGoogle = true;
 			}
-			if($strTemplate == 'analytics_googletagmanager' || strpos($strTemplate, 'analytics_googletagmanager_') !== false){
-				$blnShowTagmanager = true;
-			}			
+
+			if ($strTemplate == 'analytics_googletagmanager' || strpos($strTemplate, 'analytics_googletagmanager_') !== false){
+				$blnShowTagManager = true;
+			}
+
+            if ($strTemplate == 'analytics_matomo' || strpos($strTemplate, 'analytics_matomo_') !== false){
+                $blnShowAnalyticsMatomo = true;
+            }
 		}
     }
 
@@ -31,7 +39,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         {
             if (strpos($strMooToolsTemplate, 'moo_analytics') === 0)
             {
-                $blnShowAnalytics = true;
+                $blnShowAnalyticsGoogle = true;
                 break;
             }
         }
@@ -50,11 +58,11 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
         </div>
 
         <div class="right-col">
-			<?php if ($blnShowAnalytics || $blnShowTagmanager || $this->privacyShowLeadLab): ?>
+			<?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
             <?php endif; ?>
-			
-            <?php if ($blnShowAnalytics): ?>
+
+            <?php if ($blnShowAnalyticsGoogle): ?>
             <!-- GOOGLE ANALYTICS -->
                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
@@ -73,8 +81,28 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
-			
-            <?php if ($blnShowTagmanager): ?>
+
+            <?php if ($blnShowAnalyticsMatomo): ?>
+            <!-- MATOMO ANALYTICS -->
+                <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
+
+                <p class="matomo-analytics status-line">
+                    <label class="switch">
+                        <input type="checkbox" name="privacy-matomo-analytics" id="matomo-analytics-control">
+                        <span class="switch-btn"></span>
+                    </label>
+
+                    <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsDeactivated'] ?>
+                    </span>
+
+                    <span class="status-enabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsActive'] ?>
+                    </span>
+                </p>
+            <?php endif; ?>
+
+            <?php if ($blnShowTagManager): ?>
 			<!-- GOOGLE TAG MANAGER -->
                 <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
 
@@ -112,11 +140,11 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
                     </span>
                 </p>
             <?php endif; ?>
-            
+
             <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube): ?>
                 <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
             <?php endif; ?>
-			
+
             <?php if ($this->privacyShowGoogleMaps): ?>
             <!-- GOOGLE MAPS -->
                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
