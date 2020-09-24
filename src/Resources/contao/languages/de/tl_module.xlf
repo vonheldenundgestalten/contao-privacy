@@ -34,8 +34,8 @@
                 <target>LeadLab anzeigen</target>
             </trans-unit>
             <trans-unit id="tl_module.privacyShowMatomo.0">
-                <source>Show Matomo</source>
-                <target>Show Matomo</target>
+                <source>Show request for Matomo</source>
+                <target>Matomo-Statistik abfragen?</target>
             </trans-unit>
 			<trans-unit id="tl_module.privacy_legend">
                 <source>Privacy settings for the popup</source>

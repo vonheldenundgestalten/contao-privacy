@@ -249,9 +249,13 @@
                 <target>deaktivieren</target>
             </trans-unit>
 
-            <trans-unit id="PRIVACY.POPUP.noFeedbackText">
-                <source>no feedback text</source>
-                <target>no feedback text</target>
+            <trans-unit id="PRIVACY.POPUP.noFeedbackHeadline">
+                <source>We're only using technical cookies</source>
+                <target>Nur technische Cookies im Einsatz</target>
+            </trans-unit> 
+			<trans-unit id="PRIVACY.POPUP.noFeedbackText">
+                <source>We're only using technical cookies, necessary for the website to run and for local analysis.</source>
+                <target>Aktuell kommen nur technisch notwendige Cookies zum Einsatz, die dem Betrieb der Webseite und lokal laufender Analyse dienen.</target>
             </trans-unit>
         </body>
     </file>

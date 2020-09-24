@@ -188,9 +188,12 @@
             <trans-unit id="PRIVACY.POPUP.deactivate">
                 <source>deactivate</source>
             </trans-unit>
-
-            <trans-unit id="PRIVACY.POPUP.noFeedbackText">
-                <source>no feedback text</source>
+			
+            <trans-unit id="PRIVACY.POPUP.noFeedbackHeadline">
+                <source>We're only using technical cookies</source>
+            </trans-unit> 
+			<trans-unit id="PRIVACY.POPUP.noFeedbackText">
+                <source>We're only using technical cookies, necessary for the website to run and for local analysis.</source>
             </trans-unit>
         </body>
     </file>
