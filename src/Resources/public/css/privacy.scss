@@ -367,6 +367,7 @@ $brand-1: #01BABC;
     text-align: center;
     background: $light-grey-background;
     position: relative;
+    height: 0;
    
     .vimeo-question-block,
     .youtube-question-block {
@@ -383,7 +384,7 @@ $brand-1: #01BABC;
             top: 0;
             left: 0;
             @include transform(initial);
-            padding: 4em 3em;
+            padding: 2em 1em;
         }
     }
     p {
