@@ -19,6 +19,7 @@
             "type": "vcs",
             "url": "https://github.com/magmell-agentur/contao-basic"
         }
+	],
     "require": {
     	"contao/core-bundle": "4.9.*",
     	"magmell-agentur/contao-basic": "4.9.*"
