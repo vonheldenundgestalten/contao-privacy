@@ -14,8 +14,14 @@
             "role": "Developer"
         }
     ],
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/magmell-agentur/contao-basic"
+        }
     "require": {
-    	"contao/core-bundle": "4.9.*"
+    	"contao/core-bundle": "4.9.*",
+    	"magmell-agentur/contao-basic": "4.9.*"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
