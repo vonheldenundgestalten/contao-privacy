@@ -280,13 +280,13 @@ var contaoPrivacy = (function() {
     function showOpenStreetMap() {
         jQuery('.open-street-map-block').css('display', 'block');
         jQuery('.ce_openstreetmap .map-question-block').css('display', 'none');
-        jQuery('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'block');
+        jQuery('.openstreetmap-container .open-privacy-btn').css('display', 'block');
     }
 
     function hideOpenStreetMap() {
         jQuery('.open-street-map-block').css('display', 'none');
         jQuery('.ce_openstreetmap .map-question-block').css('display', 'block');
-        jQuery('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'none');
+        jQuery('.openstreetmap-container .open-privacy-btn').css('display', 'none');
     }
 
     /**

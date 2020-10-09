@@ -1,21 +1,24 @@
-<div class="<?= $this->class; ?> block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>">
-	<div class="open-street-map-block">
-		<iframe style="border: 1px solid black;"
-				src="//www.openstreetmap.org/export/embed.html?bbox=<?= $this->lngRight ?>%2C<?= $this->latBottom ?>%2C<?= $this->lngLeft ?>%2C<?= $this->latTop ?>[&amp;]layer=mapnik[&amp;]marker=<?= $this->markerLat ?>%2C<?= $this->markerLng ?>"
-				width="<?= $this->osmWidth ?>>"
-				height="<?= $this->osmHeight ?>>"
-				frameborder="0"
-				marginwidth="0"
-				marginheight="0"
-				scrolling="no">
-		</iframe>
-	</div>
+<div class="openstreetmap-container">
+	<div class="<?= $this->class; ?> block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>">
+		<div class="open-street-map-block">
+			<iframe style="border: 1px solid black;"
+					src="//www.openstreetmap.org/export/embed.html?bbox=<?= $this->lngRight ?>%2C<?= $this->latBottom ?>%2C<?= $this->lngLeft ?>%2C<?= $this->latTop ?>[&amp;]layer=mapnik[&amp;]marker=<?= $this->markerLat ?>%2C<?= $this->markerLng ?>"
+					width="<?= $this->osmWidth ?>>"
+					height="<?= $this->osmHeight ?>>"
+					frameborder="0"
+					marginwidth="0"
+					marginheight="0"
+					scrolling="no">
+			</iframe>
+		</div>
 
-	<div class="map-question-block">
-		<p><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestion'] ?></p>
-		<button id="load-open-street-map"
-				value="show-map" class="btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionYes'] ?></button>
-		<button class="open-privacy-settings btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionEditPrivacy'] ?></button>
+		<div class="map-question-block">
+			<p><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestion'] ?></p>
+			<button id="load-open-street-map"
+					value="show-map" class="btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionYes'] ?></button>
+			<button class="open-privacy-settings btn-privacy"><?= $GLOBALS['TL_LANG']['PRIVACY']['openStreetMapLoadQuestionEditPrivacy'] ?></button>
+		</div>
+
 	</div>
 
 	<button class="open-privacy-btn open-privacy-settings btn-privacy" style="display: none;"><?= $GLOBALS['TL_LANG']['PRIVACY']['changePrivacySettings'] ?></button>

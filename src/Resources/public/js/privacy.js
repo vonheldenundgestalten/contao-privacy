@@ -306,13 +306,13 @@ var contaoPrivacy = (function() {
     function showOpenStreetMap() {
         $('.open-street-map-block').css('display', 'block');
         $('.ce_openstreetmap .map-question-block').css('display', 'none');
-        $('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'block');
+        $('.openstreetmap-container .open-privacy-btn').css('display', 'block');
     }
 
     function hideOpenStreetMap() {
         $('.open-street-map-block').css('display', 'none');
         $('.ce_openstreetmap .map-question-block').css('display', 'block');
-        $('.ce_openstreetmap .map-question-block + .open-privacy-btn').css('display', 'none');
+        $('.openstreetmap-container .open-privacy-btn').css('display', 'none');
     }
 
     /**
