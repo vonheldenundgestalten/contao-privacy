@@ -65,200 +65,240 @@ $empty = !$blnShowAnalyticsGoogle
 <div id="privacy-settings">
     <div class="innerbox">
         <span class="icomoon-close-icon close-privacy"><svg xmlns="http://www.w3.org/2000/svg" class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M451.669333 512L55.108267 908.544a42.7776 42.7776 0 0 0 0 60.330667 42.7776 42.7776 0 0 0 60.330666 0L512 572.356267l396.544 396.561066c16.597333 16.597333 43.776 16.597333 60.330667 0 16.597333-16.597333 16.597333-43.776 0-60.373333L572.347733 512l396.561067-396.544c16.597333-16.597333 16.597333-43.776 0-60.330667-16.597333-16.597333-43.776-16.597333-60.373333 0L512 451.6608 115.456 55.125333a42.7776 42.7776 0 0 0-60.330667 0 42.7776 42.7776 0 0 0 0 60.330667L451.669333 512z"/></svg></span>
-        <h3><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['privacySettings'] ?></h3>
 
-        <div class="left-col">
-            <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['moreInfo'] ?> <a href="{{link_url::<?= $this->privacyDataProtectionPage ?>}}"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['dataProtection'] ?></a>.</p>
-        </div>
+        <!-- MAIN -->
+        <div class="privacy-settings-main">
+            <h3><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['privacySettings'] ?></h3>
 
-        <div class="right-col">
+            <div class="left-col">
+                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['moreInfo'] ?> <a href="{{link_url::<?= $this->privacyDataProtectionPage ?>}}"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['dataProtection'] ?></a>.</p>
+                <p id="privacy-popup-history-show"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['show'] ?></p>
+            </div>
 
-            <?php if ($empty): ?>
-                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackHeadline'] ?></h4>
-                <p class="content-empty"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackText'] ?></p>
-            <?php endif; ?>
+            <div class="right-col">
 
-            <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
-                <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
-            <?php endif; ?>
+                <?php if ($empty): ?>
+                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackHeadline'] ?></h4>
+                    <p class="content-empty"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackText'] ?></p>
+                <?php endif; ?>
 
-            <?php if ($blnShowAnalyticsGoogle): ?>
-            <!-- GOOGLE ANALYTICS -->
-                <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
+                <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
+                    <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
+                <?php endif; ?>
 
-                <p class="g-analytics status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($blnShowAnalyticsGoogle): ?>
+                    <!-- GOOGLE ANALYTICS -->
+                    <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
-                    <span class="status-disabled">
+                    <p class="g-analytics status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
+                            <span class="switch-btn"></span>
+                        </label>
+
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($blnShowAnalyticsMatomo): ?>
-            <!-- MATOMO ANALYTICS -->
-                <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
+                <?php if ($blnShowAnalyticsMatomo): ?>
+                    <!-- MATOMO ANALYTICS -->
+                    <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
 
-                <p class="matomo-analytics status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-matomo-analytics" id="matomo-analytics-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                    <p class="matomo-analytics status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-matomo-analytics" id="matomo-analytics-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($blnShowTagManager): ?>
-			<!-- GOOGLE TAG MANAGER -->
-                <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
+                <?php if ($blnShowTagManager): ?>
+                    <!-- GOOGLE TAG MANAGER -->
+                    <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
 
-                <p class="g-tagmanager status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-g-tagmanager" id="g-tagmanager-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                    <p class="g-tagmanager status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-g-tagmanager" id="g-tagmanager-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowLeadLab): ?>
-			<!-- LEADLAB -->
-                <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
-                <p class="leadlab status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowLeadLab): ?>
+                    <!-- LEADLAB -->
+                    <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
+                    <p class="leadlab status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube || $this->privacyShowMapbox || $this->privacyShowOpenStreetMap || $this->privacyShowVimeo): ?>
-                <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
-            <?php endif; ?>
+                <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube || $this->privacyShowMapbox || $this->privacyShowOpenStreetMap || $this->privacyShowVimeo): ?>
+                    <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['pluginsAndTools'] ?></h4>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowGoogleMaps): ?>
-            <!-- GOOGLE MAPS -->
-                <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
-                <p class="g-maps status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowGoogleMaps): ?>
+                    <!-- GOOGLE MAPS -->
+                    <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
+                    <p class="g-maps status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowMapbox): ?>
-            <!-- MAPBOX -->
-                <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
-                <p class="mapbox status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-mapbox" id="mapbox-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowMapbox): ?>
+                    <!-- MAPBOX -->
+                    <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
+                    <p class="mapbox status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-mapbox" id="mapbox-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowOpenStreetMap): ?>
-            <!-- OPEN STREET MAP -->
-                <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
-                <p class="open-street-map status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-open-street-map" id="open-street-map-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowOpenStreetMap): ?>
+                    <!-- OPEN STREET MAP -->
+                    <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
+                    <p class="open-street-map status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-open-street-map" id="open-street-map-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowYouTube): ?>
-            <!-- YOUTUBE -->
-                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
-                <p class="youtube status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-youtube" id="youtube-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowYouTube): ?>
+                    <!-- YOUTUBE -->
+                    <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
+                    <p class="youtube status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-youtube" id="youtube-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
+                        <span class="status-disabled">
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['.'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
 
-            <?php if ($this->privacyShowVimeo): ?>
-            <!-- VIMEO -->
-                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
-                <p class="vimeo status-line">
-                    <label class="switch">
-                        <input type="checkbox" name="privacy-vimeo" id="vimeo-control">
-                        <span class="switch-btn"></span>
-                    </label>
+                <?php if ($this->privacyShowVimeo): ?>
+                    <!-- VIMEO -->
+                    <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
+                    <p class="vimeo status-line">
+                        <label class="switch">
+                            <input type="checkbox" name="privacy-vimeo" id="vimeo-control">
+                            <span class="switch-btn"></span>
+                        </label>
 
-                    <span class="status-disabled">
+                        <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsDeactivated'] ?>
                     </span>
 
-                    <span class="status-enabled">
+                        <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsActive'] ?>
                     </span>
-                </p>
-            <?php endif; ?>
+                    </p>
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <!-- HISTORY -->
+        <div class="privacy-settings-history" style="display: none;">
+            <div class="left-col">
+                <h6><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['title'] ?></h6>
+                <p id="privacy-popup-history-back-to-main"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['backToMain'] ?></p>
+            </div>
+
+            <div class="right-col">
+                <table id="privacy-history-table"></table>
+            </div>
+
+            <div id="privacy-history-labels" style="display: none;">
+                <p id="all1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['all1'] ?></p>
+                <p id="all0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['all0'] ?></p>
+                <p id="analytics1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['analytics1'] ?></p>
+                <p id="analytics0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['analytics0'] ?></p>
+                <p id="analyticsMatomo1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['analyticsMatomo1'] ?></p>
+                <p id="analyticsMatomo0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['analyticsMatomo0'] ?></p>
+                <p id="tagManager1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['tagManager1'] ?></p>
+                <p id="tagManager0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['tagManager0'] ?></p>
+                <p id="leadlab1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['leadlab1'] ?></p>
+                <p id="leadlab0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['leadlab0'] ?></p>
+                <p id="gmap1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['gmap1'] ?></p>
+                <p id="gmap0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['gmap0'] ?></p>
+                <p id="mapbox1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['mapbox1'] ?></p>
+                <p id="mapbox0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['mapbox0'] ?></p>
+                <p id="youTube1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['youTube1'] ?></p>
+                <p id="youTube0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['youTube0'] ?></p>
+                <p id="vimeo1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['vimeo1'] ?></p>
+                <p id="vimeo0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['vimeo0'] ?></p>
+                <p id="openStreetMap1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['openStreetMap1'] ?></p>
+                <p id="openStreetMap0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['openStreetMap0'] ?></p>
+            </div>
         </div>
     </div>
 </div>

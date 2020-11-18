@@ -257,6 +257,100 @@
                 <source>We're only using technical cookies, necessary for the website to run and for local analysis.</source>
                 <target>Aktuell kommen nur technisch notwendige Cookies zum Einsatz, die dem Betrieb der Webseite und lokal laufender Analyse dienen.</target>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.history.show">
+                <source>Show history</source>
+                <target>Show history</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.title">
+                <source>History</source>
+                <target>History</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.backToMain">
+                <source>Back to settings</source>
+                <target>Back to settings</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.history.all1">
+                <source>All activated</source>
+                <target>All activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.all0">
+                <source>All deactivated</source>
+                <target>All deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analytics1">
+                <source>Google Analytics activated</source>
+                <target>Google Analytics activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analytics0">
+                <source>Google Analytics deactivated</source>
+                <target>Google Analytics deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo1">
+                <source>Matomo Analytics activated</source>
+                <target>Matomo Analytics activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo0">
+                <source>Matomo Analytics deactivated</source>
+                <target>Matomo Analytics deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.tagManager1">
+                <source>Tag manager activated</source>
+                <target>Tag manager activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.tagManager0">
+                <source>Tag manager deactivated</source>
+                <target>Tag manager deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.leadlab1">
+                <source>LeadLab activated</source>
+                <target>LeadLab activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.leadlab0">
+                <source>LeadLab deactivated</source>
+                <target>LeadLab deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.gmap1">
+                <source>Google Map activated</source>
+                <target>Google Map activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.gmap0">
+                <source>Google Map deactivated</source>
+                <target>Google Map deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.mapbox1">
+                <source>Mapbox activated</source>
+                <target>Mapbox activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.mapbox0">
+                <source>Mapbox deactivated</source>
+                <target>Mapbox deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.youTube1">
+                <source>YouTube activated</source>
+                <target>YouTube activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.youTube0">
+                <source>YouTube deactivated</source>
+                <target>YouTube deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.vimeo1">
+                <source>Vimeo activated</source>
+                <target>Vimeo activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.vimeo0">
+                <source>Vimeo deactivated</source>
+                <target>Vimeo deactivated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.openStreetMap1">
+                <source>Open Street Map activated</source>
+                <target>Open Street Map activated</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.openStreetMap0">
+                <source>Open Street Map deactivated</source>
+                <target>Open Street Map deactivated</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

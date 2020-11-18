@@ -35,22 +35,29 @@ var contaoPrivacy = (function() {
      * Set all enabled
      */
     function enableAll() {
-        setAnalytics(true);
-        setAnalyticsMatomo(true);
-        setTagmanager(true);
-        setLeadLab(true);
-        setGmap(true);
-        setMapbox(true);
-        setYouTube(true);
-        setVimeo(true);
-        setOpenStreetMap(true);
+        setAnalytics(true, true);
+        setAnalyticsMatomo(true, true);
+        setTagmanager(true, true);
+        setLeadLab(true, true);
+        setGmap(true, true);
+        setMapbox(true, true);
+        setYouTube(true, true);
+        setVimeo(true, true);
+        setOpenStreetMap(true, true);
+
+        addToHistory('all', true);
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setAnalytics(bln) {
+    function setAnalytics(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledAnalytics', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('analytics', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputAnalytics = $('input[name="privacy-g-analytics"]');
@@ -62,10 +69,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setAnalyticsMatomo(bln) {
+    function setAnalyticsMatomo(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledAnalyticsMatomo', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('analyticsMatomo', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputAnalyticsMatomo = $('input[name="privacy-matomo-analytics"]');
@@ -75,12 +87,17 @@ var contaoPrivacy = (function() {
         $('.matomo-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
         $('.matomo-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
     }
-	
-	/**
-     * @param bln boolean
+
+    /**
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setTagmanager(bln) {
+    function setTagmanager(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledTagManager', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('tagManager', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputTagmanager = $('input[name="privacy-g-tagmanager"]');
@@ -92,10 +109,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setLeadLab(bln) {
+    function setLeadLab(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledLeadlab', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('leadlab', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputLeadLab = $('input[name="privacy-leadlab"]');
@@ -107,10 +129,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setGmap(bln) {
+    function setGmap(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledGmap', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('gmap', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputGmaps = $('input[name="privacy-g-maps"]');
@@ -158,10 +185,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setMapbox(bln) {
+    function setMapbox(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledMapbox', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('mapbox', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputMapbox = $('input[name="privacy-mapbox"]');
@@ -209,10 +241,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setYouTube(bln) {
+    function setYouTube(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('youTube', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputYouTube = $('input[name="privacy-youtube"]');
@@ -230,10 +267,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setVimeo(bln) {
+    function setVimeo(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledVimeo', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('vimeo', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputVimeo = $('input[name="privacy-vimeo"]');
@@ -251,10 +293,15 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * @param bln boolean
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
      */
-    function setOpenStreetMap(bln) {
+    function setOpenStreetMap(bln, skipHistory) {
         localStorage.setItem('contaoPrivacy.enabledOpenStreetMap', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('openStreetMap', bln);
+        }
 
         // Switch checkbox correspondingly
         var $inputOpenStreetMap = $('input[name="privacy-open-street-map"]');
@@ -330,6 +377,73 @@ var contaoPrivacy = (function() {
         $('#privacy-settings').hide();
     }
 
+    /**
+     * @return {object}
+     */
+    function getHistory() {
+        return JSON.parse(localStorage.getItem('contaoPrivacy.history'));
+    }
+
+    /**
+     *
+     * @param type {string}
+     * @param value {boolean}
+     */
+    function addToHistory(type, value) {
+        var history = getHistory();
+
+        history.push({
+            type: type,
+            value: value,
+            time: Date.now()
+        });
+
+        localStorage.setItem('contaoPrivacy.history', JSON.stringify(history));
+
+        updateHistory();
+    }
+    
+    function historyShow() {
+        $('.privacy-settings-main').hide();
+        $('.privacy-settings-history').show();
+    }
+
+    function historyBackToMain() {
+        $('.privacy-settings-main').show();
+        $('.privacy-settings-history').hide();
+    }
+
+    function updateHistory() {
+        var history = getHistory();
+        var table = $('#privacy-history-table');
+
+        table.empty();
+
+        history.forEach(function (element) {
+            var date = new Date(element.time);
+
+            var dateTimeFormatted = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear()
+                + ', ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
+            
+            var label = $('#privacy-history-labels #' + element.type + (element.value ? 1 : 0)).text();
+            
+            var row =
+                "<tr>" +
+                    "<td>" + dateTimeFormatted + " Uhr</td>" +
+                    "<td>" + label + "</td>" +
+                "</tr>";
+
+            table.append(row);
+        });
+
+        if (!history.length) {
+            $('#privacy-popup-history-show').hide();
+
+        } else {
+            $('#privacy-popup-history-show').show();
+        }
+    }
+
     return {
         toShowBar: toShowBar,
         showBar: showBar,
@@ -346,7 +460,10 @@ var contaoPrivacy = (function() {
         setMapbox: setMapbox,
         setYouTube: setYouTube,
         setVimeo: setVimeo,
-        setOpenStreetMap: setOpenStreetMap
+        setOpenStreetMap: setOpenStreetMap,
+        historyShow: historyShow,
+        historyBackToMain: historyBackToMain,
+        updateHistory: updateHistory
     };
 })();
 
@@ -382,6 +499,13 @@ function runContaoPrivacy() {
         contaoPrivacy.showBar();
     }
 
+    // Set history empty array if not in localStorage already
+    if (!localStorage.getItem('contaoPrivacy.history')) {
+        localStorage.setItem('contaoPrivacy.history', JSON.stringify([]))
+    }
+
+    contaoPrivacy.updateHistory();
+
     // Privacy bar position relative when the page is scrolled to the bottom
     var scrolling = false;
 
@@ -406,47 +530,47 @@ function runContaoPrivacy() {
 
     // Set analytics initially
     if ($inputAnalytics.length) {
-        contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'));
+        contaoPrivacy.setAnalytics(!!localStorage.getItem('contaoPrivacy.enabledAnalytics'), true);
     }
 
     // Set matomo analytics initially
     if ($inputAnalyticsMatomo.length) {
-        contaoPrivacy.setAnalyticsMatomo(!!localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo'));
+        contaoPrivacy.setAnalyticsMatomo(!!localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo'), true);
     }
 
 	// Set tagmanager initially
     if ($inputTagmanager.length) {
-        contaoPrivacy.setTagmanager(!!localStorage.getItem('contaoPrivacy.enabledTagManager'));
+        contaoPrivacy.setTagmanager(!!localStorage.getItem('contaoPrivacy.enabledTagManager'), true);
     }
 
     // Set leadlab initially
     if ($inputLeadLab.length) {
-        contaoPrivacy.setLeadLab(!!localStorage.getItem('contaoPrivacy.enabledLeadlab'));
+        contaoPrivacy.setLeadLab(!!localStorage.getItem('contaoPrivacy.enabledLeadlab'), true);
     }
 
     // Set gmap initially
     if ($inputGmaps.length) {
-        contaoPrivacy.setGmap(!!localStorage.getItem('contaoPrivacy.enabledGmap'));
+        contaoPrivacy.setGmap(!!localStorage.getItem('contaoPrivacy.enabledGmap'), true);
     }
 
     // Set mapbox initially
     if ($inputMapbox.length) {
-        contaoPrivacy.setMapbox(!!localStorage.getItem('contaoPrivacy.enabledMapbox'));
+        contaoPrivacy.setMapbox(!!localStorage.getItem('contaoPrivacy.enabledMapbox'), true);
     }
 
     // Set youtube initially
     if ($inputYouTube.length) {
-        contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'));
+        contaoPrivacy.setYouTube(!!localStorage.getItem('contaoPrivacy.enabledYouTube'), true);
     }
 
     // Set vimeo initially
     if ($inputVimeo.length) {
-        contaoPrivacy.setVimeo(!!localStorage.getItem('contaoPrivacy.enabledVimeo'));
+        contaoPrivacy.setVimeo(!!localStorage.getItem('contaoPrivacy.enabledVimeo'), true);
     }
 
     // Set open street map initially
     if ($inputOpenStreetMap.length) {
-        contaoPrivacy.setOpenStreetMap(!!localStorage.getItem('contaoPrivacy.enabledOpenStreetMap'));
+        contaoPrivacy.setOpenStreetMap(!!localStorage.getItem('contaoPrivacy.enabledOpenStreetMap'), true);
     }
 
     // Enable all
@@ -575,8 +699,14 @@ function runContaoPrivacy() {
         contaoPrivacy.setYouTube(true);
     });
 
-    // Show youtube
+    // Show open street map
     $buttonShowOpenStreetMap.on('click', function () {
         contaoPrivacy.setOpenStreetMap(true);
     });
+
+    // Show history
+    $('#privacy-popup-history-show').on('click', contaoPrivacy.historyShow);
+
+    // Back to main (from history)
+    $('#privacy-popup-history-back-to-main').on('click', contaoPrivacy.historyBackToMain);
 }

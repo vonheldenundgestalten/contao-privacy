@@ -195,6 +195,77 @@
 			<trans-unit id="PRIVACY.POPUP.noFeedbackText">
                 <source>We're only using technical cookies, necessary for the website to run and for local analysis.</source>
             </trans-unit>
+
+			<trans-unit id="PRIVACY.POPUP.history.show">
+                <source>Show history</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.title">
+                <source>History</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.backToMain">
+                <source>Back to settings</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.history.all1">
+                <source>All activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.all0">
+                <source>All deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analytics1">
+                <source>Google Analytics activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analytics0">
+                <source>Google Analytics deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo1">
+                <source>Matomo Analytics activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo0">
+                <source>Matomo Analytics deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.tagManager1">
+                <source>Tag manager activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.tagManager0">
+                <source>Tag manager deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.leadlab1">
+                <source>LeadLab activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.leadlab0">
+                <source>LeadLab deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.gmap1">
+                <source>Google Map activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.gmap0">
+                <source>Google Map deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.mapbox1">
+                <source>Mapbox activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.mapbox0">
+                <source>Mapbox deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.youTube1">
+                <source>YouTube activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.youTube0">
+                <source>YouTube deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.vimeo1">
+                <source>Vimeo activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.vimeo0">
+                <source>Vimeo deactivated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.openStreetMap1">
+                <source>Open Street Map activated</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.openStreetMap0">
+                <source>Open Street Map deactivated</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
