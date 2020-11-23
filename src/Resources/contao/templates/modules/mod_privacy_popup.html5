@@ -98,11 +98,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -118,11 +118,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -138,11 +138,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -157,11 +157,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -180,11 +180,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -199,11 +199,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -218,11 +218,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -236,12 +236,12 @@ $empty = !$blnShowAnalyticsGoogle
                         </label>
 
                         <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['.'] ?>
-                    </span>
+                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
 
@@ -256,11 +256,11 @@ $empty = !$blnShowAnalyticsGoogle
 
                         <span class="status-disabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsDeactivated'] ?>
-                    </span>
+                        </span>
 
                         <span class="status-enabled">
                         <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsActive'] ?>
-                    </span>
+                        </span>
                     </p>
                 <?php endif; ?>
             </div>

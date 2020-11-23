@@ -127,7 +127,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.analyticsIsDeactivated">
                 <source>Google Analytics is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Google Analytics ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>Google Analytics ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.analyticsMatomo">
                 <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Matomo Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
@@ -159,7 +159,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.tagmanagerIsDeactivated">
                 <source>Google Tag Manager is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Google Tag Manager ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>Google Tag Manager ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>						
             <trans-unit id="PRIVACY.POPUP.leadlab">
                 <source>We're using the service &lt;strong&gt;leadlab.click&lt;/strong&gt; from Wiredminds GmbH to analyze your use of our website. The data helps us with with optimizing the website content and functionality.</source>
@@ -171,7 +171,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.leadlabIsDeactivated">
                 <source>leadlab.click is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>leadlab.click ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>leadlab.click ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
@@ -189,7 +189,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.mapsIsDeactivated">
                 <source>Google Maps is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Google Maps ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>Google Maps ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.mapbox">
                 <source>We use the map service &lt;strong&gt;Mapbox&lt;/strong&gt; to show you location information clearly presented.</source>
@@ -201,7 +201,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.mapboxIsDeactivated">
                 <source>Mapbox is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Mapbox ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>Mapbox ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.openStreetMap">
                 <source>We use the map service &lt;strong&gt;OpenStreetMap&lt;/strong&gt; to show you location information clearly presented.</source>
@@ -213,7 +213,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.openStreetMapIsDeactivated">
                 <source>OpenStreetMap is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>OpenStreetMap ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>OpenStreetMap ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTube">
                 <source>We use a data protection-optimized version of &lt;strong&gt;YouTube&lt;/strong&gt;, which exchanges less data with YouTube to embed videos in the website.</source>
@@ -225,7 +225,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.youTubeIsDeactivated">
                 <source>YouTube is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>YouTube ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>YouTube ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeo">
                 <source>We use &lt;strong&gt;Vimeo&lt;/strong&gt; to include video data and playback technology. We're using the do-not-track setting where Vimeo does not collect any user data.</source>
@@ -237,7 +237,7 @@
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.vimeoIsDeactivated">
                 <source>Vimeo is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
-                <target>Vimeo ist akuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+                <target>Vimeo ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.activate">
