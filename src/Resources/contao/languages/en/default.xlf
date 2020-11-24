@@ -85,6 +85,48 @@
             <trans-unit id="PRIVACY.POPUP.analysisToolsAndAdvertising">
                 <source>Analysis Tools and Advertising</source>
             </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.currentlyInactive">
+                <source>Currently inactive</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.currentlyActive">
+                <source>Currently active</source>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.cookieName">
+                <source>Cookie-name</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.cookieTTL">
+                <source>Cookie-lifetime</source>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.noCookieSet">
+                <source>No cookie set</source>
+            </trans-unit>
+
+            <trans-unit id="TIME.minute">
+                <source>minute</source>
+            </trans-unit>
+            <trans-unit id="TIME.minutes">
+                <source>minutes</source>
+            </trans-unit>
+            <trans-unit id="TIME.day">
+                <source>day</source>
+            </trans-unit>
+            <trans-unit id="TIME.days">
+                <source>days</source>
+            </trans-unit>
+            <trans-unit id="TIME.month">
+                <source>month</source>
+            </trans-unit>
+            <trans-unit id="TIME.months">
+                <source>months</source>
+            </trans-unit>
+            <trans-unit id="TIME.year">
+                <source>year</source>
+            </trans-unit>
+            <trans-unit id="TIME.years">
+                <source>years</source>
+            </trans-unit>
 			
             <trans-unit id="PRIVACY.POPUP.analytics">
                 <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Google Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>

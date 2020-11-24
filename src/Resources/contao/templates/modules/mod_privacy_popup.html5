@@ -88,81 +88,125 @@ $empty = !$blnShowAnalyticsGoogle
 
                 <?php if ($blnShowAnalyticsGoogle): ?>
                     <!-- GOOGLE ANALYTICS -->
-                    <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-ga1" aria-controls="ui-id-ga2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="g-analytics status-line">
+                                <span>Google Analytics</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-ga2" aria-labelledby="ui-id-ga1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
-                    <p class="g-analytics status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
-                            <span class="switch-btn"></span>
-                        </label>
-
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga</p>
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($blnShowAnalyticsMatomo): ?>
                     <!-- MATOMO ANALYTICS -->
-                    <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-ma1" aria-controls="ui-id-ma2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="matomo-analytics status-line">
+                                <span>Matomo Analytics</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-matomo-analytics" id="matomo-analytics-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-ma2" aria-labelledby="ui-id-ma1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
 
-                    <p class="matomo-analytics status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-matomo-analytics" id="matomo-analytics-control">
-                            <span class="switch-btn"></span>
-                        </label>
-
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomoIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _pk_ses.*; _pk_id.*</p>
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($blnShowTagManager): ?>
                     <!-- GOOGLE TAG MANAGER -->
-                    <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-gtm1" aria-controls="ui-id-gtm2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="g-tagmanager status-line">
+                                <span>Google Tagmanager</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-g-tagmanager" id="g-tagmanager-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-gtm2" aria-labelledby="ui-id-gtm1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
 
-                    <p class="g-tagmanager status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-g-tagmanager" id="g-tagmanager-control">
-                            <span class="switch-btn"></span>
-                        </label>
-
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanagerIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga; _gat</p>
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowLeadLab): ?>
                     <!-- LEADLAB -->
-                    <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
-                    <p class="leadlab status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-ll1" aria-controls="ui-id-ll2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="leadlab status-line">
+                                <span>Leadlab</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-leadlab" id="leadlab-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-ll2" aria-labelledby="ui-id-ll1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlabIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowGoogleMaps || $this->privacyShowYouTube || $this->privacyShowMapbox || $this->privacyShowOpenStreetMap || $this->privacyShowVimeo): ?>
@@ -171,97 +215,153 @@ $empty = !$blnShowAnalyticsGoogle
 
                 <?php if ($this->privacyShowGoogleMaps): ?>
                     <!-- GOOGLE MAPS -->
-                    <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
-                    <p class="g-maps status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-gm1" aria-controls="ui-id-gm2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="g-maps status-line">
+                                <span>Google Maps</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-g-maps" id="g-maps-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-gm2" aria-labelledby="ui-id-gm1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapsIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowMapbox): ?>
                     <!-- MAPBOX -->
-                    <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
-                    <p class="mapbox status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-mapbox" id="mapbox-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-mb1" aria-controls="ui-id-mb2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="mapbox status-line">
+                                <span>Mapbox</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-mapbox" id="mapbox-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-mb2" aria-labelledby="ui-id-mb1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapboxIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowOpenStreetMap): ?>
                     <!-- OPEN STREET MAP -->
-                    <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
-                    <p class="open-street-map status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-open-street-map" id="open-street-map-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-osm1" aria-controls="ui-id-osm2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="open-street-map status-line">
+                                <span>Open Street Map</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-open-street-map" id="open-street-map-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-osm2" aria-labelledby="ui-id-osm1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMapIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowYouTube): ?>
                     <!-- YOUTUBE -->
-                    <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
-                    <p class="youtube status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-youtube" id="youtube-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-yt1" aria-controls="ui-id-yt2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="youtube status-line">
+                                <span>YouTube</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-youtube" id="youtube-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-yt2" aria-labelledby="ui-id-yt1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTubeIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
 
                 <?php if ($this->privacyShowVimeo): ?>
                     <!-- VIMEO -->
-                    <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
-                    <p class="vimeo status-line">
-                        <label class="switch">
-                            <input type="checkbox" name="privacy-vimeo" id="vimeo-control">
-                            <span class="switch-btn"></span>
-                        </label>
+                    <section class="ce_accordionStart first ce_accordion block">
+                        <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-vi1" aria-controls="ui-id-vi2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                            <p class="vimeo status-line">
+                                <span>Vimeo</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-vimeo" id="vimeo-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-vi2" aria-labelledby="ui-id-vi1" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div>
+                                <!-- Explanation -->
+                                <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
 
-                        <span class="status-disabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsDeactivated'] ?>
-                        </span>
-
-                        <span class="status-enabled">
-                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeoIsActive'] ?>
-                        </span>
-                    </p>
+                                <!-- Cookie details -->
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _abexps; _ga; _gcl_au; _gid; _uetsid; _uetvid; vuid;</p>
+                                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>;</p>
+                            </div>
+                        </div>
+                    </section>
                 <?php endif; ?>
             </div>
         </div>

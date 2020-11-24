@@ -113,6 +113,61 @@
                 <target>Analyse-Tools und Werbung</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.POPUP.currentlyInactive">
+                <source>Currently inactive</source>
+                <target>Momentan inaktiv</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.currentlyActive">.
+                <source>Currently active</source>
+                <target>Momentan aktiv</target>
+            </trans-unit>
+
+            <trans-unit id="PRIVACY.POPUP.cookieName">
+                <source>Cookie-name</source>
+                <target>Cookie-Name</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.cookieTTL">
+                <source>Cookie-lifetime</source>
+                <target>Cookie-Laufzeit</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.noCookieSet">
+                <source>No cookie set</source>
+                <target>No cookie set</target>
+            </trans-unit>
+
+            <trans-unit id="TIME.minute">
+                <source>minute</source>
+                <target>minute</target>
+            </trans-unit>
+            <trans-unit id="TIME.minutes">
+                <source>minutes</source>
+                <target>minutes</target>
+            </trans-unit>
+            <trans-unit id="TIME.day">
+                <source>day</source>
+                <target>day</target>
+            </trans-unit>
+            <trans-unit id="TIME.days">
+                <source>days</source>
+                <target>days</target>
+            </trans-unit>
+            <trans-unit id="TIME.month">
+                <source>month</source>
+                <target>month</target>
+            </trans-unit>
+            <trans-unit id="TIME.months">
+                <source>months</source>
+                <target>months</target>
+            </trans-unit>
+            <trans-unit id="TIME.year">
+                <source>year</source>
+                <target>year</target>
+            </trans-unit>
+            <trans-unit id="TIME.years">
+                <source>years</source>
+                <target>years</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.POPUP.analytics">
                 <source>We evaluate your use of our online services. With the statistical data obtained, we can adapt our offers even better to your needs. &lt;strong&gt;Google Analytics&lt;/strong&gt; is used for the evaluation, we only pass anonymised data, a personal reference is not possible.</source>
                 <target>Wir werten Ihre Nutzung unserer Online-Dienste aus. Mit den gewonnenen Statistik-Daten können wir unsere Angebote noch besser auf Ihre Bedürfnisse anpassen. Für die Auswertung kommt &lt;strong&gt;Google Analytics&lt;/strong&gt; zum Einsatz, wir übergeben nur anonymisierte Daten, ein persönlicher Bezug ist dabei nicht möglich.</target>
