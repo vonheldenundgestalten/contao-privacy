@@ -478,7 +478,7 @@ function runContaoPrivacy() {
 
     var $buttonEnableAll =         $('button#enable-all');
     var $buttonOpenPopup =         $('button.open-privacy-settings');
-    var $buttonClosePopup =        $('.close-privacy');
+    var $buttonClosePopup =        $('.close-settings');
     var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
     var $inputAnalyticsMatomo =    $('input[name="privacy-matomo-analytics"]');
     var $inputTagmanager =         $('input[name="privacy-g-tagmanager"]');
@@ -709,4 +709,31 @@ function runContaoPrivacy() {
 
     // Back to main (from history)
     $('#privacy-popup-history-back-to-main').on('click', contaoPrivacy.historyBackToMain);
+
+    // Accordion js logic
+    var timing = 300;
+    var accTrigger = $('.accordion-item .acc-toggler');
+    var accContent = $('.accordion-content');
+    // add class-name 'closedFAQ' to 'faq-a' DIVs
+
+    accTrigger.click(function(e) {
+
+      
+        let $this = $(this);
+      
+        if ($this.parent().next().hasClass('show')) {
+            $this.parent().next().removeClass('show');
+            $this.parent().next().slideUp(350);
+            $this.parent().removeClass('active');
+        } else {
+            $('.accordion-content').removeClass('show');
+            accTrigger.parent().removeClass('active');
+
+            $this.parent().toggleClass('active');
+            $('.accordion-content').slideUp(timing);
+            $this.parent().next().toggleClass('show');
+            $this.parent().next().slideToggle(timing);
+        }
+    });
+
 }
