@@ -10,35 +10,27 @@ $privacyShowMatomo = $GLOBALS['privacyShowMatomo'];
 if ($MatomoSite !== 0 && '//www.example.com/matomo/' != $MatomoPath && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
 
     <script>
-        setTimeout(checkJQueryForAnalyticsMatomo, 250);
+        <?php if ($privacyShowMatomo): ?>
+        if (localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo')) {
+        <?php endif; ?>
 
-        function checkJQueryForAnalyticsMatomo() {
-            if (!window.jQuery) {
-                return setTimeout(checkJQueryForAnalyticsMatomo, 250);
-            }
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = '<?= $MatomoPath ?>';
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '<?= $MatomoSite ?>']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true;
+                g.defer = true;
+                g.src = u + 'matomo.js';
+                s.parentNode.insertBefore(g, s);
+            })();
 
-            <?php if ($privacyShowMatomo): ?>
-            if (localStorage.getItem('contaoPrivacy.enabledAnalyticsMatomo')) {
-            <?php endif; ?>
-
-                var _paq = window._paq = window._paq || [];
-                _paq.push(['trackPageView']);
-                _paq.push(['enableLinkTracking']);
-                (function () {
-                    var u = '<?= $MatomoPath ?>';
-                    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-                    _paq.push(['setSiteId', '<?= $MatomoSite ?>']);
-                    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-                    g.async = true;
-                    g.defer = true;
-                    g.src = u + 'matomo.js';
-                    s.parentNode.insertBefore(g, s);
-                })();
-
-            <?php if ($privacyShowMatomo): ?>
-            }
-            <?php endif; ?>
+        <?php if ($privacyShowMatomo): ?>
         }
+        <?php endif; ?>
     </script>
 
 <?php endif; ?>

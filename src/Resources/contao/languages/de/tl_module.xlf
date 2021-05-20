@@ -37,6 +37,18 @@
                 <source>Show request for Matomo</source>
                 <target>Matomo-Statistik abfragen?</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowMatomo.1">
+                <source>Based on https://matomo.org/cookie-consent-banners/ there is no consent needed for Matomo.</source>
+                <target>Nach Info hier ist keine Zustimmung nötig: https://matomo.org/cookie-consent-banners/</target>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyActivateMatomo.0">
+                <source>Start Matomo with pre-selected check</source>
+                <target>Matomo vorausgewählt "Ja"</target>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyActivateMatomo.1">
+                <source>Only in combination with "show Matomo", but not recommended for use.</source>
+                <target>Nur nötig wenn nach Zustimmung gefragt wird - nicht empfehlenswert</target>
+            </trans-unit>
 			<trans-unit id="tl_module.privacy_legend">
                 <source>Privacy settings for the popup</source>
                 <target>Privatsphären-Einstellungen im Popup</target>

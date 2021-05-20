@@ -28,6 +28,15 @@
             <trans-unit id="tl_module.privacyShowMatomo.0">
                 <source>Show request for Matomo?</source>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowMatomo.1">
+                <source>Based on https://matomo.org/cookie-consent-banners/ there is no consent needed for Matomo.</source>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyActivateMatomo.0">
+                <source>Start Matomo with pre-selected check</source>
+            </trans-unit>
+            <trans-unit id="tl_module.privacyActivateMatomo.1">
+                <source>Only in combination with "show Matomo", but not recommended for use.</source>
+            </trans-unit>
 			<trans-unit id="tl_module.privacy_legend">
                 <source>Privacy settings for the popup</source>
             </trans-unit>

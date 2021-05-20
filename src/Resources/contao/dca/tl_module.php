@@ -2,7 +2,7 @@
 
 // Palettes
 $GLOBALS['TL_DCA']['tl_module']['palettes']['privacyBar'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage,loadConflictFreeJs;{template_legend:hide},customTpl;';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['privacyPopup'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage,loadConflictFreeJs,privacyShowGoogleMaps,privacyShowMapbox,privacyShowYouTube,privacyShowVimeo,privacyShowOpenStreetMap,privacyShowLeadLab,privacyShowMatomo;{template_legend:hide},customTpl;';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['privacyPopup'] = '{title_legend},name,type;{privacy_legend},privacyDataProtectionPage,loadConflictFreeJs,privacyShowGoogleMaps,privacyShowMapbox,privacyShowYouTube,privacyShowVimeo,privacyShowOpenStreetMap,privacyShowLeadLab,privacyShowMatomo,privacyActivateMatomo;{template_legend:hide},customTpl;';
 
 // Fields
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyDataProtectionPage'] = [
@@ -75,6 +75,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMatomo'] = [
     'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowMatomo'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
+    'eval'                    => array('tl_class'=>'w50 clr'),
+    'sql'                     => "char(1) NOT NULL default ''"
+];
+$GLOBALS['TL_DCA']['tl_module']['fields']['privacyActivateMatomo'] = [
+    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyActivateMatomo'],
+    'exclude'                 => true,
+    'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
     'sql'                     => "char(1) NOT NULL default ''"
 ];
+
