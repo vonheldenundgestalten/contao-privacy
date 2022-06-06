@@ -60,8 +60,10 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputAnalytics = $('input[name="privacy-g-analytics"]');
-        $inputAnalytics.prop("checked", bln);
+        //var $inputAnalytics = $('input[name="privacy-g-analytics"]');
+        //$inputAnalytics.prop("checked", bln);
+        var inputAnalytics = document.querySelector('input[name="privacy-g-analytics"]');
+        inputAnalytics.checked = bln;
 
         // Show right status message
         $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
@@ -705,10 +707,12 @@ function runContaoPrivacy() {
     });
 
     // Show history
-    $('#privacy-popup-history-show').on('click', contaoPrivacy.historyShow);
+    //$('#privacy-popup-history-show').on('click', contaoPrivacy.historyShow);
+    document.querySelector('#privacy-popup-history-show').addEventListener('click', contaoPrivacy.historyShow);
 
     // Back to main (from history)
-    $('#privacy-popup-history-back-to-main').on('click', contaoPrivacy.historyBackToMain);
+    //$('#privacy-popup-history-back-to-main').on('click', contaoPrivacy.historyBackToMain);
+    document.querySelector('#privacy-popup-history-back-to-main').addEventListener('click', contaoPrivacy.historyBackToMain);
 
     // Accordion js logic
     var timing = 300;
@@ -735,5 +739,7 @@ function runContaoPrivacy() {
             $this.parent().next().slideToggle(timing);
         }
     });
+
+
 
 }
