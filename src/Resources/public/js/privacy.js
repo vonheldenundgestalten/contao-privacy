@@ -60,14 +60,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        //var $inputAnalytics = $('input[name="privacy-g-analytics"]');
-        //$inputAnalytics.prop("checked", bln);
         var inputAnalytics = document.querySelector('input[name="privacy-g-analytics"]');
         inputAnalytics.checked = bln;
 
         // Show right status message
-        $('.g-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.g-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.g-analytics .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.g-analytics .status-disabled').style.display = bln ? 'none' : 'inline-block';
     }
 
     /**
@@ -82,12 +80,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputAnalyticsMatomo = $('input[name="privacy-matomo-analytics"]');
-        $inputAnalyticsMatomo.prop("checked", bln);
+        var inputAnalyticsMatomo = document.querySelector('input[name="privacy-matomo-analytics"]');
+        inputAnalyticsMatomo.checked = bln;
 
         // Show right status message
-        $('.matomo-analytics .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.matomo-analytics .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.matomo-analytics .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.matomo-analytics .status-disabled').style.display = bln ? 'none' : 'inline-block';
     }
 
     /**
@@ -102,12 +100,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputTagmanager = $('input[name="privacy-g-tagmanager"]');
-        $inputTagmanager.prop("checked", bln);
+        var inputTagmanager = document.querySelector('input[name="privacy-g-tagmanager"]');
+        inputTagmanager.checked = bln;
 
         // Show right status message
-        $('.g-tagmanager .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.g-tagmanager .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.g-tagmanager .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.g-tagmanager .status-disabled').style.display = bln ? 'none' : 'inline-block';
     }
 
     /**
@@ -122,12 +120,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputLeadLab = $('input[name="privacy-leadlab"]');
-        $inputLeadLab.prop("checked", bln);
+        var inputLeadLab = document.querySelector('input[name="privacy-leadlab"]');
+        inputLeadLab.checked = bln;
 
         // Show right status message
-        $('.leadlab .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.leadlab .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.leadlab .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.leadlab .status-disabled').style.display = bln ? 'none' : 'inline-block';
     }
 
     /**
@@ -142,12 +140,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputGmaps = $('input[name="privacy-g-maps"]');
-        $inputGmaps.prop("checked", bln);
+        inputGmaps = document.querySelector('input[name="privacy-g-maps"]');
+        inputGmaps.checked = bln;
 
         // Show right status message
-        $('.g-maps .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.g-maps .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.g-maps .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.g-maps .status-disabled').style.display = bln ? 'none' : 'inline-block';
 
         if (bln) {
             return showGmap();
@@ -160,30 +158,58 @@ var contaoPrivacy = (function() {
      * Show google map if present
      */
     function showGmap() {
-        if (!$('.map-container').length) {
+        // if (!$('.map-container').length) {
+        //     return;
+        // }
+
+        // $('.map-container').addClass('active-gmap');
+        // $('#privacy-settings').addClass('active-gmap');
+        // $('.dlh_googlemap').removeClass('map-hidden');
+        // $(".map-container .map-question-block").hide();
+        // $(".map-container .open-privacy-btn").show();
+
+        // vanilla version - to be tested
+
+        var gMapContainer = document.querySelector('.map-container');
+
+        if (gMapContainer.length) {
             return;
         }
 
-        $('.map-container').addClass('active-gmap');
-        $('#privacy-settings').addClass('active-gmap');
-        $('.dlh_googlemap').removeClass('map-hidden');
-        $(".map-container .map-question-block").hide();
-        $(".map-container .open-privacy-btn").show();
+        gMapContainer.classList.add('active-gmap');
+        document.querySelector('#privacy-settings').classList.add('active-gmap');
+        document.querySelector('.dlh_googlemap').classList.remove('map-hidden');
+        document.querySelector(".map-container .map-question-block").style.display = 'none';
+        document.querySelector(".map-container .open-privacy-btn").style.display = 'block';
     }
 
     /**
      * Hide google map if present
      */
     function hideGmap() {
-        if (!$('.map-container').length) {
+        // if (!$('.map-container').length) {
+        //     return;
+        // }
+
+        // $('.map-container').removeClass('active-gmap');
+        // $('.dlh_googlemap').addClass('map-hidden');
+        // $('#privacy-settings').removeClass('active-gmap');
+        // $(".map-container .map-question-block").show();
+        // $(".map-container .open-privacy-btn").hide();
+
+        // vanilla version - to be tested
+
+        var gMapContainer = document.querySelector('.map-container');
+
+        if (gMapContainer.length) {
             return;
         }
 
-        $('.map-container').removeClass('active-gmap');
-        $('.dlh_googlemap').addClass('map-hidden');
-        $('#privacy-settings').removeClass('active-gmap');
-        $(".map-container .map-question-block").show();
-        $(".map-container .open-privacy-btn").hide();
+        gMapContainer.classList.remove('active-gmap');
+        document.querySelector('#privacy-settings').classList.remove('active-gmap');
+        document.querySelector('.dlh_googlemap').classList.add('map-hidden');
+        document.querySelector(".map-container .map-question-block").style.display = 'block';
+        document.querySelector(".map-container .open-privacy-btn").style.display = 'none';
     }
 
     /**
