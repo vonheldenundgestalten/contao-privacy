@@ -13,7 +13,8 @@ var contaoPrivacy = (function() {
      * Show privacy bar
      */
     function showBar() {
-        $('.privacy-bar').fadeIn();
+        // $('.privacy-bar').fadeIn(); Add fade in effect in css
+        document.querySelector('.privacy-bar').style.display = "block";
     }
 
     /**
@@ -27,8 +28,11 @@ var contaoPrivacy = (function() {
      * Close privacy bar
      */
     function closeBar() {
-        $('.privacy-bar').fadeOut();
-        $('#footer').removeClass('addSpace');
+        // $('.privacy-bar').fadeOut();
+        // $('#footer').removeClass('addSpace');
+
+        document.querySelector('.privacy-bar').style.display = "none";
+        document.querySelector('#footer').classList.remove('addSpace');
     }
 
     /**
@@ -100,7 +104,7 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var inputTagmanager = document.querySelector('input[name="privacy-g-tagmanager"]');
+        var inputTagmanager = document.querySelectorAll('input[name="privacy-g-tagmanager"]');
         inputTagmanager.checked = bln;
 
         // Show right status message
@@ -158,21 +162,9 @@ var contaoPrivacy = (function() {
      * Show google map if present
      */
     function showGmap() {
-        // if (!$('.map-container').length) {
-        //     return;
-        // }
-
-        // $('.map-container').addClass('active-gmap');
-        // $('#privacy-settings').addClass('active-gmap');
-        // $('.dlh_googlemap').removeClass('map-hidden');
-        // $(".map-container .map-question-block").hide();
-        // $(".map-container .open-privacy-btn").show();
-
-        // vanilla version - to be tested
-
         var gMapContainer = document.querySelector('.map-container');
 
-        if (gMapContainer.length) {
+        if (!gMapContainer) {
             return;
         }
 
@@ -187,21 +179,9 @@ var contaoPrivacy = (function() {
      * Hide google map if present
      */
     function hideGmap() {
-        // if (!$('.map-container').length) {
-        //     return;
-        // }
-
-        // $('.map-container').removeClass('active-gmap');
-        // $('.dlh_googlemap').addClass('map-hidden');
-        // $('#privacy-settings').removeClass('active-gmap');
-        // $(".map-container .map-question-block").show();
-        // $(".map-container .open-privacy-btn").hide();
-
-        // vanilla version - to be tested
-
         var gMapContainer = document.querySelector('.map-container');
 
-        if (gMapContainer.length) {
+        if (!gMapContainer) {
             return;
         }
 
@@ -224,12 +204,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputMapbox = $('input[name="privacy-mapbox"]');
-        $inputMapbox.prop("checked", bln);
+        var inputMapbox = document.querySelector('input[name="privacy-mapbox"]');
+        inputMapbox.checked = bln;
 
         // Show right status message
-        $('.mapbox .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.mapbox .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.mapbox .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.mapbox .status-disabled').style.display = bln ? 'none' : 'inline-block';
 
         if (bln) {
             return showMapbox();
@@ -239,86 +219,39 @@ var contaoPrivacy = (function() {
     }
 
     /**
-     * Show google map if present
+     * Show mapbox if present
      */
     function showMapbox() {
-        if (!$('.mapbox-container').length) {
+        var mapboxContainer = document.querySelector('.mapbox-container');
+
+        if (!mapboxContainer) {
             return;
         }
 
-        $('.mapbox-container').addClass('active-mapbox');
-        $('#privacy-settings').addClass('active-mapbox');
-        $('.embeded-map').removeClass('map-hidden');
-        $(".mapbox-container .mapbox-question-block").hide();
-        $(".mapbox-container + .open-privacy-btn").show();
+        mapboxContainer.classList.add('active-mapbox');
+        document.querySelector('#privacy-settings').classList.add('active-mapbox');
+        document.querySelector('.embeded-map').classList.remove('map-hidden');
+        document.querySelector(".mapbox-container .mapbox-question-block").style.display = 'none';
+        document.querySelector(".mapbox-container + .open-privacy-btn").style.display = 'block';
     }
 
     /**
-     * Hide google map if present
+     * Hide mapbox if present
      */
     function hideMapbox() {
-        if (!$('.mapbox-container').length) {
+        var mapboxContainer = document.querySelector('.mapbox-container');
+
+        if (!mapboxContainer) {
             return;
         }
 
-        $('.mapbox-container').removeClass('active-mapbox');
-        $('#privacy-settings').removeClass('active-mapbox');
-        $('.embeded-map').addClass('map-hidden');
-        $(".mapbox-container .mapbox-question-block").show();
-        $(".mapbox-container + .open-privacy-btn").hide();
+        mapboxContainer.classList.remove('active-mapbox');
+        document.querySelector('#privacy-settings').classList.remove('active-mapbox');
+        document.querySelector('.embeded-map').classList.add('map-hidden');
+        document.querySelector(".mapbox-container .mapbox-question-block").style.display = 'block';
+        document.querySelector(".mapbox-container + .open-privacy-btn").style.display = 'none';
     }
 
-    /**
-     * @param bln {boolean}
-     * @param skipHistory {boolean}
-     */
-    function setYouTube(bln, skipHistory) {
-        localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
-
-        if (!skipHistory) {
-            addToHistory('youTube', bln);
-        }
-
-        // Switch checkbox correspondingly
-        var $inputYouTube = $('input[name="privacy-youtube"]');
-        $inputYouTube.prop("checked", bln);
-
-        // Show right status message
-        $('.youtube .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.youtube .status-disabled').css('display', bln ? 'none' : 'inline-block');
-
-        if (bln) {
-            return showYouTube();
-        }
-
-        hideYouTube();
-    }
-
-    /**
-     * @param bln {boolean}
-     * @param skipHistory {boolean}
-     */
-    function setVimeo(bln, skipHistory) {
-        localStorage.setItem('contaoPrivacy.enabledVimeo', bln ? '1' : '');
-
-        if (!skipHistory) {
-            addToHistory('vimeo', bln);
-        }
-
-        // Switch checkbox correspondingly
-        var $inputVimeo = $('input[name="privacy-vimeo"]');
-        $inputVimeo.prop("checked", bln);
-
-        // Show right status message
-        $('.vimeo .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.vimeo .status-disabled').css('display', bln ? 'none' : 'inline-block');
-
-        if (bln) {
-            return showVimeo();
-        }
-
-        hideVimeo();
-    }
 
     /**
      * @param bln {boolean}
@@ -332,12 +265,12 @@ var contaoPrivacy = (function() {
         }
 
         // Switch checkbox correspondingly
-        var $inputOpenStreetMap = $('input[name="privacy-open-street-map"]');
-        $inputOpenStreetMap.prop("checked", bln);
+        var inputOpenStreetMap = document.querySelector('input[name="privacy-open-street-map"]');
+        inputOpenStreetMap.checked = bln;
 
         // Show right status message
-        $('.open-street-map .status-enabled').css('display', bln ? 'inline-block' : 'none');
-        $('.open-street-map .status-disabled').css('display', bln ? 'none' : 'inline-block');
+        document.querySelector('.open-street-map .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.open-street-map .status-disabled').style.display = bln ? 'none' : 'inline-block';
 
         if (bln) {
             return showOpenStreetMap();
@@ -346,24 +279,73 @@ var contaoPrivacy = (function() {
         hideOpenStreetMap();
     }
 
-    function showVimeo() {
-        $('.vimeo-video-block').css('display', 'block');
-        $('.privacy-vimeo-question-block').css('display', 'none');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'block');
+    function showOpenStreetMap() {
+        var openStreetMapContainer = document.querySelector('.open-street-map-block');
+
+        if (!openStreetMapContainer) {
+            return;
+        }
+
+        openStreetMapContainer.style.display = 'block';
+        document.querySelector('.ce_openstreetmap .map-question-block').style.display = 'none';
+        document.querySelector('.openstreetmap-container .open-privacy-btn').style.display = 'block';
     }
 
-    function hideVimeo() {
-        $('.vimeo-video-block').css('display', 'none');
-        $('.privacy-vimeo-question-block').css('display', 'block');
-        $('.privacy-vimeo-question-block + .open-privacy-btn').css('display', 'none');
+    function hideOpenStreetMap() {
+        var openStreetMapContainer = document.querySelector('.open-street-map-block');
+
+        if (!openStreetMapContainer) {
+            return;
+        }
+
+        openStreetMapContainer.style.display = 'none';
+        document.querySelector('.ce_openstreetmap .map-question-block').style.display = 'block';
+        document.querySelector('.openstreetmap-container .open-privacy-btn').style.display = 'none';
+    }
+
+
+    /**
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
+     */
+    function setYouTube(bln, skipHistory) {
+        localStorage.setItem('contaoPrivacy.enabledYouTube', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('youTube', bln);
+        }
+
+        // Switch checkbox correspondingly
+        var inputYouTube = document.querySelector('input[name="privacy-youtube"]');
+        inputYouTube.checked = bln;
+
+        // Show right status message
+        document.querySelector('.youtube .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.youtube .status-disabled').style.display = bln ? 'none' : 'inline-block';
+
+        if (bln) {
+            return showYouTube();
+        }
+
+        hideYouTube();
     }
 
     function showYouTube() {
-        $('.youtube-video-block').css('display', 'block');
-        $('.privacy-youtube-question-block').css('display', 'none');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'block');
+        var youTubeElement = document.querySelectorAll('.youtube-video-block');
+        var ytQuestionBlock = document.querySelectorAll('.privacy-youtube-question-block');
+        var ytOpenPrivacy = document.querySelectorAll('.privacy-youtube-question-block + .open-privacy-btn');
+
+        for (var i=0; i < youTubeElement.length; i+=1) {
+            youTubeElement[i].style.display = 'block';
+        }
+        for (var i=0; i < ytQuestionBlock.length; i+=1) {
+            ytQuestionBlock[i].style.display = 'none';
+        }
+        for (var i=0; i < ytOpenPrivacy.length; i+=1) {
+            ytOpenPrivacy[i].style.display = 'block';
+        }
         
-        // show preview images (replace data-src with src)
+        // show preview images (replace data-src with src) //DISCUSS
         var $previewImages = $('.youtube-preview img');
         if ($previewImages.length) {
             $previewImages.each(function () {
@@ -373,36 +355,94 @@ var contaoPrivacy = (function() {
     }
 
     function hideYouTube() {
-        $('.youtube-video-block').css('display', 'none');
-        $('.privacy-youtube-question-block').css('display', 'block');
-        $('.privacy-youtube-question-block + .open-privacy-btn').css('display', 'none');
+        var youTubeElement = document.querySelectorAll('.youtube-video-block');
+        var ytQuestionBlock = document.querySelectorAll('.privacy-youtube-question-block');
+        var ytOpenPrivacy = document.querySelectorAll('.privacy-youtube-question-block + .open-privacy-btn');
+
+        for (var i=0; i < youTubeElement.length; i+=1) {
+            youTubeElement[i].style.display = 'none';
+        }
+        for (var i=0; i < ytQuestionBlock.length; i+=1) {
+            ytQuestionBlock[i].style.display = 'block';
+        }
+        for (var i=0; i < ytOpenPrivacy.length; i+=1) {
+            ytOpenPrivacy[i].style.display = 'none';
+        }
     }
 
-    function showOpenStreetMap() {
-        $('.open-street-map-block').css('display', 'block');
-        $('.ce_openstreetmap .map-question-block').css('display', 'none');
-        $('.openstreetmap-container .open-privacy-btn').css('display', 'block');
+
+    /**
+     * @param bln {boolean}
+     * @param skipHistory {boolean}
+     */
+    function setVimeo(bln, skipHistory) {
+        localStorage.setItem('contaoPrivacy.enabledVimeo', bln ? '1' : '');
+
+        if (!skipHistory) {
+            addToHistory('vimeo', bln);
+        }
+
+        // Switch checkbox correspondingly
+        var inputVimeo = document.querySelector('input[name="privacy-vimeo"]');
+        inputVimeo.checked = bln;
+
+        // Show right status message
+        document.querySelector('.vimeo .status-enabled').style.display = bln ? 'inline-block' : 'none';
+        document.querySelector('.vimeo .status-disabled').style.display = bln ? 'none' : 'inline-block';
+
+        if (bln) {
+            return showVimeo();
+        }
+
+        hideVimeo();
     }
 
-    function hideOpenStreetMap() {
-        $('.open-street-map-block').css('display', 'none');
-        $('.ce_openstreetmap .map-question-block').css('display', 'block');
-        $('.openstreetmap-container .open-privacy-btn').css('display', 'none');
+    function showVimeo() {
+        var vimeoElement = document.querySelectorAll('.vimeo-video-block');
+        var vimeoQuestionBlock = document.querySelectorAll('.privacy-vimeo-question-block');
+        var vimeoOpenPrivacy = document.querySelectorAll('.privacy-vimeo-question-block + .open-privacy-btn');
+
+        for (var i=0; i < vimeoElement.length; i+=1) {
+            vimeoElement[i].style.display = 'block';
+        }
+        for (var i=0; i < vimeoQuestionBlock.length; i+=1) {
+            vimeoQuestionBlock[i].style.display = 'none';
+        }
+        for (var i=0; i < vimeoOpenPrivacy.length; i+=1) {
+            vimeoOpenPrivacy[i].style.display = 'block';
+        }
     }
+
+    function hideVimeo() {
+        var vimeoElement = document.querySelectorAll('.vimeo-video-block');
+        var vimeoQuestionBlock = document.querySelectorAll('.privacy-vimeo-question-block');
+        var vimeoOpenPrivacy = document.querySelectorAll('.privacy-vimeo-question-block + .open-privacy-btn');
+
+        for (var i=0; i < vimeoElement.length; i+=1) {
+            vimeoElement[i].style.display = 'none';
+        }
+        for (var i=0; i < vimeoQuestionBlock.length; i+=1) {
+            vimeoQuestionBlock[i].style.display = 'block';
+        }
+        for (var i=0; i < vimeoOpenPrivacy.length; i+=1) {
+            vimeoOpenPrivacy[i].style.display = 'none';
+        }
+    }
+
 
     /**
      * Show privacy popup
      */
     function showPopup() {
-        $('#privacy-settings ').show();
-        $('#footer').removeClass('addSpace');
+        document.querySelector('#privacy-settings ').style.display = 'block';
+        document.querySelector('#footer').classList.remove('addSpace');
     }
 
     /**
      * Close privacy popup
      */
     function closePopup() {
-        $('#privacy-settings').hide();
+        document.querySelector('#privacy-settings ').style.display = 'none';
     }
 
     /**
