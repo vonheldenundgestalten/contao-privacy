@@ -472,43 +472,46 @@ var contaoPrivacy = (function() {
     }
     
     function historyShow() {
-        $('.privacy-settings-main').hide();
-        $('.privacy-settings-history').show();
+        document.querySelector('.privacy-settings-main').style.display = 'none';
+        document.querySelector('.privacy-settings-history').style.display = 'block';
     }
 
     function historyBackToMain() {
-        $('.privacy-settings-main').show();
-        $('.privacy-settings-history').hide();
+        document.querySelector('.privacy-settings-main').style.display = 'block';
+        document.querySelector('.privacy-settings-history').style.display = 'none';
     }
 
     function updateHistory() {
         var history = getHistory();
-        var table = $('#privacy-history-table');
+        var table = document.querySelector('#privacy-history-table'); 
 
-        table.empty();
+        //table.empty();
+        table.innerHTML = "";
 
         history.forEach(function (element) {
             var date = new Date(element.time);
 
             var dateTimeFormatted = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear()
                 + ', ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
+
             
             var label = $('#privacy-history-labels #' + element.type + (element.value ? 1 : 0)).text();
+
+            console.log(label);
             
             var row =
                 "<tr>" +
                     "<td>" + dateTimeFormatted + " Uhr</td>" +
                     "<td>" + label + "</td>" +
                 "</tr>";
-
-            table.append(row);
+            table.innerHTML += row;
         });
 
-        if (!history.length) {
-            $('#privacy-popup-history-show').hide();
 
+        if (!history.length) {
+            document.querySelector('#privacy-popup-history-show').style.display = 'none';
         } else {
-            $('#privacy-popup-history-show').show();
+            document.querySelector('#privacy-popup-history-show').style.display = 'block';
         }
     }
 
