@@ -31,8 +31,9 @@ var contaoPrivacy = (function() {
      * Show privacy bar
      */
     function showBar() {
-        // $('.privacy-bar').fadeIn(); Add fade in effect in css
         document.querySelector('.privacy-bar').style.display = "block";
+        document.querySelector('.privacy-bar').style.transform = "translateY(0)";
+        document.querySelector('.privacy-bar').style.opacity = '1';
     }
 
     /**
@@ -46,11 +47,12 @@ var contaoPrivacy = (function() {
      * Close privacy bar
      */
     function closeBar() {
-        // $('.privacy-bar').fadeOut();
-        // $('#footer').removeClass('addSpace');
-
-        document.querySelector('.privacy-bar').style.display = "none";
+        document.querySelector('.privacy-bar').style.opacity = '0';
+        document.querySelector('.privacy-bar').style.transform = "translateY(100%)";
         document.querySelector('#footer').classList.remove('addSpace');
+        setTimeout(function() {
+            document.querySelector('.privacy-bar').style.display = "none";
+        }, 1000);
     }
 
     /**
@@ -461,15 +463,21 @@ var contaoPrivacy = (function() {
      * Show privacy popup
      */
     function showPopup() {
-        document.querySelector('#privacy-settings ').style.display = 'block';
+        document.querySelector('#privacy-settings').style.display = 'block';
         document.querySelector('#footer').classList.remove('addSpace');
+        setTimeout(function() {
+            document.querySelector('#privacy-settings').style.opacity = '1';
+        }, 200);
     }
 
     /**
      * Close privacy popup
      */
     function closePopup() {
-        document.querySelector('#privacy-settings ').style.display = 'none';
+        document.querySelector('#privacy-settings').style.opacity = '0';
+        setTimeout(function() {
+            document.querySelector('#privacy-settings').style.display = 'none';
+        }, 1000);
     }
 
     /**
@@ -568,46 +576,10 @@ var contaoPrivacy = (function() {
 setTimeout(runContaoPrivacy, 250);
 
 function runContaoPrivacy() {
-    if (!window.jQuery || !$('.privacy-bar').length || !$('#privacy-settings').length) {  //Disable when all done
-        // jQuery still not loaded
-        return setTimeout(runContaoPrivacy, 250);
-    }
-
-    var $buttonEnableAll =         $('button#enable-all');
-    var $buttonOpenPopup =         $('button.open-privacy-settings');
-    var $buttonClosePopup =        $('.close-settings');
-    var $inputAnalytics =          $('input[name="privacy-g-analytics"]');
-    var $inputAnalyticsMatomo =    $('input[name="privacy-matomo-analytics"]');
-    var $inputTagmanager =         $('input[name="privacy-g-tagmanager"]');
-    var $inputLeadLab =            $('input[name="privacy-leadlab"]');
-    var $inputGmaps =              $('input[name="privacy-g-maps"]');
-    var $inputMapbox =             $('input[name="privacy-mapbox"]');
-    var $inputYouTube =            $('input[name="privacy-youtube"]');
-    var $inputVimeo =              $('input[name="privacy-vimeo"]');
-    var $inputOpenStreetMap =      $('input[name="privacy-open-street-map"]');
-    var $buttonShowGmap =          $('button#load-google-map');
-    var $buttonShowMapbox =        $('button#load-mapbox');
-    var $buttonShowVimeo =         $('button#load-vimeo');
-    var $buttonShowYouTube =       $('button#load-youtube');
-    var $buttonShowOpenStreetMap = $('button#load-open-street-map');
-
-    // var buttonEnableAll =           document.querySelector('button#enable-all');
-    // var buttonOpenPopup =           document.querySelector('button.open-privacy-settings');
-    // var buttonClosePopup =          document.querySelector('.close-settings');
-    // var inputAnalytics =            document.querySelector('input[name="privacy-g-analytics"]');
-    // var inputAnalyticsMatomo =      document.querySelector('input[name="privacy-matomo-analytics"]');
-    // var inputTagmanager =           document.querySelector('input[name="privacy-g-tagmanager"]');
-    // var inputLeadLab =              document.querySelector('input[name="privacy-leadlab"]');
-    // var inputGmaps =                document.querySelector('input[name="privacy-g-maps"]');
-    // var inputMapbox =               document.querySelector('input[name="privacy-mapbox"]');
-    // var inputYouTube =              document.querySelector('input[name="privacy-youtube"]');
-    // var inputVimeo =                document.querySelector('input[name="privacy-vimeo"]');
-    // var inputOpenStreetMap =        document.querySelector('input[name="privacy-open-street-map"]');
-    // var buttonShowGmap =            document.querySelector('button#load-google-map');
-    // var buttonShowMapbox =          document.querySelector('button#load-mapbox');
-    // var buttonShowVimeo =           document.querySelector('button#load-vimeo');
-    // var buttonShowYouTube =         document.querySelector('button#load-youtube');
-    // var buttonShowOpenStreetMap =   document.querySelector('button#load-open-street-map');
+    // if (!window.jQuery || !$('.privacy-bar').length || !$('#privacy-settings').length) {  //Disable when all done
+    //     // jQuery still not loaded
+    //     return setTimeout(runContaoPrivacy, 250);
+    // }
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {
@@ -777,9 +749,9 @@ function runContaoPrivacy() {
     }
 
     // Toggle open street map
-    if ($inputOpenStreetMap) {
-        $inputOpenStreetMap.on('change', function() {
-            contaoPrivacy.setOpenStreetMap($(this).prop('checked'));
+    if (inputOpenStreetMap) {
+        inputOpenStreetMap.addEventListener('change', function() {
+            contaoPrivacy.setOpenStreetMap(inputOpenStreetMap.checked);
         });
     }
 
@@ -838,6 +810,7 @@ function runContaoPrivacy() {
 
     // Back to main (from history)
     document.querySelector('#privacy-popup-history-back-to-main').addEventListener('click', contaoPrivacy.historyBackToMain);
+
 
     // Accordion js logic
     var timing = 300;
