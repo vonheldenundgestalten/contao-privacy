@@ -23,8 +23,9 @@ $brand-1: #01BABC;
     width: 100%;
     padding: 0.6em 1.2em;
     background: $dark-grey;
-    display: none;
-    z-index: 9999;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+
 	.content-wrapper {
         @include flex;
         @include space-between;
@@ -134,6 +135,9 @@ $brand-1: #01BABC;
     background-color: rgba(144, 177, 178, 0.4);
     display: none;
     height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
 	.innerbox {
 		max-width: 57em;
         width: 100%;
@@ -142,16 +146,11 @@ $brand-1: #01BABC;
         @include transform(translate(-50%, -50%));
         position: relative;
         display: inline-block;
-        padding: 2.5em 2em 2em;
+        padding: 2.5em 2em;
         background: #fff;
-        
         max-height: 85%;
     }
     .privacy-settings-main,
-    .privacy-settings-history {
-       // @include flex;
-
-    }
     .privacy-settings-history {
         height: 100%;
         &:before {
@@ -162,7 +161,31 @@ $brand-1: #01BABC;
         .right-col {
             overflow-y: auto;
             height: auto;
-            max-height: 500px;
+            max-height: 70vh;
+
+            /* Firefox */
+            /* The first applies to the thumb of the scrollbar, the second to the track. */
+            scrollbar-width: none; /* thick | none | auto  */
+            scrollbar-color: rgba($brand-1, 0.2) #efefef;
+
+            /* Chrome, Edge, Safari */
+            &::-webkit-scrollbar {
+                width: 4px; /* vertical scrollbar */
+                height: 4px; /* horizontal scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #efefef;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba($brand-1, 0.2);
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: $brand-1;
+            }
         }
     }
     .cookie-details {
@@ -184,9 +207,12 @@ $brand-1: #01BABC;
         min-height: 10em;
     }
     .right-col {
-        width: 66%;
+        //width: 66%;
+        width: calc(66% + 18px);
         float: left;
+        margin-right: -18px;
         padding-left: 1.75em;
+        padding-right: 14px;
         border-left: 1px solid #a9acb0;
     }
     h3 {
