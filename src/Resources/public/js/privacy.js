@@ -508,11 +508,11 @@ var contaoPrivacy = (function() {
     
     function historyShow() {
         document.querySelector('.privacy-settings-main').style.display = 'none';
-        document.querySelector('.privacy-settings-history').style.display = 'block';
+        document.querySelector('.privacy-settings-history').style.display = 'flex';
     }
 
     function historyBackToMain() {
-        document.querySelector('.privacy-settings-main').style.display = 'block';
+        document.querySelector('.privacy-settings-main').style.display = 'flex';
         document.querySelector('.privacy-settings-history').style.display = 'none';
     }
 
@@ -813,30 +813,33 @@ function runContaoPrivacy() {
 
 
     // Accordion js logic
-    var timing = 300;
-    var accTrigger = $('.accordion-item .acc-toggler');
-    var accContent = $('.accordion-content');
-    // add class-name 'closedFAQ' to 'faq-a' DIVs
+    function initAccordions(elem, option) {
+        document.addEventListener('click', function (e) {
+            if (!e.target.matches(elem +' .acc-toggler')) return;
+            else {
+                if(!e.target.parentElement.classList.contains('active')) {
+                    //calcAccHeight();
+                    if(option == true) {
+                        var elementList = document.querySelectorAll(elem + ' .accordion-heading');
 
-    accTrigger.click(function(e) {
+                        Array.prototype.forEach.call(elementList, function (e) {
+                            e.classList.remove('active');
+                            e.nextElementSibling.style.maxHeight = null;
+                        });
+                    }            
+                    e.target.parentElement.classList.add('active');
+                    e.target.parentElement.nextElementSibling.style.maxHeight = e.target.parentElement.nextElementSibling.querySelector('.accordion-inner').clientHeight + 'px';
+                } else {
+                    e.target.parentElement.classList.remove('active');
+                    e.target.parentElement.nextElementSibling.style.maxHeight = null;
+                }
+            }
+        });
+    }
 
-      
-        let $this = $(this);
-      
-        if ($this.parent().next().hasClass('show')) {
-            $this.parent().next().removeClass('show');
-            $this.parent().next().slideUp(350);
-            $this.parent().removeClass('active');
-        } else {
-            $('.accordion-content').removeClass('show');
-            accTrigger.parent().removeClass('active');
-
-            $this.parent().toggleClass('active');
-            $('.accordion-content').slideUp(timing);
-            $this.parent().next().toggleClass('show');
-            $this.parent().next().slideToggle(timing);
-        }
-    });
-
+    initAccordions('.privacy-settings-main .right-col', true);
 
 }
+
+
+// Goodbye jQuery, my old friend :( AH

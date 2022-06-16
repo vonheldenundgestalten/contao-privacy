@@ -152,12 +152,10 @@ $brand-1: #01BABC;
     }
     .privacy-settings-main,
     .privacy-settings-history {
+        display: flex;
+        flex-wrap: wrap;
         height: 100%;
-        &:before {
-            content: '';
-            display: table;
-            clear: both;
-        }
+
         .right-col {
             overflow-y: auto;
             height: auto;
@@ -413,14 +411,22 @@ $brand-1: #01BABC;
         }
     }
     .accordion-content {
-        padding-top: 2em;
-        padding-bottom: 2em;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+
+        .accordion-inner {
+            display: block;
+            height: 100%;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
         p, ul {
             font-size: 0.9em;
         }
     }
     p {
-         font-size: 0.9em;
+        font-size: 0.9em;
         color: $dark-grey;
         margin-bottom: 1em;
         a {
@@ -459,10 +465,8 @@ $brand-1: #01BABC;
          .innerbox {
             overflow: auto;
         }
-        .privacy-settings-main,
-        .privacy-settings-history {
-           display: block;
-
+        .privacy-settings-main .right-col {
+            max-height: none;
         }
         .privacy-settings-history .right-col {
             max-height: 48vh;
