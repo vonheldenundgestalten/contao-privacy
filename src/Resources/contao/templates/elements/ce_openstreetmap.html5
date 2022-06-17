@@ -1,6 +1,6 @@
 <div class="openstreetmap-container">
-	<div class="<?= $this->class; ?> block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>">
-		<div class="open-street-map-block">
+	<div class="<?= $this->class; ?> block" <?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?> >
+		<div class="open-street-map-block"><
 			<iframe style="border: 1px solid black;"
 					src="//www.openstreetmap.org/export/embed.html?bbox=<?= $this->lngRight ?>%2C<?= $this->latBottom ?>%2C<?= $this->lngLeft ?>%2C<?= $this->latTop ?>[&amp;]layer=mapnik[&amp;]marker=<?= $this->markerLat ?>%2C<?= $this->markerLng ?>"
 					width="<?= $this->osmWidth ?>>"
