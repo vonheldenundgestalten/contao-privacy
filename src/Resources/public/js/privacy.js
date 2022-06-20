@@ -694,10 +694,6 @@ function runContaoPrivacy() {
             var innerbox = document.querySelector("#privacy-settings > .innerbox")
             var innerboxHeight = innerbox.clientHeight;
             var windowHeight = window.innerHeight;
-
-            if (innerboxHeight > windowHeight ) { //Not in use currently bcs box is set to 85% height in css
-                innerbox.style.cssText = 'top: 0; left: 0; transform: translate(0);'; 
-            }
         });
     }
 
