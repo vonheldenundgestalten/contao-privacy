@@ -855,6 +855,3 @@ function runContaoPrivacy() {
     });
 
 }
-
-
-// Goodbye jQuery, my old friend :( AH

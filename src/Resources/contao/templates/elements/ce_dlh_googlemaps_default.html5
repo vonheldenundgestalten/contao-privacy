@@ -66,8 +66,6 @@ if ($key === null) {
 
                         clearInterval(nTimer);
 
-                        //$('.dlh_googlemap').show();
-
                         function gmap<?= $this->map['id']; ?>_initialize() {
                             var gmap<?= $this->map['id']; ?>_Options = {
 
@@ -193,28 +191,9 @@ if ($key === null) {
                         }
 
                         gmap<?= $this->map['id']; ?>_initialize();
-                        //$(".map-question-block").hide();
+
                     }
 
-                    // if (window.jQuery) {
-                    //     $('#privacy-settings').addClass('active-gmap');
-                    //     $('.map-container').addClass('active-gmap');
-
-                    //     $('.map-container').addClass('active-gmap');
-                    //     $('#privacy-settings').addClass('active-gmap');
-                    //     $('.dlh_googlemap').removeClass('map-hidden');
-                    //     $(".map-question-block").hide();
-                    // }
-
-
-                } else {
-
-                    // if (window.jQuery) {
-                    //     $('.map-container').removeClass('active-gmap');
-                    //     $('.dlh_googlemap').addClass('map-hidden');
-                    //     $('#privacy-settings').removeClass('active-gmap');
-                    //     $(".map-question-block").show();
-                    // }
                 }
             }, 250);
         </script>
