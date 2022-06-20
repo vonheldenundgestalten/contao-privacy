@@ -120,7 +120,7 @@ $empty = !$blnShowAnalyticsGoogle
                                     <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></li>
                                 </ul> -->
                                
-                                <table class="cookie-info">
+                                <!-- <table class="cookie-info">
                                     <tr>
                                         <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
                                         <th>_gid</th>
@@ -131,7 +131,7 @@ $empty = !$blnShowAnalyticsGoogle
                                         <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
                                         <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
                                     </tr>
-                                </table>
+                                </table> -->
 
                             </div>  
                         </div>
@@ -171,7 +171,7 @@ $empty = !$blnShowAnalyticsGoogle
                                     <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></li>
                                 </ul> -->
                                 
-                                <table class="cookie-info">
+                                <!-- <table class="cookie-info">
                                     <tr>
                                         <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
                                         <th>_pk_ses.*</th>
@@ -182,7 +182,7 @@ $empty = !$blnShowAnalyticsGoogle
                                         <td>30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?></td>
                                         <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
                                     </tr>
-                                </table>
+                                </table> -->
                            
                             </div>
                         </div>
@@ -225,7 +225,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 </ul> -->
                                 
 
-                                <table class="cookie-info">
+                                <!-- <table class="cookie-info">
                                     <tr>
                                         <th> <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
                                         <th>_gid</th>
@@ -238,7 +238,7 @@ $empty = !$blnShowAnalyticsGoogle
                                         <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
                                         <td>1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></td>
                                     </tr>
-                                </table>
+                                </table> -->
 
                             </div>
                         </div>
@@ -273,7 +273,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
 
                                 <!-- Cookie details -->
-                                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
                             
                             </div>
                         </div>
@@ -313,7 +313,7 @@ $empty = !$blnShowAnalyticsGoogle
 
                                 <!-- Cookie details -->
                                
-                                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
                            
                             </div>
                         </div>
@@ -348,7 +348,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
 
                                 <!-- Cookie details -->
-                                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
                             
                             </div>
                         </div>
@@ -383,7 +383,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
 
                                 <!-- Cookie details -->
-                                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
                             
                             </div>
                         </div>
@@ -418,8 +418,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
 
                                 <!-- Cookie details -->
-                                
-                                <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
                             
                             </div>
                         </div>
@@ -460,7 +459,7 @@ $empty = !$blnShowAnalyticsGoogle
                                 <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>;</li>
                             </ul> -->
 
-                            <table class="cookie-info">
+                            <!-- <table class="cookie-info">
                                 <tr>
                                     <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
                                     <th>_abexps</th>
@@ -481,7 +480,7 @@ $empty = !$blnShowAnalyticsGoogle
                                     <td>15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?></td>
                                     <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
                                 </tr>
-                            </table>
+                            </table> -->
                             
                             </div>
                         </div>

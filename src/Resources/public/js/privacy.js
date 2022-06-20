@@ -594,14 +594,10 @@ var contaoPrivacy = (function() {
     };
 })();
 
-// Run privacy logic but wait first for jQuery to be loaded
+// Run privacy logic with little delay (not sure if needed anymore)
 setTimeout(runContaoPrivacy, 250);
 
 function runContaoPrivacy() {
-    // if (!window.jQuery || !$('.privacy-bar').length || !$('#privacy-settings').length) {  //Disable when all done
-    //     // jQuery still not loaded
-    //     return setTimeout(runContaoPrivacy, 250);
-    // }
 
     // Show privacy bar if not already shown previously
     if (contaoPrivacy.toShowBar()) {

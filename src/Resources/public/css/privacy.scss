@@ -98,7 +98,7 @@ $brand-1: #01BABC;
 	}
 	@media screen and (max-width: 900px){
 		.content-wrapper {
-			@include flex-wrap($value: wrap);
+			@include flex-wrap(wrap);
 		}
 		p {
 			margin-bottom: 1em;
@@ -152,8 +152,8 @@ $brand-1: #01BABC;
     }
     .privacy-settings-main,
     .privacy-settings-history {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex;
+        @include flex-wrap(wrap);
         height: 100%;
 
         .right-col {
@@ -275,8 +275,8 @@ $brand-1: #01BABC;
     }
 	.status-line {
 		@include flex-center;
-		@include flex-direction($value: row);
-		@include flex-wrap($value: nowrap);
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
         color: #9d9599;
         margin-bottom: 0;
 	}
@@ -367,19 +367,19 @@ $brand-1: #01BABC;
     .icon-arrow {
         position: absolute;
         cursor: pointer;
-        right: 1em;
-        top: 50%;
-        transform: translateY(-50%);
-        //padding: 0.5em 1em;
+        height: 100%;
+        width: 2.5em;
+        right: 0;
+        top: 0;
+        text-align: center;
         &:before {
             content: '';
-            display: block;
-            height: 10px;
-            width: 10px;
-            margin: -2px 0 2px;
+            display: inline-block;
+            height: 0.8em;
+            width: 0.8em;
             border-style: solid;
-            border-width: 2px 2px 0 0;
-            transform: rotate(135deg);
+            border-width: 0.2em 0.2em 0 0;
+            transform: translateY(0.6em) rotate(135deg);
             transition: transform 0.6s ease;
         }
     }
@@ -387,12 +387,12 @@ $brand-1: #01BABC;
         margin-top: 1em;
     }
     .accordion-heading {
-        background: #e6e7e9;
-        padding: 0.35em 2.2em 0.35em 1em;
-        margin-bottom: 0.25em;
-        display: flex;
-        justify-content: space-between;
+        @include flex;
+        @include justify-content(space-between);
         position: relative;
+        margin-bottom: 0.25em;
+        padding: 0.5em 2.5em 0.5em 1em;
+        background: #e6e7e9;
         transition: all 0.15s ease-in-out;
 
         .acc-title {
@@ -408,10 +408,9 @@ $brand-1: #01BABC;
                 color: #fff;
             }
             .icon-arrow {
-                transform: translateY(0);
                 &:before {
-                    //color: #fff;
-                    transform: rotate(-45deg);
+                    color: #fff;
+                    transform: translateY(1em) rotate(-45deg);
                 }
             }
         }
@@ -441,9 +440,9 @@ $brand-1: #01BABC;
         }
     }
     .switch-wrap {
+        @include flex;
+        @include align-items(center);
         min-width: 15em;
-        display: flex;
-        align-items: center;
     }
 
     .cookie-info {
@@ -516,12 +515,8 @@ $brand-1: #01BABC;
     }
     @media all and (max-width: 520px){
         p.accordion-heading {
-            @include flex-direction($value: column);
-            -webkit-box-align: baseline;
-            -moz-box-align: baseline;
-            -ms-flex-align: baseline;
-            -webkit-align-items: baseline;
-            align-items: baseline;
+            @include flex-direction(column);
+            @include align-items(baseline);
             .switch-wrap {
                 margin: 0.75em 0 0.25em;
             }
