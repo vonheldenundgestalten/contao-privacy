@@ -602,7 +602,7 @@ $brand-1: #7ebe64;
         top: 50%;
         left: 50%;
         @include transform(translate(-50%, -50%));
-        width: 100%;
+        //width: 100%;
         padding-left: 1em;
         padding-right: 1em;
         @media screen and (max-width: 520px) {
@@ -635,6 +635,25 @@ $brand-1: #7ebe64;
         margin: 0 0.3em 0.7em;
         &:hover {
             background: #333;
+        }
+    }
+}
+
+.youtube-video-block {
+    .video-play-icon {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 15%;
+        max-width: 100px;
+        height: auto;
+        fill: $light-grey-background;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

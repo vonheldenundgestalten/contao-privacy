@@ -7,13 +7,13 @@
 $this->src = str_replace('https://www.youtube.com', 'https://www.youtube-nocookie.com', $this->src);
 
 // add autoplay if there is a splash image, so users don't have to double-click, would be weird behaviour
-if($this->splashImage && strpos($this->src, 'autoplay=1') === false) {
-	if(strpos($this->src, '?') === false) {
-		$this->src .= '?autoplay=1';		
-	} else {
-		$this->src .= '&amp;autoplay=1';
-	}
-}
+// if($this->splashImage && strpos($this->src, 'autoplay=1') === false) {
+// 	if(strpos($this->src, '?') === false) {
+// 		$this->src .= '?autoplay=1';		
+// 	} else {
+// 		$this->src .= '&amp;autoplay=1';
+// 	}
+// }
 
 ?>
 
@@ -21,8 +21,12 @@ if($this->splashImage && strpos($this->src, 'autoplay=1') === false) {
     <div class="youtube-video-block  <?php if ($this->aspect): ?>ratio-<?= $this->aspect ?> <?php endif; ?>" style="display: none;">
 
         <?php if ($this->splashImage): ?>
-            <a id="splashImage_<?= $this->id ?>" href="<?= $this->src ?>">
+            <a id="splashImage_<?= $this->id ?>" class="youtube-poster-image" href="<?= $this->src ?>">
                 <?php $this->insert('picture_default', $this->splashImage->picture); ?>
+                <svg class="video-play-icon" width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 48,0 C 21.561,0 0,21.582 0,48 0,74.439 21.582,96 48,96 74.439,96 96,74.418 96,48 96,21.561 74.418,0 48,0 Z m 0,90.375 C 24.639,90.375 5.625,71.364 5.625,48 5.625,24.636 24.639,5.625 48,5.625 71.361,5.625 90.375,24.639 90.375,48 90.375,71.361 71.364,90.375 48,90.375 Z" />
+                <path d="M 35.25,76.875 76.875,49.125 35.25,21.375 Z" />
+                </svg>
             </a>
             <script>
                 document.getElementById('splashImage_<?= $this->id ?>').addEventListener('click', function(e) {
@@ -33,6 +37,11 @@ if($this->splashImage && strpos($this->src, 'autoplay=1') === false) {
                     iframe.height = '<?= $this->height ?>';
                     iframe.setAttribute('allowfullscreen', '');
                     this.parentNode.replaceChild(iframe, this);
+
+                    setTimeout(function() {
+                        iframe.src += "?autoplay=1";
+                        iframe.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+                    }, 1000);
                 });
             </script>
 

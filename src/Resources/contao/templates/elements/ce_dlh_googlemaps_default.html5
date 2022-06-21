@@ -46,10 +46,10 @@ if ($key === null) {
         </div>
     	
         <script>
-            var showMap = false;
+            // var showMap<?= $this->map['id']; ?> = false;
             var gmapInit = false;
 
-            var nTimer = setInterval(function () {
+            var nTimer<?= $this->map['id']; ?> = setInterval(function () {
                 if (localStorage.getItem('contaoPrivacy.enabledGmap')) {
                     if (gmapInit !== true) {
 
@@ -64,7 +64,7 @@ if ($key === null) {
 
                     if (typeof google === 'object' && typeof google.maps === 'object') {
 
-                        clearInterval(nTimer);
+                        clearInterval(nTimer<?= $this->map['id']; ?>);
 
                         function gmap<?= $this->map['id']; ?>_initialize() {
                             var gmap<?= $this->map['id']; ?>_Options = {
@@ -195,6 +195,7 @@ if ($key === null) {
                     }
 
                 }
+                
             }, 250);
         </script>
     </div>
