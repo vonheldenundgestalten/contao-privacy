@@ -5,8 +5,6 @@ $privacy-light-grey: #eee;
 $privacy-dark-grey: #656565;
 $privacy-toggle-active: #4A8329;
 
-$project-brand-color-1: #7ebe64;
-
 
 #footer {
 	transition: padding-bottom 0.3s ease-in-out;
@@ -42,7 +40,7 @@ $project-brand-color-1: #7ebe64;
         width: 100%;
         a {
 			position: relative;
-            color: $project-brand-color-1;
+            //color: $privacy-dark-grey;
             text-decoration: underline;
             font-weight: 800;
             transition: all 0.3s ease-in-out;
@@ -132,7 +130,7 @@ $project-brand-color-1: #7ebe64;
     left: 0;
     bottom: 0;
 	z-index: 100;
-    background-color: rgba($project-brand-color-1, 0.8);
+    background-color: rgba($privacy-dark-grey, 0.8);
     opacity: 0;
     transition: opacity 0.8s ease;
 
@@ -162,7 +160,7 @@ $project-brand-color-1: #7ebe64;
             /* Firefox */
             /* The first applies to the thumb of the scrollbar, the second to the track. */
             scrollbar-width: none; /* thick | none | auto  */
-            scrollbar-color: rgba($project-brand-color-1, 0.5) #efefef;
+            scrollbar-color: rgba($privacy-dark-grey, 0.5) #efefef;
 
             /* Chrome, Edge, Safari */
             &::-webkit-scrollbar {
@@ -175,12 +173,12 @@ $project-brand-color-1: #7ebe64;
             }
 
             &::-webkit-scrollbar-thumb {
-                background: rgba($project-brand-color-1, 0.5);
+                background: rgba($privacy-dark-grey, 0.5);
                 border-radius: 4px;
             }
 
             &::-webkit-scrollbar-thumb:hover {
-                background: $project-brand-color-1;
+                background: $privacy-dark-grey;
             }
         }
     }
@@ -559,7 +557,6 @@ $project-brand-color-1: #7ebe64;
 .mod_dlh_googlemaps,
 .ce_openstreetmap {
     background: $privacy-light-grey;
-    margin-bottom: 38px;
     padding-bottom: 56.25%;
 
     .map-question-block {
@@ -577,9 +574,6 @@ $project-brand-color-1: #7ebe64;
         &.map-hidden {
             opacity: 0;
         }
-    }
-    + .open-privacy-btn {
-        top: 100%;
     }
 }
 
