@@ -1,13 +1,11 @@
 @import 'mixins';
 
 // variables
-$light-grey-background: #eee;
-$dark-grey: #656565;
+$privacy-light-grey: #eee;
+$privacy-dark-grey: #656565;
+$privacy-toggle-active: #4A8329;
 
-$red: #E0182F;
-$green: #4A8329;
-
-$brand-1: #7ebe64;
+$project-brand-color-1: #7ebe64;
 
 
 #footer {
@@ -22,7 +20,7 @@ $brand-1: #7ebe64;
     right: 0;
     width: 100%;
     padding: 0.6em 1.2em;
-    background: $dark-grey;
+    background: $privacy-dark-grey;
     transform: translateY(100%);
     transition: all 0.4s ease;
 
@@ -44,7 +42,7 @@ $brand-1: #7ebe64;
         width: 100%;
         a {
 			position: relative;
-            color: $brand-1;
+            color: $project-brand-color-1;
             text-decoration: underline;
             font-weight: 800;
             transition: all 0.3s ease-in-out;
@@ -59,14 +57,14 @@ $brand-1: #7ebe64;
     }
     button {
         width: 100%;
-        background: $light-grey-background;;
+        background: $privacy-light-grey;;
         padding: .6em 1.2em;
         cursor: pointer;
 		outline: none;
         border: none;
         display: inline-block;
         @include align-self($value: center);
-        color: $dark-grey;
+        color: $privacy-dark-grey;
         font-size: 0.8em;
         transition: all 0.3s ease-in-out;
         &.button-enable-all {
@@ -134,7 +132,7 @@ $brand-1: #7ebe64;
     left: 0;
     bottom: 0;
 	z-index: 100;
-    background-color: rgba($brand-1, 0.8);
+    background-color: rgba($project-brand-color-1, 0.8);
     opacity: 0;
     transition: opacity 0.8s ease;
 
@@ -164,7 +162,7 @@ $brand-1: #7ebe64;
             /* Firefox */
             /* The first applies to the thumb of the scrollbar, the second to the track. */
             scrollbar-width: none; /* thick | none | auto  */
-            scrollbar-color: rgba($brand-1, 0.5) #efefef;
+            scrollbar-color: rgba($project-brand-color-1, 0.5) #efefef;
 
             /* Chrome, Edge, Safari */
             &::-webkit-scrollbar {
@@ -177,12 +175,12 @@ $brand-1: #7ebe64;
             }
 
             &::-webkit-scrollbar-thumb {
-                background: rgba($brand-1, 0.5);
+                background: rgba($project-brand-color-1, 0.5);
                 border-radius: 4px;
             }
 
             &::-webkit-scrollbar-thumb:hover {
-                background: $brand-1;
+                background: $project-brand-color-1;
             }
         }
     }
@@ -272,7 +270,7 @@ $brand-1: #7ebe64;
         border: none;
         cursor: pointer;
         &:hover {
-            background-color: $dark-grey;
+            background-color: $privacy-dark-grey;
         }
     }
 	.status-line {
@@ -320,7 +318,7 @@ $brand-1: #7ebe64;
 			}
 		}
 		input:checked + .switch-btn:before {
-			background-color: $green;
+			background-color: $privacy-toggle-active;
 		}
 		input:focus + .switch-btn {
 			box-shadow: 0 0 1px #2196F3;
@@ -333,7 +331,7 @@ $brand-1: #7ebe64;
 	}
     .status-enabled {
         display: none;
-        color: $green;
+        color: $privacy-toggle-active;
     }
     .status-disabled {
         display: inline-block;
@@ -343,7 +341,7 @@ $brand-1: #7ebe64;
         background-color: red;
     }
     .btn-on {
-        background-color: green;
+        background-color: privacy-toggle-active;
     }
     .gmap-active-status,
     .g-analytics-active-status {
@@ -434,7 +432,7 @@ $brand-1: #7ebe64;
     }
     p {
         font-size: 0.9em;
-        color: $dark-grey;
+        color: $privacy-dark-grey;
         margin-bottom: 1em;
         a {
             color: inherit;
@@ -560,7 +558,7 @@ $brand-1: #7ebe64;
 .ce_dlh_googlemaps, 
 .mod_dlh_googlemaps,
 .ce_openstreetmap {
-    background: $light-grey-background;
+    background: $privacy-light-grey;
     margin-bottom: 38px;
     padding-bottom: 56.25%;
 
@@ -597,7 +595,7 @@ $brand-1: #7ebe64;
 .privacy-vimeo-question-block,
 .privacy-youtube-question-block {
     text-align: center;
-    background: $light-grey-background;
+    background: $privacy-light-grey;
     position: relative;
     height: 0;
    
@@ -632,7 +630,7 @@ $brand-1: #7ebe64;
     button {
         border: none;
         outline: none;
-        background: $dark-grey;
+        background: $privacy-dark-grey;
         font-size: 0.9em;
         color: #fff;
         padding: 0.5em 1em;
@@ -654,7 +652,7 @@ $brand-1: #7ebe64;
         width: 15%;
         max-width: 100px;
         height: auto;
-        fill: $light-grey-background;
+        fill: $privacy-light-grey;
         transition: all 0.3s ease;
 
         &:hover {
@@ -668,7 +666,7 @@ $brand-1: #7ebe64;
 .btn-privacy,
 .open-privacy-btn {
     outline: none;
-    background: $dark-grey;
+    background: $privacy-dark-grey;
     font-size: 0.9em;
     color: #fff;
     border: none;
