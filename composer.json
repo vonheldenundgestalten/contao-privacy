@@ -1,16 +1,21 @@
 {
-    "name": "magmell-agentur/contao-privacy",
+    "name": "vonheldenundgestalten/contao-privacy",
     "description": "Standalone package to deliver privacy related functions, cookie notice and updated templates for Analytics and Google Maps",
     "type": "contao-bundle",
     "authors": [
         {
             "name": "Markus Milkereit",
-            "email": "markus.milkereit@magmell.de",
+            "email": "mm@vondheldenundgestalten.de",
             "role": "Developer"
         },
         {
             "name": "Marko Todić",
             "email": "drexplosiveweb@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Arben Husić",
+            "email": "ah@vondheldenundgestalten.de",
             "role": "Developer"
         }
     ],
