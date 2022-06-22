@@ -595,7 +595,6 @@ window.addEventListener('DOMContentLoaded', function() {
         };
     })();
 
-    // Run privacy logic with little delay (not sure if needed anymore)
 
     function runContaoPrivacy() {
 
@@ -618,6 +617,7 @@ window.addEventListener('DOMContentLoaded', function() {
             scrolling = true;
         });
 
+        var globalFooter = document.querySelector('#footer');
         var privacyBar = document.querySelector(".privacy-bar");
         var privacyBarHeight = privacyBar.clientHeight + 30;
 
@@ -625,9 +625,11 @@ window.addEventListener('DOMContentLoaded', function() {
             if (scrolling) {
                 scrolling = false;
                 if(window.scrollY + window.innerHeight + privacyBarHeight > document.body.scrollHeight) {
-                    privacyBar.classList.add('not-fixed');
+                    privacyBar.style.borderTop = '1px solid #fff';
+                    globalFooter.style.paddingBottom = privacyBar.clientHeight + 'px';
                 } else {
-                    privacyBar.classList.remove('not-fixed');
+                    privacyBar.style.borderTop = null;
+                    globalFooter.style.paddingBottom = null;
                 }
             }
         }, 450);

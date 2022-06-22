@@ -19,6 +19,7 @@ $privacy-toggle-active: #4A8329;
     width: 100%;
     padding: 0.6em 1.2em;
     background: $privacy-dark-grey;
+    z-index: 999;
     transform: translateY(100%);
     transition: all 0.4s ease;
 
@@ -40,14 +41,10 @@ $privacy-toggle-active: #4A8329;
         width: 100%;
         a {
 			position: relative;
-            //color: $privacy-dark-grey;
+            color: #FFF;
             text-decoration: underline;
             font-weight: 800;
             transition: all 0.3s ease-in-out;
-            &:hover {
-               color: #fff;
-               text-decoration: underline;
-            }
         }
     }
     .btn-holder {
@@ -75,11 +72,10 @@ $privacy-toggle-active: #4A8329;
             background: #fff;
         }
     }
-    &.not-fixed {
-        position: relative;
-        border-top: 1px solid #fff;
-        clear: both;
-    }
+    // &.reached-bottom {
+    //     //position: relative;
+    //     border-top: 1px solid #fff;
+    // }
     @media screen and (max-width: 1200px){
 		padding: 1.25rem;
 	}
