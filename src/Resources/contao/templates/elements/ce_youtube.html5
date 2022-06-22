@@ -6,15 +6,6 @@
 // data protection fix: always use no-cookie domain
 $this->src = str_replace('https://www.youtube.com', 'https://www.youtube-nocookie.com', $this->src);
 
-// add autoplay if there is a splash image, so users don't have to double-click, would be weird behaviour
-// if($this->splashImage && strpos($this->src, 'autoplay=1') === false) {
-// 	if(strpos($this->src, '?') === false) {
-// 		$this->src .= '?autoplay=1';		
-// 	} else {
-// 		$this->src .= '&amp;autoplay=1';
-// 	}
-// }
-
 ?>
 
 <figure class="video_container">
