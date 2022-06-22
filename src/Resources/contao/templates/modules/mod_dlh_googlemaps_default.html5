@@ -24,7 +24,6 @@
 
         <script>
 
-            // var showMap<?= $this->map['id']; ?> = false;
             var gmapInit = false;
 
             var nTimer<?= $this->map['id']; ?> = setInterval(function () {
