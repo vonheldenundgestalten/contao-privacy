@@ -6,6 +6,7 @@
         <p><?= $this->content ?></p>
         <div class="btn-holder">
             <button class="button button-enable-all" id="enable-all"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['activateAll'] ?></button>
+            <button class="button button-disable-all" id="disable-all"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['disableAll'] ?></button>
             <button class="button open-privacy-settings"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['privacySettings'] ?></button>
         </div>
     </div>

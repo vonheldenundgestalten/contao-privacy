@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
-    console.log('footer-update');
 
     var buttonEnableAll =           document.querySelector('button#enable-all');
+    var buttonDisableAll =          document.querySelector('button#disable-all');
     var buttonOpenPopup =           document.querySelectorAll('button.open-privacy-settings');
     var buttonClosePopup =          document.querySelectorAll('.close-settings');
     var inputAnalytics =            document.querySelector('input[name="privacy-g-analytics"]');
@@ -47,11 +47,11 @@ window.addEventListener('DOMContentLoaded', function() {
          * Close privacy bar
          */
         function closeBar() {
-            document.querySelector('.privacy-bar').style.cssText = 'opacity: 0; transform: translateY(100%); height: 0';
+            document.querySelector('.privacy-bar').style.cssText = 'opacity: 0; transform: translateY(100%)';
             document.querySelector('#footer').style.paddingBottom = "0";
             setTimeout(function() {
-                document.querySelector('.privacy-bar').style.display = "none";
-            }, 1000);
+                document.querySelector('.privacy-bar').style.cssText = 'height: 0; display: none';
+            }, 600);
         }
 
         /**
@@ -69,6 +69,20 @@ window.addEventListener('DOMContentLoaded', function() {
             setVimeo(true, true);
 
             addToHistory('all', true);
+        }
+
+        function disableAll() {
+            setAnalytics(false, false); 
+            setAnalyticsMatomo(false, false); 
+            setTagmanager(false, false);
+            setLeadLab(false, false);
+            setGmap(false, false);
+            setMapbox(false, false);
+            setOpenStreetMap(false, false);
+            setYouTube(false, false);
+            setVimeo(false, false);
+
+            addToHistory('all', false);
         }
 
         /**
@@ -575,6 +589,7 @@ window.addEventListener('DOMContentLoaded', function() {
             showBar: showBar,
             setBarUsed: setBarUsed,
             enableAll: enableAll,
+            disableAll: disableAll,
             closeBar: closeBar,
             showPopup: showPopup,
             closePopup: closePopup,
@@ -620,7 +635,7 @@ window.addEventListener('DOMContentLoaded', function() {
         var privacyBarHeight = privacyBar.clientHeight + 30;
 
         setInterval(function() {
-            if (scrolling) {
+            if (scrolling && !localStorage.getItem('contaoPrivacy.barUsed') == '1') {
                 scrolling = false;
                 if(window.scrollY + window.innerHeight + privacyBarHeight > document.body.scrollHeight) {
                     privacyBar.style.borderTop = '1px solid #fff';
@@ -681,6 +696,13 @@ window.addEventListener('DOMContentLoaded', function() {
         // Enable all
         buttonEnableAll.addEventListener('click', function() {
             contaoPrivacy.enableAll();
+            contaoPrivacy.setBarUsed();
+            contaoPrivacy.closeBar();
+        });
+
+        // Disable all
+        buttonDisableAll.addEventListener('click', function() {
+            contaoPrivacy.disableAll();
             contaoPrivacy.setBarUsed();
             contaoPrivacy.closeBar();
         });

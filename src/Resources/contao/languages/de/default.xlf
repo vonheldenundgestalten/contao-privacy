@@ -29,6 +29,10 @@
                 <source>Activate all</source>
                 <target>Alle aktivieren</target>
             </trans-unit>
+            <trans-unit id="PRIVACY.BAR.disableAll">
+                <source>Disable all</source>
+                <target>Alle deaktivieren</target>
+            </trans-unit>
             <trans-unit id="PRIVACY.BAR.privacySettings">
                 <source>Privacy settings</source>
                 <target>Privatsphären-Einstellungen</target>
