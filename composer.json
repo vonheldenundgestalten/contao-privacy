@@ -1,5 +1,5 @@
 {
-    "name": "Contao Privacy",
+    "name": "vonheldenundgestalten/contao-privacy",
     "description": "Standalone package to deliver privacy related functions, cookie notice and updated templates for Analytics, Google Maps, YouTube and more.",
     "type": "contao-bundle",
     "license": "MIT",
