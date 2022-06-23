@@ -1,4 +1,4 @@
-# contao-privacy
+# Contao Privacy
 GDPR-safe privacy extension bundle for Contao 4.  
 Includes elements such as Google Analytics, Maps, YouTube, Vimeo...  
 No jQuery dependency.

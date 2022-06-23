@@ -32,9 +32,7 @@ window.addEventListener('DOMContentLoaded', function() {
          * Show privacy bar
          */
         function showBar() {
-            document.querySelector('.privacy-bar').style.display = "block";
-            document.querySelector('.privacy-bar').style.transform = "translateY(0)";
-            document.querySelector('.privacy-bar').style.opacity = '1';
+            document.querySelector('.privacy-bar').style.cssText = 'display: block; transform: translateY(0); opacity: 1';
         }
 
         /**
@@ -48,8 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
          * Close privacy bar
          */
         function closeBar() {
-            document.querySelector('.privacy-bar').style.opacity = '0';
-            document.querySelector('.privacy-bar').style.transform = "translateY(100%)";
+            document.querySelector('.privacy-bar').style.cssText = 'opacity: 0; transform: translateY(100%); height: 0';
             document.querySelector('#footer').classList.remove('addSpace');
             setTimeout(function() {
                 document.querySelector('.privacy-bar').style.display = "none";
@@ -632,7 +629,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     globalFooter.style.paddingBottom = null;
                 }
             }
-        }, 450);
+        }, 20);
 
 
         // Set analytics initially
