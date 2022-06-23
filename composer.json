@@ -1,6 +1,6 @@
 {
-    "name": "vonheldenundgestalten/contao-privacy",
-    "description": "Standalone package to deliver privacy related functions, cookie notice and updated templates for Analytics and Google Maps",
+    "name": "Contao Privacy",
+    "description": "Standalone package to deliver privacy related functions, cookie notice and updated templates for Analytics, Google Maps, YouTube and more.",
     "type": "contao-bundle",
     "authors": [
         {
@@ -19,15 +19,9 @@
             "role": "Developer"
         }
     ],
-	"repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/magmell-agentur/contao-basic"
-        }
-	],
     "require": {
     	"contao/core-bundle": "4.9.*",
-    	"magmell-agentur/contao-basic": "@dev"
+    	"vonheldenundgestalten/contao-basic": "@dev"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
