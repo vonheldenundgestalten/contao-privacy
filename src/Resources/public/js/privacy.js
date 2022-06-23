@@ -1,4 +1,5 @@
-window.addEventListener('DOMContentLoaded', function() { 
+window.addEventListener('DOMContentLoaded', function() {
+    console.log('footer-update');
 
     var buttonEnableAll =           document.querySelector('button#enable-all');
     var buttonOpenPopup =           document.querySelectorAll('button.open-privacy-settings');
