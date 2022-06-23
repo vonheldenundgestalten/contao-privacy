@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function() {
          */
         function closeBar() {
             document.querySelector('.privacy-bar').style.cssText = 'opacity: 0; transform: translateY(100%); height: 0';
-            document.querySelector('#footer').classList.remove('addSpace');
+            document.querySelector('#footer').style.paddingBottom = "0";
             setTimeout(function() {
                 document.querySelector('.privacy-bar').style.display = "none";
             }, 1000);
