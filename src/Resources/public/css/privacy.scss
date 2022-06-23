@@ -5,7 +5,10 @@ $privacy-light-grey: #eee;
 $privacy-dark-grey: #656565;
 $privacy-toggle-active: #4A8329;
 
-
+//Footer transition when bar is closed
+#footer {
+    transition: padding-bottom 0.6s ease;
+}
 
 // Privacy bottom bar
 .privacy-bar {
@@ -114,7 +117,7 @@ $privacy-toggle-active: #4A8329;
     height: 100%;
     left: 0;
     bottom: 0;
-	z-index: 100;
+	z-index: 999;
     background-color: rgba($privacy-dark-grey, 0.8);
     opacity: 0;
     transition: opacity 0.8s ease;
