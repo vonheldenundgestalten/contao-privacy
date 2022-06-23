@@ -1,4 +1,8 @@
-window.addEventListener('DOMContentLoaded', function() {
+// detect MSIE 9,10,11, but not Edge
+ua=navigator.userAgent.toLowerCase();isIE=/msie/.test(ua);
+
+
+function startPrivacyMagic () {
 
     var buttonEnableAll =           document.querySelector('button#enable-all');
     var buttonDisableAll =          document.querySelector('button#disable-all');
@@ -876,4 +880,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
     runContaoPrivacy();
 
-});
+}
+
+
+if(isIE){
+    window.onload=function(){ startPrivacyMagic(); }
+} else {
+    if(document.readyState==='loading'){
+        document.addEventListener('DOMContentLoaded', startPrivacyMagic);
+    } else {
+        startPrivacyMagic();
+    }
+}
