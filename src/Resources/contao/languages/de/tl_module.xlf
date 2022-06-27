@@ -5,10 +5,6 @@
                 <source>Data protection page</source>
                 <target>Datenschutz-Seite</target>
             </trans-unit>
-            <trans-unit id="tl_module.loadConflictFreeJs.0">
-                <source>Load conflict free javascript</source>
-                <target>Load conflict free javascript</target>
-            </trans-unit>
             <trans-unit id="tl_module.privacyShowGoogleMaps.0">
                 <source>Show Google Maps</source>
                 <target>Google Maps anzeigen</target>

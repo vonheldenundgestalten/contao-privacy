@@ -319,96 +319,96 @@
 
             <trans-unit id="PRIVACY.POPUP.history.show">
                 <source>Show history</source>
-                <target>Show history</target>
+                <target>Verlauf zeigen</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.title">
                 <source>History</source>
-                <target>History</target>
+                <target>Verlauf</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.backToMain">
                 <source>Back to settings</source>
-                <target>Back to settings</target>
+                <target>Zurück zu den Einstellungen</target>
             </trans-unit>
 
             <trans-unit id="PRIVACY.POPUP.history.all1">
                 <source>All activated</source>
-                <target>All activated</target>
+                <target>Alle aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.all0">
                 <source>All deactivated</source>
-                <target>All deactivated</target>
+                <target>Alle deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.analytics1">
                 <source>Google Analytics activated</source>
-                <target>Google Analytics activated</target>
+                <target>Google Analytics aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.analytics0">
                 <source>Google Analytics deactivated</source>
-                <target>Google Analytics deactivated</target>
+                <target>Google Analytics deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo1">
                 <source>Matomo Analytics activated</source>
-                <target>Matomo Analytics activated</target>
+                <target>Matomo Analytics aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.analyticsMatomo0">
                 <source>Matomo Analytics deactivated</source>
-                <target>Matomo Analytics deactivated</target>
+                <target>Matomo Analytics deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.tagManager1">
                 <source>Tag manager activated</source>
-                <target>Tag manager activated</target>
+                <target>Tag manager aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.tagManager0">
                 <source>Tag manager deactivated</source>
-                <target>Tag manager deactivated</target>
+                <target>Tag manager deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.leadlab1">
                 <source>LeadLab activated</source>
-                <target>LeadLab activated</target>
+                <target>LeadLab aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.leadlab0">
                 <source>LeadLab deactivated</source>
-                <target>LeadLab deactivated</target>
+                <target>LeadLab deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.gmap1">
                 <source>Google Map activated</source>
-                <target>Google Map activated</target>
+                <target>Google Map aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.gmap0">
                 <source>Google Map deactivated</source>
-                <target>Google Map deactivated</target>
+                <target>Google Map deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.mapbox1">
                 <source>Mapbox activated</source>
-                <target>Mapbox activated</target>
+                <target>Mapbox aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.mapbox0">
                 <source>Mapbox deactivated</source>
-                <target>Mapbox deactivated</target>
+                <target>Mapbox deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.youTube1">
                 <source>YouTube activated</source>
-                <target>YouTube activated</target>
+                <target>YouTube aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.youTube0">
                 <source>YouTube deactivated</source>
-                <target>YouTube deactivated</target>
+                <target>YouTube deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.vimeo1">
                 <source>Vimeo activated</source>
-                <target>Vimeo activated</target>
+                <target>Vimeo aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.vimeo0">
                 <source>Vimeo deactivated</source>
-                <target>Vimeo deactivated</target>
+                <target>Vimeo deaktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.openStreetMap1">
                 <source>Open Street Map activated</source>
-                <target>Open Street Map activated</target>
+                <target>Open Street Map aktiviert</target>
             </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.openStreetMap0">
                 <source>Open Street Map deactivated</source>
-                <target>Open Street Map deactivated</target>
+                <target>Open Street Map deaktiviert</target>
             </trans-unit>
         </body>
     </file>

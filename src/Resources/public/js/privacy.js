@@ -518,6 +518,8 @@ function startPrivacyMagic () {
             setTimeout(function() {
                 document.querySelector('#privacy-settings').style.display = 'none';
             }, 1000);
+
+            historyBackToMain(); // Close history preview on popup close;
         }
 
         /**
