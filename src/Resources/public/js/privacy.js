@@ -1,5 +1,6 @@
-// detect MSIE 9,10,11, but not Edge
-ua=navigator.userAgent.toLowerCase();isIE=/msie/.test(ua);
+// detect IE 9,10,11, but not Edge
+ua = navigator.userAgent.toLowerCase(); 
+IEbrowser = /msie/.test(ua);
 
 
 function startPrivacyMagic () {
@@ -883,10 +884,12 @@ function startPrivacyMagic () {
 }
 
 
-if(isIE){
-    window.onload=function(){ startPrivacyMagic(); }
+if(IEbrowser) {
+    window.onload = function() { 
+        startPrivacyMagic();
+    }
 } else {
-    if(document.readyState==='loading'){
+    if(document.readyState === 'loading'){
         document.addEventListener('DOMContentLoaded', startPrivacyMagic);
     } else {
         startPrivacyMagic();
