@@ -517,9 +517,8 @@ function startPrivacyMagic () {
             document.querySelector('#privacy-settings').style.opacity = '0';
             setTimeout(function() {
                 document.querySelector('#privacy-settings').style.display = 'none';
+                historyBackToMain(); // Close history preview on popup close;
             }, 1000);
-
-            historyBackToMain(); // Close history preview on popup close;
         }
 
         /**
