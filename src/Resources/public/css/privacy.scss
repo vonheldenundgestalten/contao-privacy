@@ -39,7 +39,7 @@ $privacy-toggle-active: #4A8329;
 	.content-wrapper {
         @include flex;
         @include space-between;
-        width: 100%;
+        width: 90%;
         margin: auto;
         padding: 0;
     }
