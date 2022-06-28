@@ -8,7 +8,7 @@
                 <source>You can change your privacy settings anytime in the privacy center. %s</source>
             </trans-unit>
 			<trans-unit id="PRIVACY.open">
-                <source>open privacy center</source>
+                <source>Open privacy center</source>
             </trans-unit>
             <trans-unit id="PRIVACY.changePrivacySettings">
                 <source>Change your privacy settings</source>
