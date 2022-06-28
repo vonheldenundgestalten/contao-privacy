@@ -5,7 +5,7 @@
                 <source>Privacy popup opener</source>
             </trans-unit>
             <trans-unit id="PRIVACY.page_notice">
-                <source>You can change your privacy settings anytime in the privacy center. %s</source>
+                <source>You can change your privacy settings anytime in the privacy center: %s</source>
             </trans-unit>
 			<trans-unit id="PRIVACY.open">
                 <source>Open privacy center</source>
