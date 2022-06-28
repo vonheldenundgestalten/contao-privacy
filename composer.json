@@ -43,5 +43,8 @@
             "src/Resources/contao/languages/",
             "src/Resources/contao/templates/"
         ]
+    },
+    "suggest": {
+        "terminal42/changelanguage": "Simple language handling for Contao pages, news and content elements."
     }
 }
