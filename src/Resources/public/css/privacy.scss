@@ -18,7 +18,7 @@ $privacy-toggle-active: #4A8329;
     left: 0;
     right: 0;
     width: 100%;
-    padding: 0.6em 0;
+    padding: 1em 0;
     background: $privacy-dark-grey;
     z-index: 999;
     transform: translateY(100%);
@@ -29,6 +29,11 @@ $privacy-toggle-active: #4A8329;
         @include space-between;
         padding: 0;
         margin: auto;
+
+        &.inside {
+            @include flex-direction(row);
+            @include flex-wrap(nowrap);
+        }
     }
     .privacy-bar-text {
         color: #fff;
@@ -72,9 +77,9 @@ $privacy-toggle-active: #4A8329;
             background: #fff;
         }
     }
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1199px) {
         padding: 1.5em 0;
-		.content-wrapper {
+		.content-wrapper.inside {
 			@include flex-wrap(wrap);
 		}
 		.privacy-bar-text {
