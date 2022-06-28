@@ -2,9 +2,9 @@
 <?php $GLOBALS['TL_CSS'][] = 'bundles/contaoprivacy/css/privacy.scss|static'; ?>
 
 <div class="privacy-bar">
-    <div class="content-wrapper">
-        <p><?= $this->content ?></p>
-        <div class="btn-holder">
+    <div class="content-wrapper inside">
+        <p class="privacy-bar-text"><?= $this->content ?></p>
+        <div class="privacy-bar-btns">
             <button class="button button-enable-all" id="enable-all"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['activateAll'] ?></button>
             <button class="button button-disable-all" id="disable-all"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['disableAll'] ?></button>
             <button class="button open-privacy-settings"><?= $GLOBALS['TL_LANG']['PRIVACY']['BAR']['privacySettings'] ?></button>
