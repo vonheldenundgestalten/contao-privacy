@@ -566,10 +566,10 @@ function startPrivacyMagic () {
 
             history.forEach(function (element) {
                 var date = new Date(element.time);
+                var germanDateFormat = (date.toLocaleDateString('de')) + ', ' + (date.toLocaleTimeString('de')) + ' Uhr';
+                var englishDateFormat = (date.toLocaleDateString('en-GB')) + ' at ' + (date.toLocaleTimeString('en-GB'));
 
-                var dateTimeFormatted = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear()
-                    + ', ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
-                
+                var dateTimeFormatted = (document.documentElement.lang === "de") ? germanDateFormat : englishDateFormat;
 
                 var label = document.querySelector('#privacy-history-labels #' + element.type + (element.value ? 1 : 0)).textContent;
                 

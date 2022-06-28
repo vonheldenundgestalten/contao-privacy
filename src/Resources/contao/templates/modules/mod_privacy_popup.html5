@@ -114,25 +114,28 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analytics'] ?></p>
 
-                                <!-- Cookie details -->
-                              <!--   <ul class="cookie-details">
-                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga</li>
-                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></li>
-                                </ul> -->
-                               
-                                <!-- <table class="cookie-info">
-                                    <tr>
-                                        <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
-                                        <th>_gid</th>
-                                        <th>_ga</th>
-                                    </tr>
-                                    <tr>
-                                        <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
-                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
-                                        <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
-                                    </tr>
-                                </table> -->
-
+                                <?php
+                                /*
+                                    <!-- Cookie details -->
+                                    <ul class="cookie-details">
+                                        <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga</li>
+                                        <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></li>
+                                    </ul>
+                                   
+                                    <table class="cookie-info">
+                                        <tr>
+                                            <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
+                                            <th>_gid</th>
+                                            <th>_ga</th>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
+                                            <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
+                                            <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
+                                        </tr>
+                                    </table>
+                                */
+                                ?>
                             </div>  
                         </div>
                     </section>
@@ -165,25 +168,28 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-analytics"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analyticsMatomo'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <ul class="cookie-details">
-                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _pk_ses.*; _pk_id.*</li>
-                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></li>
-                                </ul> -->
-                                
-                                <!-- <table class="cookie-info">
-                                    <tr>
-                                        <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
-                                        <th>_pk_ses.*</th>
-                                        <th>_pk_id.*</th>
-                                    </tr>
-                                    <tr>
-                                        <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
-                                        <td>30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?></td>
-                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
-                                    </tr>
-                                </table> -->
-                           
+                                <?php
+                                /*
+                                    <!-- Cookie details -->
+                                    <ul class="cookie-details">
+                                        <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _pk_ses.*; _pk_id.*</li>
+                                        <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></li>
+                                    </ul>
+                                    
+                                    <table class="cookie-info">
+                                        <tr>
+                                            <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
+                                            <th>_pk_ses.*</th>
+                                            <th>_pk_id.*</th>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
+                                            <td>30 <?= $GLOBALS['TL_LANG']['TIME']['minutes'] ?></td>
+                                            <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
+                                        </tr>
+                                    </table>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -216,30 +222,33 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-tagmanager"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['tagmanager'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <ul class="cookie-details">
-                                    <li>
-                                        <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga; _gat
-                                    </li>
-                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></li>
-                                </ul> -->
-                                
+                                <?php
+                                /*
+                                    <!-- Cookie details -->
+                                    <ul class="cookie-details">
+                                        <li>
+                                            <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _gid; _ga; _gat
+                                        </li>
+                                        <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></li>
+                                    </ul>
+                                    
 
-                                <!-- <table class="cookie-info">
-                                    <tr>
-                                        <th> <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
-                                        <th>_gid</th>
-                                        <th>_ga</th>
-                                        <th>_gat</th>
-                                    </tr>
-                                    <tr>
-                                        <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
-                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
-                                        <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
-                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></td>
-                                    </tr>
-                                </table> -->
-
+                                    <table class="cookie-info">
+                                        <tr>
+                                            <th> <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
+                                            <th>_gid</th>
+                                            <th>_ga</th>
+                                            <th>_gat</th>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
+                                            <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
+                                            <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
+                                            <td>1 <?= $GLOBALS['TL_LANG']['TIME']['minute'] ?></td>
+                                        </tr>
+                                    </table>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -272,9 +281,12 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
-                            
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -311,10 +323,12 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-gmaps"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['maps'] ?></p>
 
-                                <!-- Cookie details -->
-                               
-                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
-                           
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -347,9 +361,12 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-mapbox"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['mapbox'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
-                            
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -382,9 +399,12 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-open-street-map"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['openStreetMap'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
-                            
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -417,9 +437,12 @@ $empty = !$blnShowAnalyticsGoogle
                                 <!-- Explanation -->
                                 <p class="content-youtube"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['youTube'] ?></p>
 
-                                <!-- Cookie details -->
-                                <!-- <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4> -->
-                            
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
                             </div>
                         </div>
                     </section>
@@ -455,7 +478,7 @@ $empty = !$blnShowAnalyticsGoogle
 
                             <?php 
                             /*
-                            <!-- Cookie details -->
+                                <!-- Cookie details -->
                                 <ul class="cookie-details">
                                     <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _abexps; _ga; _gcl_au; _gid; _uetsid; _uetvid; vuid;</li>
                                     <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>;</li>
