@@ -1,5 +1,3 @@
 <div class="ce_text block ce_privacyPopOpener">
-<p>
-<?= $this->html ?>
-</p>
+	<p><?= $this->html ?></p>
 </div>

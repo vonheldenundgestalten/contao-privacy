@@ -6,11 +6,11 @@
                 <target>Inhaltselement mit Einstellungen-Popup</target>
             </trans-unit>
 			<trans-unit id="PRIVACY.page_notice">
-                <source>You can change your privacy settings anytime in the privacy center. %s</source>
+                <source>You can change your privacy settings anytime in the privacy center: %s</source>
                 <target>Ihre Privatsphären-Einstellungen können jederzeit im Popup bearbeitet werden: %s</target>
             </trans-unit>
             <trans-unit id="PRIVACY.open">
-                <source>open privacy center</source>
+                <source>Open privacy center</source>
                 <target>Einstellungen öffnen</target>
             </trans-unit>
             <trans-unit id="PRIVACY.changePrivacySettings">
