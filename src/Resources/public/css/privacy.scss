@@ -39,8 +39,9 @@ $privacy-toggle-active: #4A8329;
 	.content-wrapper {
         @include flex;
         @include space-between;
-        padding: 0;
+        width: 100%;
         margin: auto;
+        padding: 0;
     }
     .privacy-bar-text {
         color: #fff;
