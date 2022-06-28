@@ -4,6 +4,7 @@ namespace VHUG\Contao\Privacy\Modules;
 
 use Contao\BackendTemplate;
 use Contao\Module;
+use Contao\PageModel;
 use Patchwork\Utf8;
 
 /**
@@ -48,6 +49,19 @@ class ModulePrivacyPopup extends Module
 
     protected function compile()
     {
+        global $objPage;
+        
+        // if the fallback language and the current page language are the same -> use the selected page
+        if(isset($objPage->languageMain) && $objPage->rootFallbackLanguage != $GLOBALS['TL_LANGUAGE']) {       
+            $objPagesPrivacy = PageModel::findBy(array('languageMain=?'), array($this->privacyDataProtectionPage));
+            
+            foreach($objPagesPrivacy as $objPagePrivacy){
+                if($objPagePrivacy->rootLanguage == $GLOBALS['TL_LANGUAGE']){
+                    $this->Template->privacyDataProtectionPage = $objPagePrivacy->id;
+                }
+            }
+        }
+        
         $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js';
         $GLOBALS['privacyShowMatomo'] = (bool)$this->privacyShowMatomo;
     }

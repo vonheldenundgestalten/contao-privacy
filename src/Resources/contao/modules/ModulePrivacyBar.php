@@ -43,11 +43,23 @@ class ModulePrivacyBar extends Module
 
     protected function compile()
     {
-        $privacyJs = $this->loadConflictFreeJs ? 'privacy_conflict_free.js' : 'privacy.js';
-        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/' . $privacyJs;
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js';
 
-		$objPagePrivacy = PageModel::findById($this->privacyDataProtectionPage);
-		$strLink = '<a href="'.$objPagePrivacy->getFrontendUrl().'">'.$GLOBALS['TL_LANG']['PRIVACY']['BAR']['dataProtection'].'</a>';
+        global $objPage;
+        
+        // if the fallback language and the current page language are the same -> use the selected page
+        $objPagePrivacy = PageModel::findById($this->privacyDataProtectionPage);
+        if(isset($objPage->languageMain) && $objPage->rootFallbackLanguage != $GLOBALS['TL_LANGUAGE']) {
+            $objPagesPrivacy = PageModel::findBy(array('languageMain=?'), array($this->privacyDataProtectionPage));
+            
+            foreach($objPagesPrivacy as $objPagePrivacy){
+                if($objPagePrivacy->rootLanguage == $GLOBALS['TL_LANGUAGE']){
+                    break;
+                }
+            }
+        }
+
+        $strLink = '<a href="'.$objPagePrivacy->getFrontendUrl().'">'.$GLOBALS['TL_LANG']['PRIVACY']['BAR']['dataProtection'].'</a>';
 		
 		$this->Template->content = sprintf($GLOBALS['TL_LANG']['PRIVACY']['BAR']['info'], $strLink);
     }
