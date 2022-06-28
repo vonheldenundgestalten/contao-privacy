@@ -1,6 +1,6 @@
 <?php
 
-namespace Magmell\Zeag\Privacy\Elements;
+namespace VHUG\Contao\Privacy\Elements;
 
 use Contao\ContentHtml;
 

@@ -453,34 +453,38 @@ $empty = !$blnShowAnalyticsGoogle
                             <!-- Explanation -->
                             <p class="content-vimeo"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['vimeo'] ?></p>
 
+                            <?php 
+                            /*
                             <!-- Cookie details -->
-                           <!-- <ul class="cookie-details">
-                                <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _abexps; _ga; _gcl_au; _gid; _uetsid; _uetvid; vuid;</li>
-                                <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>;</li>
-                            </ul> -->
+                                <ul class="cookie-details">
+                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?> _abexps; _ga; _gcl_au; _gid; _uetsid; _uetvid; vuid;</li>
+                                    <li><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?> 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>; 2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?>; 90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?>; 15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?>; 1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?>;</li>
+                                </ul>
 
-                            <!-- <table class="cookie-info">
-                                <tr>
-                                    <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
-                                    <th>_abexps</th>
-                                    <th>_ga</th>
-                                    <th>_gcl_au</th>
-                                    <th>_gid</th>
-                                    <th>_uetsid</th>
-                                    <th>_uetvid</th>
-                                    <th>vuid</th>
-                                </tr>
-                                <tr>
-                                    <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
-                                    <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
-                                    <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
-                                    <td>90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?></td>
-                                    <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
-                                    <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
-                                    <td>15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?></td>
-                                    <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
-                                </tr>
-                            </table> -->
+                                <table class="cookie-info">
+                                    <tr>
+                                        <th><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieName'] ?></th>
+                                        <th>_abexps</th>
+                                        <th>_ga</th>
+                                        <th>_gcl_au</th>
+                                        <th>_gid</th>
+                                        <th>_uetsid</th>
+                                        <th>_uetvid</th>
+                                        <th>vuid</th>
+                                    </tr>
+                                    <tr>
+                                        <td><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['cookieTTL'] ?></td>
+                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
+                                        <td>2 <?= $GLOBALS['TL_LANG']['TIME']['years'] ?></td>
+                                        <td>90 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?></td>
+                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
+                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['day'] ?></td>
+                                        <td>15 <?= $GLOBALS['TL_LANG']['TIME']['days'] ?></td>
+                                        <td>1 <?= $GLOBALS['TL_LANG']['TIME']['year'] ?></td>
+                                    </tr>
+                                </table>
+                            */
+                            ?>
                             
                             </div>
                         </div>
@@ -493,7 +497,7 @@ $empty = !$blnShowAnalyticsGoogle
         <div class="privacy-settings-history" style="display: none;">
             <div class="left-col">
                 <h3><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['title'] ?></h3>
-                <p>Hier können Sie alle Ihre Änderungen nachverfolgen.</p>
+                <p><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['description'] ?></p>
                 <p id="privacy-popup-history-back-to-main"  class="toggle-history"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['backToMain'] ?></p>
             </div>
 

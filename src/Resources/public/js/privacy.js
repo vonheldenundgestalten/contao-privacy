@@ -575,7 +575,7 @@ function startPrivacyMagic () {
                 
                 var row =
                     "<tr>" +
-                        "<td>" + dateTimeFormatted + " Uhr</td>" +
+                        "<td>" + dateTimeFormatted + "</td>" +
                         "<td>" + label + "</td>" +
                     "</tr>";
 

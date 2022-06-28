@@ -28,11 +28,11 @@
         "contao/manager-plugin": "^2.3"
     },
     "extra": {
-        "contao-manager-plugin": "Magmell\\Contao\\Privacy\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "VHUG\\Contao\\Privacy\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Magmell\\Contao\\Privacy\\": "src"
+            "VHUG\\Contao\\Privacy\\": "src"
         },
         "classmap": [
             "src/Resources/contao/"

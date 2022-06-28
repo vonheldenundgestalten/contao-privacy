@@ -1,6 +1,6 @@
 <?php
 
-namespace Magmell\Zeag\Privacy\Modules;
+namespace VHUG\Contao\Privacy\Modules;
 
 use Contao\BackendTemplate;
 use Contao\Module;
@@ -9,7 +9,6 @@ use Patchwork\Utf8;
 /**
  * Front end module "privacyPopup".
  *
- * @property bool $loadConflictFreeJs
  * @property bool $privacyDataProtectionPage
  * @property bool $privacyShowGoogleMaps
  * @property bool $privacyShowYouTube
@@ -18,7 +17,6 @@ use Patchwork\Utf8;
  * @property bool $privacyShowLeadLab
  * @property bool $privacyShowMapbox
  * @property bool $privacyShowMatomo
- * @property bool $privacyActivateMatomo
  */
 class ModulePrivacyPopup extends Module
 {
@@ -50,9 +48,7 @@ class ModulePrivacyPopup extends Module
 
     protected function compile()
     {
-        $privacyJs = $this->loadConflictFreeJs ? 'privacy_conflict_free.js' : 'privacy.js';
-        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/' . $privacyJs;
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaoprivacy/js/privacy.js';
         $GLOBALS['privacyShowMatomo'] = (bool)$this->privacyShowMatomo;
-        $GLOBALS['privacyActivateMatomo'] = (bool)$this->privacyActivateMatomo;
     }
 }

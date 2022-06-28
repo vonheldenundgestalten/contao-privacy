@@ -2,9 +2,9 @@
 
 // Front end modules
 $GLOBALS['FE_MOD']['privacy'] = [
-    'privacyBar' => 'Magmell\Zeag\Privacy\Modules\ModulePrivacyBar',
-    'privacyPopup' => 'Magmell\Zeag\Privacy\Modules\ModulePrivacyPopup',
+    'privacyBar' => 'VHUG\Contao\Privacy\Modules\ModulePrivacyBar',
+    'privacyPopup' => 'VHUG\Contao\Privacy\Modules\ModulePrivacyPopup',
 ];
 
 // Content elements
-$GLOBALS['TL_CTE']['privacy']['privacyPopupOpener'] = 'Magmell\Zeag\Privacy\Elements\ContentPrivacyPopupOpener';
+$GLOBALS['TL_CTE']['privacy']['privacyPopupOpener'] = 'VHUG\Contao\Privacy\Elements\ContentPrivacyPopupOpener';

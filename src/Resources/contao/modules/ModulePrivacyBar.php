@@ -1,6 +1,6 @@
 <?php
 
-namespace Magmell\Zeag\Privacy\Modules;
+namespace VHUG\Contao\Privacy\Modules;
 
 use Contao\BackendTemplate;
 use Contao\Module;

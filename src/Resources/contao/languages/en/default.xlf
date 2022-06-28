@@ -247,6 +247,9 @@
             <trans-unit id="PRIVACY.POPUP.history.title">
                 <source>History</source>
             </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.description">
+                <source>You can track all your changes here.</source>
+            </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.backToMain">
                 <source>Back to settings</source>
             </trans-unit>

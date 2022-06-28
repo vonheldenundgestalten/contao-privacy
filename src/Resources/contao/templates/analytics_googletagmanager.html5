@@ -8,7 +8,7 @@ $GoogleTagmanagerId = 'GTM-XXXXXX';
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
  */
-if ($GoogleTagmanagerId != 'GTM-XXXXXX' && !BE_USER_LOGGED_IN && sha1(session_id() . (!Config::get('disableIpCheck') ? Environment::get('ip') : '') . 'BE_USER_AUTH') != Input::cookie('BE_USER_AUTH')): ?>
+if ($GoogleTagmanagerId != 'GTM-XXXXXX' && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
     <script>
         if (localStorage.getItem('contaoPrivacy.enabledTagManager')) {			
             setTimeout(function() {

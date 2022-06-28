@@ -1,6 +1,6 @@
 <?php
 
-namespace Magmell\Contao\Privacy;
+namespace VHUG\Contao\Privacy;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
