@@ -582,6 +582,11 @@ $privacy-toggle-active: #4A8329;
 
     .dlh_googlemap,
 	.open-street-map-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         padding-bottom: 56.25%;
         &.map-hidden {
             opacity: 0;
