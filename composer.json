@@ -22,7 +22,7 @@
     ],
     "require": {
     	"contao/core-bundle": "4.9.*",
-    	"vonheldenundgestalten/contao-basic": "@dev"
+    	"vonheldenundgestalten/contao-basic": "4.9.*"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
