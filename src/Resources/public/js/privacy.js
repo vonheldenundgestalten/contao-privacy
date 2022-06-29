@@ -827,7 +827,7 @@ function startPrivacyMagic () {
         }
         
         // Show open street map
-        for (var i = 0 ; i < buttonShowMapbox.length; i++) {
+        for (var i = 0 ; i < buttonShowOpenStreetMap.length; i++) {
             buttonShowOpenStreetMap[i].addEventListener('click', function () {
                 contaoPrivacy.setOpenStreetMap(true);
             });

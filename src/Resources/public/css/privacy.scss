@@ -585,6 +585,7 @@ $privacy-toggle-active: #4A8329;
     }
     .dlh_googlemap,
 	.open-street-map-block {
+        padding-bottom: 56.25%;
         &.map-hidden {
             opacity: 0;
         }
