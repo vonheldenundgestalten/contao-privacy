@@ -348,6 +348,23 @@ function startPrivacyMagic () {
             }
         }
 
+        // function showOpenStreetMap() {
+        //     var openStreetMapContainer = document.querySelectorAll('.open-street-map-block');
+
+        //     if (!openStreetMapContainer) {
+        //         return;
+        //     }
+
+        //     openStreetMapContainer.forEach(function(elem) {
+        //         var openStreetMapQuestionBlock = elem.querySelector('.map-question-block');
+        //         var openStreetMapPrivacyBtn = elem.querySelector('.open-privacy-btn');
+
+        //         elem.style.display = 'block';
+        //         openStreetMapQuestionBlock.style.display = 'none';
+        //         openStreetMapPrivacyBtn.style.display = 'block';
+        //     });
+        // }
+
         function showOpenStreetMap() {
             var openStreetMapContainer = document.querySelectorAll('.open-street-map-block');
 
@@ -356,8 +373,8 @@ function startPrivacyMagic () {
             }
 
             openStreetMapContainer.forEach(function(elem) {
-                var openStreetMapQuestionBlock = elem.querySelector('.map-question-block');
-                var openStreetMapPrivacyBtn = elem.querySelector('.open-privacy-btn');
+                var openStreetMapQuestionBlock = elem.nextElementSibling;
+                var openStreetMapPrivacyBtn = elem.parentElement.nextElementSibling;
 
                 elem.style.display = 'block';
                 openStreetMapQuestionBlock.style.display = 'none';
