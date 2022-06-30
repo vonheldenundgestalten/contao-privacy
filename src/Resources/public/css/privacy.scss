@@ -594,10 +594,10 @@ $privacy-toggle-active: #4A8329;
     }
 
     @media screen and (max-width: 520px) {
-        padding-bottom: 95% !important;
+        padding-bottom: 95%;
         .dlh_googlemap,
         .open-street-map-block {
-            padding-bottom: 95% !important;
+            padding-bottom: 95%;
         }
     }
 }
