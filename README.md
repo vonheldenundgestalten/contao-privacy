@@ -1,5 +1,8 @@
 # Contao Privacy
-GDPR-safe privacy extension bundle for Contao 4.  
+[![Contao 4 compatible](https://img.shields.io/badge/Contao%20v4.9%2B-compatible-orange)](https://contao.org/)
+[![License](https://img.shields.io/github/license/vonheldenundgestalten/contao-privacy)](https://opensource.org/licenses/MIT)
+
+GDPR-safe privacy extension bundle for Contao 4, compatible with v4.9 LTS and v4.13 LTS (since version 4.9.21).  
 Includes elements such as Google Analytics, Maps, YouTube, Vimeo...  
 No jQuery dependency.
 
