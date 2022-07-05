@@ -30,8 +30,8 @@
                 <target>Alle aktivieren</target>
             </trans-unit>
             <trans-unit id="PRIVACY.BAR.disableAll">
-                <source>Disable all</source>
-                <target>Alle deaktivieren</target>
+                <source>Reject all</source>
+                <target>Alle ablehnen</target>
             </trans-unit>
             <trans-unit id="PRIVACY.BAR.privacySettings">
                 <source>Privacy settings</source>

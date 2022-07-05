@@ -23,7 +23,7 @@
                 <source>Activate all</source>
             </trans-unit>
             <trans-unit id="PRIVACY.BAR.disableAll">
-                <source>Disable all</source>
+                <source>Reject all</source>
             </trans-unit>
             <trans-unit id="PRIVACY.BAR.privacySettings">
                 <source>Privacy settings</source>
