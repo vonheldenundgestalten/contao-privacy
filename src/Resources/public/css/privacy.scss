@@ -617,6 +617,7 @@ $privacy-toggle-active: #4A8329;
 .privacy-youtube-question-block {
     position: relative;
     text-align: center;
+    padding-bottom: 56.25%;
     background: $privacy-light-grey;
    
     .vimeo-question-block,
@@ -666,6 +667,8 @@ $privacy-toggle-active: #4A8329;
 }
 
 .youtube-video-block {
+    padding-bottom: 56.25%;
+
     .video-play-icon {
         display: inline-block;
         position: absolute;
@@ -682,6 +685,10 @@ $privacy-toggle-active: #4A8329;
             opacity: 0.8;
         }
     }
+}
+
+.vimeo-video-block {
+    padding-bottom: 56.25%;
 }
 
 // Default button style for non-specific/non-high-important-action buttons
