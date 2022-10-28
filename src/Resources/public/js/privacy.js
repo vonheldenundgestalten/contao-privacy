@@ -420,6 +420,13 @@ function startPrivacyMagic () {
                 elem.style.display = 'block';
                 ytQuestionBlock.style.display = 'none';
                 ytPrivacyBtn.style.display = 'block';
+                
+                if(elem.children.length > 0){
+                    var iframe = elem.querySelector('iframe');
+                    if(iframe){
+                        iframe.src = iframe.dataset.src;
+                    }
+                }
             });
             
             // show preview images (replace data-src with src)
