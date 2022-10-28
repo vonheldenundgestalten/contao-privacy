@@ -2,6 +2,7 @@
 ua = navigator.userAgent.toLowerCase(); 
 IEbrowser = /msie/.test(ua);
 
+var contaoPrivacy;
 
 function startPrivacyMagic () {
 
@@ -24,7 +25,7 @@ function startPrivacyMagic () {
     var buttonShowVimeo =           document.querySelectorAll('button#load-vimeo');
     var buttonShowYouTube =         document.querySelectorAll('button#load-youtube');
 
-    var contaoPrivacy = (function() {
+    contaoPrivacy = (function() {
 
         /**
          * Whether we show privacy bar or not
@@ -217,7 +218,9 @@ function startPrivacyMagic () {
                 var gMapPrivacyBtn = elem.querySelector('.open-privacy-btn');
 
                 elem.classList.add('active-gmap');
-                gMapBlock.classList.remove('map-hidden');
+                if(gMapBlock){
+                    gMapBlock.classList.remove('map-hidden');
+                }
                 gMapQuestionBlock.style.display = 'none';
                 gMapPrivacyBtn.style.display = 'block';
             });
@@ -240,7 +243,9 @@ function startPrivacyMagic () {
                 var gMapPrivacyBtn = elem.querySelector('.open-privacy-btn');
 
                 elem.classList.remove('active-gmap');
-                gMapBlock.classList.add('map-hidden');
+                if(gMapBlock){
+                    gMapBlock.classList.add('map-hidden');
+                }
                 gMapQuestionBlock.style.display = 'block';
                 gMapPrivacyBtn.style.display = 'none';
             });
