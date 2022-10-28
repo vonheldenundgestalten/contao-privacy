@@ -362,6 +362,13 @@ function startPrivacyMagic () {
                 elem.style.display = 'block';
                 openStreetMapQuestionBlock.style.display = 'none';
                 openStreetMapPrivacyBtn.style.display = 'block';
+                
+                if(elem.children.length > 0){
+                    var iframe = elem.querySelector('iframe');
+                    if(iframe){
+                        iframe.src = iframe.dataset.src;
+                    }
+                }
             });
         }
 
@@ -489,6 +496,13 @@ function startPrivacyMagic () {
                 elem.style.display = 'block';
                 vimeoQuestionBlock.style.display = 'none';
                 vimeoPrivacyBtn.style.display = 'block';
+                
+                if(elem.children.length > 0){
+                    var iframe = elem.querySelector('iframe');
+                    if(iframe){
+                        iframe.src = iframe.dataset.src;
+                    }
+                }
             });
         }
 

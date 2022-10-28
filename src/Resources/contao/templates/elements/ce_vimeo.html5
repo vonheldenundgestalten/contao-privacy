@@ -32,7 +32,7 @@ $this->src = $arrUrl['scheme'].'://'.$arrUrl['host'].$arrUrl['path'].$strQuery.$
             });
         </script>
     <?php else: ?>
-        <iframe<?= $this->size ?> src="<?= $this->src ?>" allowfullscreen></iframe>
+        <iframe<?= $this->size ?> data-src="<?= $this->src ?>" allowfullscreen></iframe>
     <?php endif; ?>
 
     <?php if ($this->aspect): ?>
