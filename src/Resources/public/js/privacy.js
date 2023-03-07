@@ -14,6 +14,7 @@ function startPrivacyMagic () {
     var inputAnalyticsMatomo =      document.querySelector('input[name="privacy-matomo-analytics"]');
     var inputTagmanager =           document.querySelector('input[name="privacy-g-tagmanager"]');
     var inputLeadLab =              document.querySelector('input[name="privacy-leadlab"]');
+    var inputFacebookPixel =        document.querySelector('input[name="privacy-facebook-pixel"]');
     var inputGmaps =                document.querySelector('input[name="privacy-g-maps"]');
     var inputMapbox =               document.querySelector('input[name="privacy-mapbox"]');
     var inputYouTube =              document.querySelector('input[name="privacy-youtube"]');
@@ -68,6 +69,7 @@ function startPrivacyMagic () {
             setAnalyticsMatomo(true, true); 
             setTagmanager(true, true);
             setLeadLab(true, true);
+            setFacebookPixel(true, true);
             setGmap(true, true);
             setMapbox(true, true);
             setOpenStreetMap(true, true);
@@ -82,6 +84,7 @@ function startPrivacyMagic () {
             setAnalyticsMatomo(false, false); 
             setTagmanager(false, false);
             setLeadLab(false, false);
+            setFacebookPixel(false, false);
             setGmap(false, false);
             setMapbox(false, false);
             setOpenStreetMap(false, false);
@@ -172,6 +175,27 @@ function startPrivacyMagic () {
                 // Show right status message
                 document.querySelector('.leadlab .status-enabled').style.display = bln ? 'inline-block' : 'none';
                 document.querySelector('.leadlab .status-disabled').style.display = bln ? 'none' : 'inline-block';
+            }
+        }
+
+        /**
+         * @param bln {boolean}
+         * @param skipHistory {boolean}
+         */
+        function setFacebookPixel(bln, skipHistory) {
+            if(inputFacebookPixel) {
+                localStorage.setItem('contaoPrivacy.enabledFacebookPixel', bln ? '1' : '');
+
+                if (!skipHistory) {
+                    addToHistory('facebookPixel', bln);
+                }
+
+                // Switch checkbox correspondingly
+                inputFacebookPixel.checked = bln;
+
+                // Show right status message
+                document.querySelector('.facebook-pixel .status-enabled').style.display = bln ? 'inline-block' : 'none';
+                document.querySelector('.facebook-pixel .status-disabled').style.display = bln ? 'none' : 'inline-block';
             }
         }
 
@@ -629,6 +653,7 @@ function startPrivacyMagic () {
             setAnalyticsMatomo: setAnalyticsMatomo,
             setTagmanager: setTagmanager,
             setLeadLab: setLeadLab,
+            setFacebookPixel: setFacebookPixel,
             setGmap: setGmap,
             setMapbox: setMapbox,
             setYouTube: setYouTube,
@@ -698,6 +723,11 @@ function startPrivacyMagic () {
         // Set leadlab initially
         if (inputLeadLab) {
             contaoPrivacy.setLeadLab(!!localStorage.getItem('contaoPrivacy.enabledLeadlab'), true);
+        }
+
+        // Set facebook pixel initially
+        if (inputFacebookPixel) {
+            contaoPrivacy.setFacebookPixel(!!localStorage.getItem('contaoPrivacy.enabledFacebookPixel'), true);
         }
 
         // Set gmap initially
@@ -799,6 +829,13 @@ function startPrivacyMagic () {
         if (inputLeadLab) {
             inputLeadLab.addEventListener('change', function() {
                 contaoPrivacy.setLeadLab(inputLeadLab.checked);
+            });
+        }
+
+        // Toggle Facebook Pixel
+        if (inputFacebookPixel) {
+            inputFacebookPixel.addEventListener('change', function() {
+                contaoPrivacy.setFacebookPixel(inputFacebookPixel.checked);
             });
         }
 

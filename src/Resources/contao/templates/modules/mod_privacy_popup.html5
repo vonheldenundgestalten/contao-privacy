@@ -83,7 +83,7 @@ $empty = !$blnShowAnalyticsGoogle
                     <p class="content-empty"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackText'] ?></p>
                 <?php endif; ?>
 
-                <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab): ?>
+                <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab || $blnShowFacebookPixel): ?>
                     <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
                 <?php endif; ?>
 
@@ -280,6 +280,44 @@ $empty = !$blnShowAnalyticsGoogle
                                 
                                 <!-- Explanation -->
                                 <p class="content-leadlab"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['leadlab'] ?></p>
+
+                                <?php 
+                                /*
+                                    <!-- Cookie details -->
+                                    <h4><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noCookieSet'] ?></h4>
+                                */
+                                ?>
+                            </div>
+                        </div>
+                    </section>
+                <?php endif; ?>
+
+                <?php if ($this->privacyShowFacebookPixel): ?>
+                    <!-- FACEBOOK PIXEL -->
+                    <section class="accordion-item">
+                        
+                        <p class="facebook-pixel status-line accordion-heading">
+                            <span class="acc-title acc-toggler">Facebook Pixel</span>
+                            <span class="switch-wrap">
+                                <label class="switch">
+                                    <input type="checkbox" name="privacy-facebook-pixel" id="facebook-pixel-control">
+                                    <span class="switch-btn"></span>
+                                </label>
+                                <span class="status-disabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyInactive'] ?>
+                                </span>
+                                <span class="status-enabled">
+                                <?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['currentlyActive'] ?>
+                                </span>
+                            </span>
+                            <span class="icon-arrow acc-toggler"></span>
+                        </p>
+                        
+                        <div class="accordion-content" role="tabpanel" aria-hidden="true">
+                            <div class="accordion-inner">
+                                
+                                <!-- Explanation -->
+                                <p class="content-facebookpixel"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['facebookpixel'] ?></p>
 
                                 <?php 
                                 /*
@@ -539,6 +577,8 @@ $empty = !$blnShowAnalyticsGoogle
                 <p id="tagManager0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['tagManager0'] ?></p>
                 <p id="leadlab1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['leadlab1'] ?></p>
                 <p id="leadlab0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['leadlab0'] ?></p>
+                <p id="facebookPixel1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['facebookPixel1'] ?></p>
+                <p id="facebookPixel0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['facebookPixel0'] ?></p>
                 <p id="gmap1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['gmap1'] ?></p>
                 <p id="gmap0"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['gmap0'] ?></p>
                 <p id="mapbox1"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['history']['mapbox1'] ?></p>
