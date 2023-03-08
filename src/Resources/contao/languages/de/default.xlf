@@ -233,6 +233,19 @@
                 <target>leadlab.click ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
             </trans-unit>
 
+            <trans-unit id="PRIVACY.POPUP.facebookPixel">
+                <source>We're using the service &lt;strong&gt;Facebook Pixel&lt;/strong&gt; from META to analyze your use of our website. The data helps us with with optimizing the website content and functionality.</source>
+                <target>Wir verwenden &lt;strong&gt;leadlab.click&lt;/strong&gt; von der Facebook Pixel um statistische Nutzungsdaten über unsere Webseite zu erfassen. Die Auswertung unterstützt die inhaltliche und funktionale Optimierung unserer Webseite.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.facebookPixelIsActive">
+                <source>Facebook Pixel is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
+                <target>Facebook Pixel ist aktuell &lt;strong&gt;aktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.facebookPixelIsDeactivated">
+                <source>Facebook Pixel is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
+                <target>Facebook Pixel ist aktuell &lt;strong&gt;inaktiv&lt;/strong&gt;.</target>
+            </trans-unit>
+
             <trans-unit id="PRIVACY.POPUP.pluginsAndTools">
                 <source>Plugins and Tools</source>
                 <target>Plugins und Drittanbieter-Tools</target>
