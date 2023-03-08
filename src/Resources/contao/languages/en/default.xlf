@@ -177,13 +177,13 @@
                 <source>leadlab.click is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
-            <trans-unit id="PRIVACY.POPUP.facebookPixel">
+            <trans-unit id="PRIVACY.POPUP.facebookpixel">
                 <source>We're using the service &lt;strong&gt;Facebook Pixel&lt;/strong&gt; from META to analyze your use of our website. The data helps us with with optimizing the website content and functionality.</source>
             </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.facebookPixelIsActive">
+            <trans-unit id="PRIVACY.POPUP.facebookpixelIsActive">
                 <source>Facebook Pixel is currently &lt;strong&gt;active&lt;/strong&gt;.</source>
             </trans-unit>
-            <trans-unit id="PRIVACY.POPUP.facebookPixelIsDeactivated">
+            <trans-unit id="PRIVACY.POPUP.facebookpixelIsDeactivated">
                 <source>Facebook Pixel is currently &lt;strong&gt;deactivated&lt;/strong&gt;.</source>
             </trans-unit>
 
