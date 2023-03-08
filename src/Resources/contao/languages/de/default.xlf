@@ -374,6 +374,14 @@
                 <source>LeadLab deactivated</source>
                 <target>LeadLab deaktiviert</target>
             </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.facebookPixel1">
+                <source>Facebook Pixel activated</source>
+                <target>Facebook Pixel aktiviert</target>
+            </trans-unit>
+            <trans-unit id="PRIVACY.POPUP.history.facebookPixel0">
+                <source>Facebook Pixel deactivated</source>
+                <target>Facebook Pixel deaktiviert</target>
+            </trans-unit>
             <trans-unit id="PRIVACY.POPUP.history.gmap1">
                 <source>Google Map activated</source>
                 <target>Google Map aktiviert</target>
