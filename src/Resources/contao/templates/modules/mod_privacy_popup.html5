@@ -83,7 +83,7 @@ $empty = !$blnShowAnalyticsGoogle
                     <p class="content-empty"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['noFeedbackText'] ?></p>
                 <?php endif; ?>
 
-                <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab || $blnShowFacebookPixel): ?>
+                <?php if ($blnShowAnalyticsGoogle || $blnShowAnalyticsMatomo || $blnShowTagManager || $this->privacyShowLeadLab || $this->privacyShowFacebookPixel): ?>
                     <h4 class="tools"><?= $GLOBALS['TL_LANG']['PRIVACY']['POPUP']['analysisToolsAndAdvertising'] ?></h4>
                 <?php endif; ?>
 
