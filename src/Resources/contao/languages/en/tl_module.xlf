@@ -22,6 +22,9 @@
             <trans-unit id="tl_module.privacyShowLeadlab.0">
                 <source>Show LeadLab</source>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowFacebookPixel.0">
+                <source>Show Facebook Pixel</source>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowMatomo.0">
                 <source>Show request for Matomo?</source>
             </trans-unit>

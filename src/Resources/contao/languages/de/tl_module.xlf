@@ -29,6 +29,10 @@
                 <source>Show LeadLab</source>
                 <target>LeadLab anzeigen</target>
             </trans-unit>
+            <trans-unit id="tl_module.privacyShowFacebookPixel.0">
+                <source>Show Facebook Pixel</source>
+                <target>Facebook Pixel anzeigen</target>
+            </trans-unit>
             <trans-unit id="tl_module.privacyShowMatomo.0">
                 <source>Show request for Matomo</source>
                 <target>Matomo-Statistik abfragen?</target>
