@@ -6,7 +6,6 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['privacyPopup'] = '{title_legend},na
 
 // Fields
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyDataProtectionPage'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyDataProtectionPage'],
     'exclude'                 => true,
     'inputType'               => 'pageTree',
     'foreignKey'              => 'tl_page.title',
@@ -16,7 +15,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyDataProtectionPage'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowGoogleMaps'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowGoogleMaps'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -24,7 +22,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowGoogleMaps'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowYouTube'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowYouTube'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -32,7 +29,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowYouTube'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowVimeo'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowVimeo'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -40,7 +36,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowVimeo'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowOpenStreetMap'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowOpenStreetMap'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -48,7 +43,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowOpenStreetMap'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowLeadLab'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowLeadlab'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -56,7 +50,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowLeadLab'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMapbox'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowMapbox'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50'),
@@ -64,7 +57,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMapbox'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMatomo'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowMatomo'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50 clr'),
@@ -72,7 +64,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowMatomo'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['privacyShowFacebookPixel'] = [
-    'label'                   => $GLOBALS['TL_LANG']['tl_module']['privacyShowFacebookPixel'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('tl_class'=>'w50 clr'),
