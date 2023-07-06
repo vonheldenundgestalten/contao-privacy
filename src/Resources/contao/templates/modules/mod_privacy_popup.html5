@@ -18,7 +18,7 @@ if ($objPage->layout && $objLayout = \Contao\LayoutModel::findByPk($objPage->lay
     {
 		foreach ($arrAnalytics as $strTemplate)
 		{
-			if ($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false)
+			if ($strTemplate == 'analytics_google' || strpos($strTemplate, 'analytics_google_') !== false || $strTemplate == 'analytics_google4' || strpos($strTemplate, 'analytics_google4_') !== false)
 			{
 				$blnShowAnalyticsGoogle = true;
 			}
