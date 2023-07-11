@@ -3,7 +3,7 @@
 /**
  * To use this script, please fill in your Google Analytics ID below
  */
-$GoogleAnalyticsId = 'UA-XXXXX-X';
+$GoogleAnalyticsId = 'XXXXX';
 
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
