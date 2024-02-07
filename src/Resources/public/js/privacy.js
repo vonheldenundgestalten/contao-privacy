@@ -55,7 +55,10 @@ function startPrivacyMagic () {
          */
         function closeBar() {
             document.querySelector('.privacy-bar').style.cssText = 'opacity: 0; transform: translateY(100%)';
-            document.querySelector('#footer').style.paddingBottom = "0";
+
+            if(document.querySelector('#footer') != null) {
+                document.querySelector('#footer').style.paddingBottom = "0";
+            }
             setTimeout(function() {
                 document.querySelector('.privacy-bar').style.cssText = 'height: 0; display: none';
             }, 600);
@@ -554,7 +557,9 @@ function startPrivacyMagic () {
          */
         function showPopup() {
             document.querySelector('#privacy-settings').style.display = 'block';
-            document.querySelector('#footer').classList.remove('addSpace');
+            if(document.querySelector('#footer') != null) {
+                document.querySelector('#footer').classList.remove('addSpace');
+            }
             setTimeout(function() {
                 document.querySelector('#privacy-settings').style.opacity = '1';
             }, 200);

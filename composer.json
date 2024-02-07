@@ -21,8 +21,8 @@
         }
     ],
     "require": {
-    	"contao/core-bundle": "^4.9",
-    	"vonheldenundgestalten/contao-basic": "^4.9"
+    	"contao/core-bundle": "^5.3",
+    	"vonheldenundgestalten/contao-basic": "@dev"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"

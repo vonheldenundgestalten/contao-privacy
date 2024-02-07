@@ -6,6 +6,8 @@ use Contao\BackendTemplate;
 use Contao\Module;
 use Contao\PageModel;
 use Patchwork\Utf8;
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Front end module "privacyPopup".
@@ -32,10 +34,10 @@ class ModulePrivacyPopup extends Module
      */
     public function generate()
     {
-        if (TL_MODE == 'BE')
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
         {
             $objTemplate = new BackendTemplate('be_wildcard');
-            $objTemplate->wildcard = '### ' . Utf8::strtoupper($GLOBALS['TL_LANG']['FMD']['privacyPopup'][0]) . ' ###';
+            $objTemplate->wildcard = '### ' . strtoupper($GLOBALS['TL_LANG']['FMD']['privacyPopup'][0]) . ' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
